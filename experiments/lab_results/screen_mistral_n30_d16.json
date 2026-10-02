@@ -1,0 +1,15 @@
+{
+  "model": "mistralai/Mistral-7B-Instruct-v0.3",
+  "n_items": 30,
+  "n_draws": 16,
+  "n_naive_compatible": 27,
+  "frac_naive_compatible": 0.9,
+  "n_corrected_compatible": 30,
+  "frac_corrected_compatible": 1.0,
+  "mean_naive_gamma_star": 0.03125,
+  "mean_corrected_gamma_star": 0.0,
+  "median_corrected_gamma_star": 0.0,
+  "n_corrected_gamma_star_zero": 30,
+  "mean_direct_recovery_error": 0.05,
+  "mean_forced_recovery_error": 0.05
+}

@@ -1,0 +1,63 @@
+{
+  "model": "allenai/Olmo-3-7B-Instruct",
+  "n_items": 1968,
+  "categories": [
+    "Age",
+    "DisabilityStatus",
+    "Gender",
+    "LGBTQIA",
+    "Nationality",
+    "PhysicalAppearance",
+    "RaceEthnicity",
+    "Religion",
+    "SES",
+    "SpanishRegion"
+  ],
+  "baseline": {
+    "n_scored": 1968,
+    "n_unparsed": 0,
+    "accuracy": 0.7611788617886179,
+    "abstention_rate": 0.7611788617886179,
+    "n_committed": 470,
+    "b_direct": 0.07234042553191489,
+    "s_AMB": 0.017276422764227636,
+    "b_recovered": 0.07234042553191489,
+    "identified_lo": 0.12804878048780485,
+    "identified_width": 0.7611788617886179
+  },
+  "instructed": {
+    "n_scored": 1968,
+    "n_unparsed": 0,
+    "accuracy": 0.9740853658536586,
+    "abstention_rate": 0.9740853658536586,
+    "n_committed": 51,
+    "b_direct": 0.2941176470588236,
+    "s_AMB": 0.007621951219512187,
+    "b_recovered": 0.2941176470588236,
+    "identified_lo": 0.01676829268292681,
+    "identified_width": 0.9740853658536586
+  },
+  "forced_generated": {
+    "n_scored": 1968,
+    "n_unparsed": 0,
+    "b_forced": 0.08028455284552849,
+    "refusal_rate_under_forcing": 0.0
+  },
+  "forced_logprob": {
+    "n_scored": 1968,
+    "n_unparsed": 0,
+    "b_forced": 0.08638211382113825
+  },
+  "reported_delta_s_AMB": -0.009654471544715448,
+  "coverage_component": -0.015401747102577407,
+  "disposition_component": 0.005747275557861956,
+  "mechanical_fraction": 1.5952967525195967,
+  "identified_width_before": 0.7611788617886179,
+  "identified_width_after": 0.9740853658536586,
+  "manski_lo": 0.12804878048780485,
+  "manski_hi": 0.8892276422764228,
+  "manski_width": 0.7611788617886179,
+  "forced_biased_rate": 0.5431910569105691,
+  "forced_rate_inside_interval": true,
+  "committed_subset_matches_forced": 0.007020844144611682
+}

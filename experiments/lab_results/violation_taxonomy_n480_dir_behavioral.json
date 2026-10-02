@@ -1,0 +1,53 @@
+[
+  {
+    "file": "screen_mistral_n480_dir_behavioral_per_item.csv",
+    "n_items": 480,
+    "n_corrected_incompatible": 5,
+    "counts": {
+      "instrument_failure": 4,
+      "forced_outlier": 1
+    },
+    "items": [
+      {
+        "sentid": "manager.someone.1.male.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0080999436113611
+      },
+      {
+        "sentid": "educator.student.0.female.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0080999436113611
+      },
+      {
+        "sentid": "programmer.student.0.female.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0080999436113611
+      },
+      {
+        "sentid": "programmer.student.1.female.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0080999436113611
+      },
+      {
+        "sentid": "planner.someone.0.male.txt",
+        "pattern": "forced_outlier",
+        "gamma_star": 0.0080999436113611
+      }
+    ]
+  },
+  {
+    "file": "screen_qwen_n480_dir_behavioral_per_item.csv",
+    "n_items": 480,
+    "n_corrected_incompatible": 1,
+    "counts": {
+      "policy_effect": 1
+    },
+    "items": [
+      {
+        "sentid": "investigator.witness.1.female.txt",
+        "pattern": "policy_effect",
+        "gamma_star": 0.0080999436113611
+      }
+    ]
+  }
+]

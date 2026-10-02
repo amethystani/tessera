@@ -1,0 +1,24 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+30 items x 16 draws x 3 conditions = 1440 generate() calls
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s]Fetching 3 files:  33%|███▎      | 1/3 [03:43<07:26, 223.27s/it]Fetching 3 files:  67%|██████▋   | 2/3 [03:54<01:38, 98.80s/it] Fetching 3 files: 100%|██████████| 3/3 [04:01<00:00, 56.64s/it]Fetching 3 files: 100%|██████████| 3/3 [04:01<00:00, 80.47s/it]
+Loading weights:   0%|          | 0/355 [00:00<?, ?it/s]Loading weights:   4%|▍         | 15/355 [00:00<00:02, 149.07it/s]Loading weights:  10%|█         | 36/355 [00:00<00:01, 184.41it/s]Loading weights:  16%|█▋        | 58/355 [00:00<00:01, 194.29it/s]Loading weights:  23%|██▎       | 80/355 [00:00<00:01, 200.66it/s]Loading weights:  29%|██▊       | 102/355 [00:00<00:01, 205.61it/s]Loading weights:  35%|███▍      | 124/355 [00:00<00:01, 203.64it/s]Loading weights:  41%|████      | 145/355 [00:00<00:01, 202.40it/s]Loading weights:  47%|████▋     | 166/355 [00:00<00:00, 203.64it/s]Loading weights:  53%|█████▎    | 188/355 [00:00<00:00, 207.84it/s]Loading weights:  59%|█████▉    | 209/355 [00:01<00:00, 203.89it/s]Loading weights:  65%|██████▍   | 230/355 [00:01<00:00, 197.29it/s]Loading weights:  72%|███████▏  | 254/355 [00:01<00:00, 208.66it/s]Loading weights:  77%|███████▋  | 275/355 [00:01<00:00, 208.33it/s]Loading weights:  84%|████████▍ | 298/355 [00:01<00:00, 213.95it/s]Loading weights:  90%|█████████ | 321/355 [00:01<00:00, 216.30it/s]Loading weights:  97%|█████████▋| 343/355 [00:01<00:00, 200.94it/s]Loading weights: 100%|██████████| 355/355 [00:01<00:00, 203.04it/s]
+
+[1/3] Ground-truth condition (ablated, forced) ...
+[2/3] Direct condition (intact model) ...
+[3/3] Forced condition (intact model) ...
+
+Computing per-item compatibility certificates (naive plug-in AND Bonferroni-corrected) ...
+
+==================================================================
+Compatible with one common law -- NAIVE plug-in:      18/30 (60.0%)
+Compatible with one common law -- BONFERRONI-corrected: 30/30 (100.0%)  (alpha=0.00167 per item)
+  -> correction flipped 12 item(s) from 'incompatible' to 'compatible': exactly the false-positive pattern the null simulation predicted at this draw count.
+
+Mean itemwise gamma* -- naive: 0.1000  |  corrected: 0.0000
+Items with corrected gamma*=0 exactly: 30/30
+
+Mean |direct_aligned - truth_aligned| across items: 0.0938
+Mean |forced_aligned - truth_aligned| across items: 0.0563
+
+Wrote screen_olmo_dpo_n30_d16.json and screen_olmo_dpo_n30_d16_per_item.csv

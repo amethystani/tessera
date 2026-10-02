@@ -1,0 +1,78 @@
+{
+  "reps": 200,
+  "seed": 20260917,
+  "results": [
+    {
+      "file": "screen_mistral_n160_d16_per_item.csv",
+      "n_items": 160,
+      "n_draws": 16,
+      "observed_naive_incompatible": 22,
+      "null_naive_mean": 19.135,
+      "null_naive_p95": 22.0,
+      "p_value_naive": 0.085,
+      "observed_corrected_incompatible": 0,
+      "null_corrected_mean": 0.0,
+      "p_value_corrected": 1.0
+    },
+    {
+      "file": "screen_olmo_dpo_n160_d16_per_item.csv",
+      "n_items": 160,
+      "n_draws": 16,
+      "observed_naive_incompatible": 64,
+      "null_naive_mean": 60.375,
+      "null_naive_p95": 64.04999999999998,
+      "p_value_naive": 0.1,
+      "observed_corrected_incompatible": 0,
+      "null_corrected_mean": 0.0,
+      "p_value_corrected": 1.0
+    },
+    {
+      "file": "screen_olmo_inst_n160_d16_per_item.csv",
+      "n_items": 160,
+      "n_draws": 16,
+      "observed_naive_incompatible": 54,
+      "null_naive_mean": 50.42,
+      "null_naive_p95": 54.0,
+      "p_value_naive": 0.055,
+      "observed_corrected_incompatible": 0,
+      "null_corrected_mean": 0.0,
+      "p_value_corrected": 1.0
+    },
+    {
+      "file": "screen_olmo_sft_n160_d16_per_item.csv",
+      "n_items": 160,
+      "n_draws": 16,
+      "observed_naive_incompatible": 82,
+      "null_naive_mean": 78.79,
+      "null_naive_p95": 82.0,
+      "p_value_naive": 0.1,
+      "observed_corrected_incompatible": 0,
+      "null_corrected_mean": 0.0,
+      "p_value_corrected": 1.0
+    },
+    {
+      "file": "screen_phi_n160_d16_per_item.csv",
+      "n_items": 160,
+      "n_draws": 16,
+      "observed_naive_incompatible": 32,
+      "null_naive_mean": 29.81,
+      "null_naive_p95": 32.0,
+      "p_value_naive": 0.1,
+      "observed_corrected_incompatible": 9,
+      "null_corrected_mean": 0.0,
+      "p_value_corrected": 0.0
+    },
+    {
+      "file": "screen_qwen_n160_d16_per_item.csv",
+      "n_items": 160,
+      "n_draws": 16,
+      "observed_naive_incompatible": 35,
+      "null_naive_mean": 32.305,
+      "null_naive_p95": 35.0,
+      "p_value_naive": 0.105,
+      "observed_corrected_incompatible": 1,
+      "null_corrected_mean": 0.0,
+      "p_value_corrected": 0.0
+    }
+  ]
+}

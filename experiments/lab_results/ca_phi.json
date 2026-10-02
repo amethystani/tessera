@@ -1,0 +1,63 @@
+{
+  "model": "microsoft/Phi-3.5-mini-instruct",
+  "n_items": 1968,
+  "categories": [
+    "Age",
+    "DisabilityStatus",
+    "Gender",
+    "LGBTQIA",
+    "Nationality",
+    "PhysicalAppearance",
+    "RaceEthnicity",
+    "Religion",
+    "SES",
+    "SpanishRegion"
+  ],
+  "baseline": {
+    "n_scored": 1968,
+    "n_unparsed": 0,
+    "accuracy": 0.5533536585365854,
+    "abstention_rate": 0.5533536585365854,
+    "n_committed": 879,
+    "b_direct": 0.21274175199089873,
+    "s_AMB": 0.09502032520325203,
+    "b_recovered": 0.21274175199089873,
+    "identified_lo": 0.2708333333333333,
+    "identified_width": 0.5533536585365854
+  },
+  "instructed": {
+    "n_scored": 1968,
+    "n_unparsed": 0,
+    "accuracy": 0.9095528455284553,
+    "abstention_rate": 0.9095528455284553,
+    "n_committed": 178,
+    "b_direct": 0.348314606741573,
+    "s_AMB": 0.031504065040650404,
+    "b_recovered": 0.348314606741573,
+    "identified_lo": 0.06097560975609757,
+    "identified_width": 0.9095528455284553
+  },
+  "forced_generated": {
+    "n_scored": 1966,
+    "n_unparsed": 2,
+    "b_forced": 0.06408952187182093,
+    "refusal_rate_under_forcing": 0.0010162601626016261
+  },
+  "forced_logprob": {
+    "n_scored": 1968,
+    "n_unparsed": 0,
+    "b_forced": 0.06605691056910579
+  },
+  "reported_delta_s_AMB": -0.06351626016260162,
+  "coverage_component": -0.07577843909838415,
+  "disposition_component": 0.012262178935782532,
+  "mechanical_fraction": 1.1930557451649602,
+  "identified_width_before": 0.5533536585365854,
+  "identified_width_after": 0.9095528455284553,
+  "manski_lo": 0.2708333333333333,
+  "manski_hi": 0.8241869918699187,
+  "manski_width": 0.5533536585365855,
+  "forced_biased_rate": 0.5330284552845529,
+  "forced_rate_inside_interval": true,
+  "committed_subset_matches_forced": 0.07334242071089647
+}

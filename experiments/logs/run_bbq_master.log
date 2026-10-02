@@ -1,0 +1,13 @@
+=== START qwen Thu Sep 17 09:24:18 AM IST 2026 ===
+=== DONE qwen rc=0 Thu Sep 17 09:27:54 AM IST 2026 ===
+=== START olmo_sft Thu Sep 17 09:27:54 AM IST 2026 ===
+=== DONE olmo_sft rc=0 Thu Sep 17 09:36:58 AM IST 2026 ===
+=== START olmo_dpo Thu Sep 17 09:36:58 AM IST 2026 ===
+=== DONE olmo_dpo rc=0 Thu Sep 17 09:45:04 AM IST 2026 ===
+=== START olmo_inst Thu Sep 17 09:45:04 AM IST 2026 ===
+=== DONE olmo_inst rc=0 Thu Sep 17 09:52:47 AM IST 2026 ===
+=== START mistral Thu Sep 17 09:52:47 AM IST 2026 ===
+=== DONE mistral rc=0 Thu Sep 17 10:03:00 AM IST 2026 ===
+=== START phi Thu Sep 17 10:03:00 AM IST 2026 ===
+=== DONE phi rc=0 Thu Sep 17 10:09:17 AM IST 2026 ===
+ALL BBQ RUNS COMPLETE Thu Sep 17 10:09:17 AM IST 2026

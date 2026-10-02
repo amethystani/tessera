@@ -1,0 +1,15 @@
+{
+  "model": "allenai/OLMo-2-1124-7B-SFT",
+  "n_items": 30,
+  "n_draws": 16,
+  "n_naive_compatible": 14,
+  "frac_naive_compatible": 0.4666666666666667,
+  "n_corrected_compatible": 30,
+  "frac_corrected_compatible": 1.0,
+  "mean_naive_gamma_star": 0.11041666666666666,
+  "mean_corrected_gamma_star": 0.0,
+  "median_corrected_gamma_star": 0.0,
+  "n_corrected_gamma_star_zero": 30,
+  "mean_direct_recovery_error": 0.08333333333333333,
+  "mean_forced_recovery_error": 0.05416666666666667
+}

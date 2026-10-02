@@ -1,0 +1,289 @@
+{
+  "status": "SYNTHETIC ONLY; no LLM inference or empirical bias result",
+  "seed": 20260908,
+  "examples": {
+    "binary_selection_only_despite_opposite_answered_majorities": {
+      "unconditional_probabilities": [
+        [
+          0.45,
+          0.05
+        ],
+        [
+          0.05,
+          0.45
+        ]
+      ],
+      "pure_suppression_compatible": true,
+      "necessary_dependence": 0.0,
+      "common_mass_by_category": [
+        0.55,
+        0.45
+      ],
+      "witness_completed_laws": [
+        [
+          0.55,
+          0.45
+        ],
+        [
+          0.55,
+          0.45
+        ]
+      ]
+    },
+    "binary_irreducible_difference": {
+      "unconditional_probabilities": [
+        [
+          0.7,
+          0.1
+        ],
+        [
+          0.1,
+          0.65
+        ]
+      ],
+      "pure_suppression_compatible": false,
+      "necessary_dependence": 0.35,
+      "common_mass_by_category": [
+        0.35,
+        0.30000000000000004
+      ],
+      "witness_completed_laws": [
+        [
+          0.7,
+          0.30000000000000004
+        ],
+        [
+          0.35,
+          0.65
+        ]
+      ]
+    },
+    "three_way_failure_all_pairs_pass": {
+      "unconditional_probabilities": [
+        [
+          0.4,
+          0,
+          0
+        ],
+        [
+          0,
+          0.4,
+          0
+        ],
+        [
+          0,
+          0,
+          0.4
+        ]
+      ],
+      "pure_suppression_compatible": false,
+      "necessary_dependence": 0.1,
+      "common_mass_by_category": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "witness_completed_laws": [
+        [
+          0.4,
+          0.3,
+          0.3
+        ],
+        [
+          0.3,
+          0.4,
+          0.3
+        ],
+        [
+          0.3,
+          0.3,
+          0.4
+        ]
+      ]
+    },
+    "fully_observed_identical": {
+      "unconditional_probabilities": [
+        [
+          0.2,
+          0.3,
+          0.5
+        ],
+        [
+          0.2,
+          0.3,
+          0.5
+        ],
+        [
+          0.2,
+          0.3,
+          0.5
+        ]
+      ],
+      "pure_suppression_compatible": true,
+      "necessary_dependence": 0.0,
+      "common_mass_by_category": [
+        0.2,
+        0.3,
+        0.5
+      ],
+      "witness_completed_laws": [
+        [
+          0.2,
+          0.3,
+          0.5
+        ],
+        [
+          0.2,
+          0.3,
+          0.5
+        ],
+        [
+          0.2,
+          0.3,
+          0.5
+        ]
+      ]
+    },
+    "fully_observed_disjoint": {
+      "unconditional_probabilities": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pure_suppression_compatible": false,
+      "necessary_dependence": 1.0,
+      "common_mass_by_category": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "witness_completed_laws": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "all_unobserved": {
+      "unconditional_probabilities": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "pure_suppression_compatible": true,
+      "necessary_dependence": 0.0,
+      "common_mass_by_category": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "witness_completed_laws": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    "agreed_rewriting_invisible_without_anchor": {
+      "unconditional_probabilities": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "pure_suppression_compatible": true,
+      "necessary_dependence": 0.0,
+      "common_mass_by_category": [
+        1.0,
+        -0.0
+      ],
+      "witness_completed_laws": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ]
+    }
+  },
+  "aggregation_counterexample": {
+    "per_item_dependence": [
+      0.3999999999999999,
+      0.3999999999999999
+    ],
+    "pooled_dependence": 0.0
+  },
+  "randomized_independent_LP_comparisons_passed": 150,
+  "synthetic_counts_three_way_95pct_lower_bound": 0.05829208774111472,
+  "null_boundary_simulation": {
+    "trials": 1000,
+    "samples_per_condition": 500,
+    "naive_positive_count": 1000,
+    "certified_positive_count": 0
+  },
+  "common_mode_blind_spot": {
+    "independent_reference_law": [
+      0.5,
+      0.5
+    ],
+    "each_agreed_intervention_law": [
+      1,
+      0
+    ],
+    "actual_TV_from_reference": 0.5,
+    "unanchored_necessary_dependence": 0
+  }
+}

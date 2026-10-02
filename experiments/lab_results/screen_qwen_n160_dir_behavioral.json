@@ -1,0 +1,20 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "n_items": 160,
+  "n_draws": 16,
+  "n_naive_compatible": 129,
+  "frac_naive_compatible": 0.80625,
+  "n_corrected_compatible": 158,
+  "frac_corrected_compatible": 0.9875,
+  "mean_naive_gamma_star": 0.071484375,
+  "mean_corrected_gamma_star": 0.0009968891761164556,
+  "median_corrected_gamma_star": 0.0,
+  "n_corrected_gamma_star_zero": 158,
+  "mean_direct_recovery_error": 0.140625,
+  "mean_forced_recovery_error": 0.03671875,
+  "direction": {
+    "source": "behavioral",
+    "n_abstained": 18,
+    "n_answered": 142
+  }
+}

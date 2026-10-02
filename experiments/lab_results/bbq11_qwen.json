@@ -1,0 +1,64 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "n_items": 2200,
+  "categories": [
+    "Age",
+    "Disability_status",
+    "Gender_identity",
+    "Nationality",
+    "Physical_appearance",
+    "Race_ethnicity",
+    "Race_x_SES",
+    "Race_x_gender",
+    "Religion",
+    "SES",
+    "Sexual_orientation"
+  ],
+  "baseline": {
+    "n_scored": 2200,
+    "n_unparsed": 0,
+    "accuracy": 0.9481818181818182,
+    "abstention_rate": 0.9481818181818182,
+    "n_committed": 114,
+    "b_direct": 0.631578947368421,
+    "s_AMB": 0.03272727272727269,
+    "b_recovered": 0.631578947368421,
+    "identified_lo": 0.042272727272727226,
+    "identified_width": 0.9481818181818182
+  },
+  "instructed": {
+    "n_scored": 2200,
+    "n_unparsed": 0,
+    "accuracy": 0.9968181818181818,
+    "abstention_rate": 0.9968181818181818,
+    "n_committed": 7,
+    "b_direct": 1.0,
+    "s_AMB": 0.0031818181818181746,
+    "b_recovered": 1.0,
+    "identified_lo": 0.0031818181818181746,
+    "identified_width": 0.9968181818181818
+  },
+  "forced_generated": {
+    "n_scored": 2093,
+    "n_unparsed": 107,
+    "b_forced": 0.2517916865742953,
+    "refusal_rate_under_forcing": 0.04863636363636364
+  },
+  "forced_logprob": {
+    "n_scored": 2200,
+    "n_unparsed": 0,
+    "b_forced": 0.24454545454545462
+  },
+  "reported_delta_s_AMB": -0.029545454545454514,
+  "coverage_component": -0.030717703349282265,
+  "disposition_component": 0.0011722488038277486,
+  "mechanical_fraction": 1.0396761133603238,
+  "identified_width_before": 0.9481818181818182,
+  "identified_width_after": 0.9968181818181818,
+  "manski_lo": 0.042272727272727226,
+  "manski_hi": 0.9904545454545455,
+  "manski_width": 0.9481818181818182,
+  "forced_biased_rate": 0.6222727272727273,
+  "forced_rate_inside_interval": true,
+  "committed_subset_matches_forced": 0.1935167464114832
+}

@@ -1,0 +1,20 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "n_items": 480,
+  "n_draws": 16,
+  "n_naive_compatible": 374,
+  "frac_naive_compatible": 0.7791666666666667,
+  "n_corrected_compatible": 479,
+  "frac_corrected_compatible": 0.9979166666666667,
+  "mean_naive_gamma_star": 0.07578125,
+  "mean_corrected_gamma_star": 1.6874882523669013e-05,
+  "median_corrected_gamma_star": 0.0,
+  "n_corrected_gamma_star_zero": 479,
+  "mean_direct_recovery_error": 0.1390625,
+  "mean_forced_recovery_error": 0.04544270833333333,
+  "direction": {
+    "source": "behavioral",
+    "n_abstained": 58,
+    "n_answered": 422
+  }
+}

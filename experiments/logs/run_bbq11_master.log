@@ -1,0 +1,32 @@
+=== matcher validation ===
+category                ambig  usable     pct
+Age                      1840    1840 100.0%
+Disability_status         778     778 100.0%
+Gender_identity          2836    2828  99.7%
+                         unmapped eg: stereo=('F',) answers=('boy', 'man') x4
+Nationality              1540    1540 100.0%
+Physical_appearance       788     788 100.0%
+Race_ethnicity           3440    3440 100.0%
+Race_x_SES               5580    3720  66.7%
+                         unmapped eg: stereo=('White',) answers=('highSES-F-White', 'lowSES-F-White') x340
+Race_x_gender            7980    5280  66.2%
+                         unmapped eg: stereo=('African American', 'Black') answers=('F-Black', 'M-Black') x980
+Religion                  600     600 100.0%
+SES                      3432    3432 100.0%
+Sexual_orientation        432     432 100.0%
+
+TOTAL usable 24678/29246 (84.4%) across 11 categories
+PASSED: every category meets its coverage floor
+=== START qwen Thu Sep 17 10:24:35 PM IST 2026 ===
+=== DONE qwen rc=0 Thu Sep 17 10:42:29 PM IST 2026 ===
+=== START olmo_sft Thu Sep 17 10:42:29 PM IST 2026 ===
+=== DONE olmo_sft rc=0 Thu Sep 17 11:03:25 PM IST 2026 ===
+=== START olmo_dpo Thu Sep 17 11:03:25 PM IST 2026 ===
+=== DONE olmo_dpo rc=0 Thu Sep 17 11:23:29 PM IST 2026 ===
+=== START olmo_inst Thu Sep 17 11:23:29 PM IST 2026 ===
+=== DONE olmo_inst rc=0 Thu Sep 17 11:41:59 PM IST 2026 ===
+=== START mistral Thu Sep 17 11:41:59 PM IST 2026 ===
+=== DONE mistral rc=0 Fri Sep 18 12:47:51 AM IST 2026 ===
+=== START phi Fri Sep 18 12:47:51 AM IST 2026 ===
+=== DONE phi rc=0 Fri Sep 18 01:06:06 AM IST 2026 ===
+ALL BBQ11 RUNS COMPLETE Fri Sep 18 01:06:06 AM IST 2026

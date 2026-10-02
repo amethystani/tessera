@@ -1,0 +1,90 @@
+{
+  "reps": 500,
+  "seed": 20260917,
+  "results": [
+    {
+      "file": "screen_mistral_n30_d16_per_item.csv",
+      "n_items": 30,
+      "n_draws": 16,
+      "observed_naive_incompatible": 3,
+      "null_naive_mean": 3.342,
+      "null_naive_p95": 4.0,
+      "p_value_naive": 0.884,
+      "observed_corrected_incompatible": 0,
+      "null_corrected_mean": 0.0,
+      "p_value_corrected": 1.0
+    },
+    {
+      "file": "screen_n30_d16_per_item.csv",
+      "n_items": 30,
+      "n_draws": 16,
+      "observed_naive_incompatible": 5,
+      "null_naive_mean": 4.276,
+      "null_naive_p95": 5.0,
+      "p_value_naive": 0.444,
+      "observed_corrected_incompatible": 0,
+      "null_corrected_mean": 0.0,
+      "p_value_corrected": 1.0
+    },
+    {
+      "file": "screen_olmo_dpo_n30_d16_per_item.csv",
+      "n_items": 30,
+      "n_draws": 16,
+      "observed_naive_incompatible": 12,
+      "null_naive_mean": 11.856,
+      "null_naive_p95": 13.0,
+      "p_value_naive": 0.684,
+      "observed_corrected_incompatible": 0,
+      "null_corrected_mean": 0.0,
+      "p_value_corrected": 1.0
+    },
+    {
+      "file": "screen_olmo_n30_d16_per_item.csv",
+      "n_items": 30,
+      "n_draws": 16,
+      "observed_naive_incompatible": 11,
+      "null_naive_mean": 9.908,
+      "null_naive_p95": 11.0,
+      "p_value_naive": 0.26,
+      "observed_corrected_incompatible": 0,
+      "null_corrected_mean": 0.0,
+      "p_value_corrected": 1.0
+    },
+    {
+      "file": "screen_olmo_sft_n30_d16_per_item.csv",
+      "n_items": 30,
+      "n_draws": 16,
+      "observed_naive_incompatible": 16,
+      "null_naive_mean": 14.796,
+      "null_naive_p95": 16.0,
+      "p_value_naive": 0.282,
+      "observed_corrected_incompatible": 0,
+      "null_corrected_mean": 0.0,
+      "p_value_corrected": 1.0
+    },
+    {
+      "file": "screen_phi_n30_d16_per_item.csv",
+      "n_items": 30,
+      "n_draws": 16,
+      "observed_naive_incompatible": 4,
+      "null_naive_mean": 3.904,
+      "null_naive_p95": 4.0,
+      "p_value_naive": 0.906,
+      "observed_corrected_incompatible": 3,
+      "null_corrected_mean": 0.0,
+      "p_value_corrected": 0.0
+    },
+    {
+      "file": "screen_qwen_n80_d16_confirm_per_item.csv",
+      "n_items": 80,
+      "n_draws": 16,
+      "observed_naive_incompatible": 17,
+      "null_naive_mean": 14.92,
+      "null_naive_p95": 17.0,
+      "p_value_naive": 0.124,
+      "observed_corrected_incompatible": 0,
+      "null_corrected_mean": 0.0,
+      "p_value_corrected": 1.0
+    }
+  ]
+}

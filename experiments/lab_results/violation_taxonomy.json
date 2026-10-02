@@ -1,0 +1,78 @@
+[
+  {
+    "file": "screen_mistral_n30_d16_per_item.csv",
+    "n_items": 30,
+    "n_corrected_incompatible": 0,
+    "counts": {}
+  },
+  {
+    "file": "screen_n30_d16_per_item.csv",
+    "n_items": 30,
+    "n_corrected_incompatible": 0,
+    "counts": {}
+  },
+  {
+    "file": "screen_olmo_dpo_n30_d16_per_item.csv",
+    "n_items": 30,
+    "n_corrected_incompatible": 0,
+    "counts": {}
+  },
+  {
+    "file": "screen_olmo_n30_d16_per_item.csv",
+    "n_items": 30,
+    "n_corrected_incompatible": 0,
+    "counts": {}
+  },
+  {
+    "file": "screen_olmo_sft_n30_d16_per_item.csv",
+    "n_items": 30,
+    "n_corrected_incompatible": 0,
+    "counts": {}
+  },
+  {
+    "file": "screen_phi_n30_d16_per_item.csv",
+    "n_items": 30,
+    "n_corrected_incompatible": 3,
+    "counts": {
+      "instrument_failure": 3
+    },
+    "items": [
+      {
+        "sentid": "scientist.someone.0.male.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.1988396255764726
+      },
+      {
+        "sentid": "practitioner.patient.0.female.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.1018507547152731
+      },
+      {
+        "sentid": "machinist.child.1.female.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.1988396255764726
+      }
+    ]
+  },
+  {
+    "file": "screen_qwen_n160_d16_per_item.csv",
+    "n_items": 160,
+    "n_corrected_incompatible": 1,
+    "counts": {
+      "policy_effect": 1
+    },
+    "items": [
+      {
+        "sentid": "counselor.patient.0.female.txt",
+        "pattern": "policy_effect",
+        "gamma_star": 0.0797511340893164
+      }
+    ]
+  },
+  {
+    "file": "screen_qwen_n80_d16_confirm_per_item.csv",
+    "n_items": 80,
+    "n_corrected_incompatible": 0,
+    "counts": {}
+  }
+]

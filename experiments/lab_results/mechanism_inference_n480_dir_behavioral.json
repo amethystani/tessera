@@ -1,0 +1,62 @@
+{
+  "reps": 10000,
+  "seed": 20260917,
+  "results": [
+    {
+      "file": "screen_mistral_n480_dir_behavioral_per_item.csv",
+      "metric": "direct_err",
+      "n_someone": 240,
+      "n_named": 240,
+      "mean_someone": 0.06927083333333334,
+      "mean_named": 0.09973958333333334,
+      "difference": -0.030468750000000003,
+      "ci_lo": -0.06692708333333335,
+      "ci_hi": 0.004687499999999997,
+      "p_permutation": 0.1013,
+      "significant_at_05": false,
+      "ci_excludes_zero": false
+    },
+    {
+      "file": "screen_mistral_n480_dir_behavioral_per_item.csv",
+      "metric": "forced_err",
+      "n_someone": 240,
+      "n_named": 240,
+      "mean_someone": 0.0375,
+      "mean_named": 0.06041666666666667,
+      "difference": -0.02291666666666667,
+      "ci_lo": -0.052343749999999994,
+      "ci_hi": 0.005989583333333333,
+      "p_permutation": 0.1302,
+      "significant_at_05": false,
+      "ci_excludes_zero": false
+    },
+    {
+      "file": "screen_qwen_n480_dir_behavioral_per_item.csv",
+      "metric": "direct_err",
+      "n_someone": 240,
+      "n_named": 240,
+      "mean_someone": 0.2140625,
+      "mean_named": 0.0640625,
+      "difference": 0.15,
+      "ci_lo": 0.10572916666666665,
+      "ci_hi": 0.1958333333333333,
+      "p_permutation": 0.0,
+      "significant_at_05": true,
+      "ci_excludes_zero": true
+    },
+    {
+      "file": "screen_qwen_n480_dir_behavioral_per_item.csv",
+      "metric": "forced_err",
+      "n_someone": 240,
+      "n_named": 240,
+      "mean_someone": 0.07734375,
+      "mean_named": 0.013541666666666667,
+      "difference": 0.06380208333333334,
+      "ci_lo": 0.043229166666666666,
+      "ci_hi": 0.0859375,
+      "p_permutation": 0.0,
+      "significant_at_05": true,
+      "ci_excludes_zero": true
+    }
+  ]
+}

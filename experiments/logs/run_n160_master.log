@@ -1,0 +1,13 @@
+=== START qwen Thu Sep 17 01:51:04 AM IST 2026 ===
+=== DONE qwen rc=0 Thu Sep 17 02:04:58 AM IST 2026 ===
+=== START olmo_sft Thu Sep 17 02:04:58 AM IST 2026 ===
+=== DONE olmo_sft rc=0 Thu Sep 17 02:23:57 AM IST 2026 ===
+=== START olmo_dpo Thu Sep 17 02:23:57 AM IST 2026 ===
+=== DONE olmo_dpo rc=0 Thu Sep 17 02:39:30 AM IST 2026 ===
+=== START olmo_inst Thu Sep 17 02:39:30 AM IST 2026 ===
+=== DONE olmo_inst rc=0 Thu Sep 17 02:57:22 AM IST 2026 ===
+=== START mistral Thu Sep 17 02:57:22 AM IST 2026 ===
+=== DONE mistral rc=0 Thu Sep 17 03:15:46 AM IST 2026 ===
+=== START phi Thu Sep 17 03:15:46 AM IST 2026 ===
+=== DONE phi rc=0 Thu Sep 17 03:29:33 AM IST 2026 ===
+ALL RUNS COMPLETE Thu Sep 17 03:29:33 AM IST 2026

@@ -1,0 +1,23 @@
+{
+  "n_sampled": 161,
+  "per_cell": 6,
+  "seed": 20260927,
+  "n_strata": 12,
+  "agreement_rate_overall": 1.0,
+  "agreement_rate_by_outcome": {
+    "abstained": {
+      "mean": 1.0,
+      "count": 72
+    },
+    "answered": {
+      "mean": 1.0,
+      "count": 72
+    },
+    "unparsed": {
+      "mean": 1.0,
+      "count": 17
+    }
+  },
+  "n_disagreements": 0,
+  "note": "Agreement with an independently-implemented classifier, not ground truth by itself; see docstring for the manual read that additionally confirmed correctness on a sub-sample."
+}

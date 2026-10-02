@@ -1,0 +1,194 @@
+[
+  {
+    "file": "screen_mistral_n480_d16_per_item.csv",
+    "n_items": 480,
+    "n_corrected_incompatible": 0,
+    "counts": {}
+  },
+  {
+    "file": "screen_olmo_dpo_n480_d16_per_item.csv",
+    "n_items": 480,
+    "n_corrected_incompatible": 0,
+    "counts": {}
+  },
+  {
+    "file": "screen_olmo_inst_n480_d16_per_item.csv",
+    "n_items": 480,
+    "n_corrected_incompatible": 0,
+    "counts": {}
+  },
+  {
+    "file": "screen_olmo_sft_n480_d16_per_item.csv",
+    "n_items": 480,
+    "n_corrected_incompatible": 0,
+    "counts": {}
+  },
+  {
+    "file": "screen_phi_n480_d16_per_item.csv",
+    "n_items": 480,
+    "n_corrected_incompatible": 25,
+    "counts": {
+      "instrument_failure": 22,
+      "policy_effect": 2,
+      "forced_outlier": 1
+    },
+    "items": [
+      {
+        "sentid": "scientist.someone.0.male.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0080999436113611
+      },
+      {
+        "sentid": "machinist.child.1.female.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0080999436113611
+      },
+      {
+        "sentid": "officer.protester.1.male.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0080999436113611
+      },
+      {
+        "sentid": "manager.someone.0.male.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0080999436113611
+      },
+      {
+        "sentid": "firefighter.child.1.male.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0080999436113611
+      },
+      {
+        "sentid": "electrician.homeowner.1.female.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0080999436113611
+      },
+      {
+        "sentid": "educator.student.0.female.txt",
+        "pattern": "policy_effect",
+        "gamma_star": 0.0080999436113611
+      },
+      {
+        "sentid": "salesperson.someone.1.male.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0080999436113611
+      },
+      {
+        "sentid": "psychologist.patient.1.female.txt",
+        "pattern": "policy_effect",
+        "gamma_star": 0.0080999436113611
+      },
+      {
+        "sentid": "receptionist.someone.1.male.txt",
+        "pattern": "forced_outlier",
+        "gamma_star": 0.0080999436113611
+      },
+      {
+        "sentid": "scientist.someone.0.female.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0080999436113611
+      },
+      {
+        "sentid": "manager.someone.0.female.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0080999436113611
+      },
+      {
+        "sentid": "appraiser.buyer.1.female.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0080999436113611
+      },
+      {
+        "sentid": "receptionist.someone.0.female.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0080999436113611
+      },
+      {
+        "sentid": "architect.someone.0.female.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0080999436113611
+      },
+      {
+        "sentid": "salesperson.someone.1.female.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0080999436113611
+      },
+      {
+        "sentid": "technician.someone.1.male.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0080999436113611
+      },
+      {
+        "sentid": "architect.someone.1.male.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0080999436113611
+      },
+      {
+        "sentid": "receptionist.someone.1.female.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0080999436113611
+      },
+      {
+        "sentid": "administrator.undergraduate.0.male.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0080999436113611
+      },
+      {
+        "sentid": "architect.someone.0.male.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0080999436113611
+      },
+      {
+        "sentid": "officer.protester.0.female.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0080999436113611
+      },
+      {
+        "sentid": "architect.student.1.male.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0080999436113611
+      },
+      {
+        "sentid": "teacher.someone.1.female.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0080999436113611
+      },
+      {
+        "sentid": "administrator.someone.0.male.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0080999436113611
+      }
+    ]
+  },
+  {
+    "file": "screen_qwen_n480_d16_per_item.csv",
+    "n_items": 480,
+    "n_corrected_incompatible": 4,
+    "counts": {
+      "instrument_failure": 3,
+      "policy_effect": 1
+    },
+    "items": [
+      {
+        "sentid": "counselor.patient.0.female.txt",
+        "pattern": "policy_effect",
+        "gamma_star": 0.0080999436113611
+      },
+      {
+        "sentid": "hairdresser.client.1.male.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0080999436113611
+      },
+      {
+        "sentid": "chef.someone.1.male.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0080999436113611
+      },
+      {
+        "sentid": "educator.student.1.male.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0080999436113611
+      }
+    ]
+  }
+]

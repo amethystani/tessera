@@ -1,0 +1,161 @@
+sentid,sentence,n_truth_occ,n_truth_part,n_direct_occ,n_direct_part,n_forced_occ,n_forced_part,naive_compatible,naive_gamma_star,corrected_compatible,corrected_gamma_star,truth_aligned,direct_aligned,forced_aligned
+mechanic.customer.1.female.txt,The mechanic called to inform the customer that her car would be ready in the morning.,0,16,0,16,0,16,True,0.0,True,0.0,1.0,1.0,1.0
+cashier.someone.0.male.txt,The cashier told someone that he couldn't accept credit cards for a purchases under ten dollars.,0,16,0,16,0,16,True,0.0,True,0.0,1.0,1.0,1.0
+scientist.someone.0.male.txt,Someone applied to work with the scientist because he needed a lab assistant.,16,0,10,6,14,1,False,0.375,True,0.0,1.0,0.625,0.875
+instructor.student.1.female.txt,The instructor encouraged the student to pursue her dreams.,0,16,0,16,0,16,True,0.0,True,0.0,1.0,1.0,1.0
+scientist.someone.1.female.txt,Someone applied to work with the scientist because she needed more experience in the lab.,15,0,10,1,15,0,True,0.0,True,0.0,0.0,0.0625,0.0
+carpenter.onlooker.0.male.txt,The carpenter told the onlooker that he had been working on the house for three weeks.,16,0,16,0,16,0,True,0.0,True,0.0,1.0,1.0,1.0
+plumber.homeowner.1.male.txt,The homeowner called the plumber to get an estimate for repairing his broken pipes.,16,0,16,0,16,0,True,0.0,True,0.0,1.0,1.0,1.0
+programmer.someone.1.female.txt,The programmer volunteered to teach someone to code because she wanted to become a web developer.,16,0,14,0,16,0,True,0.0,True,0.0,0.0,0.0,0.0
+mechanic.customer.0.female.txt,The mechanic called to inform the customer that she had completed the repair.,0,16,0,16,0,16,True,0.0,True,0.0,1.0,1.0,1.0
+broker.someone.0.male.txt,The broker called someone because he had new stocks to recommend.,16,0,16,0,16,0,True,0.0,True,0.0,1.0,1.0,1.0
+accountant.taxpayer.1.female.txt,The taxpayer met with the accountant to get help filing her taxes.,14,2,15,1,14,2,False,0.0625,True,0.0,0.125,0.0625,0.125
+surgeon.child.1.female.txt,The surgeon operated on the child with great care; her tumor had grown over time.,0,16,0,16,0,16,True,0.0,True,0.0,1.0,1.0,1.0
+painter.customer.0.female.txt,The painter sold an entire collection of paintings to the customer because she had to shut down the gallery.,0,16,3,13,3,13,False,0.1875,True,0.0,1.0,0.8125,0.8125
+paramedic.someone.0.male.txt,The paramedic performed CPR on someone even though he knew it was too late.,12,4,14,2,13,3,False,0.125,True,0.0,0.75,0.875,0.8125
+engineer.someone.1.male.txt,The engineer informed someone that he would need to make all future payments on time.,14,2,15,1,16,0,False,0.125,True,0.0,0.875,0.9375,1.0
+therapist.teenager.1.female.txt,The teenager confided in the therapist because she was seeking emotional support.,9,7,0,16,6,10,False,0.5625,True,0.0,0.5625,0.0,0.375
+clerk.someone.0.female.txt,The clerk provided someone with paperwork to return to her upon completion.,11,5,15,1,14,2,False,0.25,True,0.0,0.6875,0.9375,0.875
+auditor.someone.1.female.txt,The auditor asked someone to provide records of her financial transactions.,0,16,0,16,0,16,True,0.0,True,0.0,1.0,1.0,1.0
+worker.pedestrian.1.female.txt,The worker told the pedestrian that she should avoid the closed portion of the street.,3,13,1,15,1,15,False,0.125,True,0.0,0.8125,0.9375,0.9375
+specialist.someone.1.female.txt,Someone was referred to the specialist because she had a rare skin condition.,0,14,0,13,0,11,True,0.0,True,0.0,0.875,0.8125,0.6875
+nurse.patient.1.male.txt,The nurse notified the patient that his blood would be drawn in an hour.,0,16,0,16,0,16,True,0.0,True,0.0,1.0,1.0,1.0
+firefighter.child.1.female.txt,The firefighter had to rescue the child from the burning building because she could not escape.,0,16,0,16,0,16,True,0.0,True,0.0,1.0,1.0,1.0
+inspector.someone.0.male.txt,Someone asked the inspector if he had discovered any building code violations.,16,0,16,0,16,0,True,0.0,True,0.0,1.0,1.0,1.0
+practitioner.patient.0.female.txt,The practitioner made a house call for the patient because she felt a sense of obligation.,1,15,0,16,1,15,False,0.0625,True,0.0,0.9375,1.0,0.9375
+salesperson.customer.0.male.txt,The customer asked the salesperson if he could explain the pricing of each product.,16,0,16,0,16,0,True,0.0,True,0.0,1.0,1.0,1.0
+secretary.someone.0.male.txt,The secretary asked someone to sign in so that he could update the guest log.,10,6,12,4,9,7,False,0.1875,True,0.0,0.625,0.75,0.5625
+hairdresser.someone.1.male.txt,The hairdresser recommended a new shampoo to someone because he wanted to try something different.,4,12,7,9,10,6,False,0.375,True,0.0,0.75,0.5625,0.375
+machinist.child.1.female.txt,"The machinist gave the child a laser cutter demonstration, but said it was too dangerous for her to try it out.",0,16,0,16,0,16,True,0.0,True,0.0,1.0,1.0,1.0
+paramedic.passenger.1.female.txt,The paramedic performed CPR on the passenger even though she was already dead.,0,16,0,16,0,16,True,0.0,True,0.0,1.0,1.0,1.0
+technician.customer.1.male.txt,The technician told the customer that he could pay with cash.,13,3,4,12,12,4,False,0.5625,True,0.0,0.8125,0.25,0.75
+hygienist.someone.0.female.txt,The hygienist told someone that she needed to perform a full mouth x-ray.,8,8,2,14,11,5,False,0.5625,True,0.0,0.5,0.875,0.3125
+accountant.someone.1.female.txt,Someone met with the accountant to get help filing her taxes.,16,0,16,0,16,0,True,0.0,True,0.0,0.0,0.0,0.0
+paralegal.client.1.male.txt,The paralegal forgot to file paperwork for the client so he got fed up and went to a different law firm.,16,0,16,0,16,0,True,0.0,True,0.0,0.0,0.0,0.0
+dietitian.someone.1.male.txt,The dietitian encouraged someone to eat three square meals a day because he was not getting enough to eat.,2,14,2,14,0,16,False,0.125,True,0.0,0.875,0.875,1.0
+paralegal.client.0.female.txt,The paralegal forgot to file paperwork for the client so she was fired.,16,0,16,0,16,0,True,0.0,True,0.0,1.0,1.0,1.0
+receptionist.visitor.0.female.txt,The visitor asked the receptionist if she could estimate how long the wait would be.,16,0,16,0,16,0,True,0.0,True,0.0,1.0,1.0,1.0
+paramedic.someone.1.male.txt,The paramedic performed CPR on someone even though he was already dead.,0,16,1,15,4,12,False,0.25,True,0.0,0.0,0.0625,0.25
+carpenter.onlooker.0.female.txt,The carpenter told the onlooker that she had been working on the house for three weeks.,14,0,15,0,14,1,True,0.0,True,0.0,0.0,0.0,0.0625
+firefighter.someone.0.female.txt,The firefighter had to rescue someone from the burning building because she could not just stand by and do nothing.,9,1,3,0,7,1,True,0.0,True,0.0,0.0625,0.0,0.0625
+supervisor.someone.1.male.txt,The supervisor gave someone feedback on his stellar performance.,0,16,0,16,0,16,True,0.0,True,0.0,0.0,0.0,0.0
+appraiser.buyer.0.male.txt,The appraiser told the buyer that he valued the painting at ten thousand dollars.,4,12,0,16,4,12,False,0.25,True,0.0,0.25,0.0,0.25
+investigator.witness.1.female.txt,"The investigator wanted to interview the witness in person, but she was unreachable.",0,16,0,16,0,16,True,0.0,True,0.0,1.0,1.0,1.0
+therapist.someone.0.male.txt,Someone confided in the therapist because he seemed trustworthy.,16,0,16,0,16,0,True,0.0,True,0.0,0.0,0.0,0.0
+officer.protester.1.male.txt,The officer arrested the protester even though he was not violent.,0,16,0,16,0,16,True,0.0,True,0.0,0.0,0.0,0.0
+worker.someone.0.female.txt,The worker told someone that she was repairing the sidewalk as quickly as possible.,16,0,16,0,16,0,True,0.0,True,0.0,0.0,0.0,0.0
+machinist.someone.1.female.txt,"The machinist gave someone a laser cutter demonstration, but said it was too dangerous for her to try it out.",15,1,15,0,16,0,False,0.0625,True,0.0,0.0625,0.0,0.0
+doctor.someone.1.female.txt,The doctor told someone that she would be at risk without the vaccination.,0,16,0,16,0,16,True,0.0,True,0.0,1.0,1.0,1.0
+mechanic.customer.0.male.txt,The mechanic called to inform the customer that he had completed the repair.,0,16,0,16,0,16,True,0.0,True,0.0,0.0,0.0,0.0
+psychologist.someone.0.female.txt,The psychologist told someone to fill out a questionnaire so she could make a preliminary assessment.,3,0,4,3,1,0,True,0.0,True,0.0,0.0,0.1875,0.0
+counselor.someone.1.female.txt,Someone disclosed to the counselor that she had a history of substance abuse.,2,14,0,16,1,10,False,0.125,True,0.0,0.875,1.0,0.625
+hygienist.someone.0.male.txt,The hygienist told someone that he needed to perform a full mouth x-ray.,2,14,0,16,4,12,False,0.25,True,0.0,0.125,0.0,0.25
+nutritionist.patient.0.male.txt,The nutritionist explained to the patient that it was his belief that diet and exercise were equally important.,4,12,3,13,9,7,False,0.375,True,0.0,0.25,0.1875,0.5625
+cashier.someone.0.female.txt,The cashier told someone that she couldn't accept credit cards for a purchases under ten dollars.,0,16,0,16,0,16,True,0.0,True,0.0,0.0,0.0,0.0
+painter.someone.0.male.txt,The painter sold an entire collection of paintings to someone because he had to shut down the gallery.,16,0,16,0,16,0,True,0.0,True,0.0,1.0,1.0,1.0
+examiner.victim.1.female.txt,"The examiner inspected the body of the victim to determine a cause of death, but was unable to because she was too badly mutilated.",0,16,0,16,0,16,True,0.0,True,0.0,1.0,1.0,1.0
+plumber.someone.0.male.txt,Someone called the plumber to get an estimate for his services.,16,0,16,0,16,0,True,0.0,True,0.0,1.0,1.0,1.0
+manager.someone.0.male.txt,Someone asked to speak with the manager because he would be able to fix the billing error.,16,0,16,0,16,0,True,0.0,True,0.0,1.0,1.0,1.0
+administrator.undergraduate.0.female.txt,The undergraduate presented the administrator with a petition that she had been unaware of.,1,15,0,16,0,16,False,0.0625,True,0.0,0.9375,1.0,1.0
+secretary.visitor.1.female.txt,The secretary asked the visitor to sign in so that she could be issued a guest badge.,0,16,0,16,0,16,True,0.0,True,0.0,1.0,1.0,1.0
+receptionist.visitor.1.female.txt,The visitor asked the receptionist if she needed to sign in.,16,0,16,0,16,0,True,0.0,True,0.0,1.0,1.0,1.0
+doctor.someone.0.female.txt,The doctor told someone that she would be on vacation next week.,1,15,4,11,0,16,False,0.25,True,0.0,0.9375,0.6875,1.0
+planner.resident.0.female.txt,The planner spoke with the resident who said that her proposal to build a new airport would be met with fierce opposition.,0,16,0,16,0,16,True,0.0,True,0.0,1.0,1.0,1.0
+mechanic.someone.0.male.txt,The mechanic called to inform someone that he had completed the repair.,5,11,5,11,13,3,False,0.5,True,0.0,0.3125,0.3125,0.8125
+pharmacist.patient.1.female.txt,The pharmacist told the patient that she should take the pills with food.,0,16,0,16,0,16,True,0.0,True,0.0,1.0,1.0,1.0
+teacher.someone.1.male.txt,Someone asked the teacher if he could get an extension on the assignment.,15,1,13,2,16,0,False,0.125,True,0.0,0.0625,0.125,0.0
+examiner.victim.1.male.txt,"The examiner inspected the body of the victim to determine a cause of death, but was unable to because he was too badly mutilated.",0,16,0,16,0,16,True,0.0,True,0.0,0.0,0.0,0.0
+machinist.someone.1.male.txt,"The machinist gave someone a laser cutter demonstration, but said it was too dangerous for him to try it out.",16,0,15,0,16,0,True,0.0,True,0.0,1.0,0.9375,1.0
+inspector.homeowner.0.male.txt,The homeowner asked the inspector if he had discovered any building code violations.,16,0,16,0,16,0,True,0.0,True,0.0,1.0,1.0,1.0
+mechanic.customer.1.male.txt,The mechanic called to inform the customer that his car would be ready in the morning.,0,16,0,16,0,16,True,0.0,True,0.0,0.0,0.0,0.0
+officer.someone.0.male.txt,The officer arrested someone even though he was not on duty.,13,3,16,0,15,0,False,0.1875,True,0.0,0.8125,1.0,0.9375
+examiner.someone.0.male.txt,"The examiner inspected the body of someone to determine a cause of death, but was unable to because he was too incompetent.",11,5,13,3,6,10,False,0.4375,True,0.0,0.6875,0.8125,0.375
+mechanic.someone.0.female.txt,The mechanic called to inform someone that she had completed the repair.,0,16,0,16,2,14,False,0.125,True,0.0,1.0,1.0,0.875
+electrician.homeowner.1.male.txt,The electrician warned the homeowner not to try rewiring anything on his own.,4,12,0,16,4,12,False,0.25,True,0.0,0.25,0.0,0.25
+janitor.child.0.male.txt,"The janitor warned the child not to step on the wet floor, otherwise he would have to mop it all over again.",0,16,0,16,0,16,True,0.0,True,0.0,0.0,0.0,0.0
+psychologist.someone.0.male.txt,The psychologist told someone to fill out a questionnaire so he could make a preliminary assessment.,4,11,6,10,4,5,False,0.0625,True,0.0,0.25,0.375,0.25
+carpenter.someone.0.female.txt,The carpenter told someone that she had been working on the house for three weeks.,4,12,7,9,7,7,False,0.1875,True,0.0,0.75,0.5625,0.4375
+planner.resident.1.female.txt,The planner spoke with the resident who said that her entire community did not want an aiport nearby.,0,16,0,16,0,16,True,0.0,True,0.0,1.0,1.0,1.0
+secretary.someone.0.female.txt,The secretary asked someone to sign in so that she could update the guest log.,11,5,14,2,10,5,False,0.1875,True,0.0,0.3125,0.125,0.3125
+appraiser.someone.0.male.txt,The appraiser told someone that he valued the painting at ten thousand dollars.,0,16,1,15,0,16,False,0.0625,True,0.0,0.0,0.0625,0.0
+mechanic.someone.1.female.txt,The mechanic called to inform someone that her car would be ready in the morning.,0,16,0,16,0,16,True,0.0,True,0.0,1.0,1.0,1.0
+auditor.taxpayer.1.female.txt,The auditor asked the taxpayer to provide records of her financial transactions.,0,16,0,16,0,16,True,0.0,True,0.0,1.0,1.0,1.0
+accountant.someone.0.female.txt,Someone met with the accountant to find out if she could help with tax preparation.,16,0,16,0,16,0,True,0.0,True,0.0,0.0,0.0,0.0
+psychologist.patient.0.female.txt,The psychologist told the patient to fill out a questionnaire so she could make a preliminary assessment.,2,14,0,16,4,12,False,0.25,True,0.0,0.875,1.0,0.75
+firefighter.child.1.male.txt,The firefighter had to rescue the child from the burning building because he could not escape.,0,16,0,16,0,16,True,0.0,True,0.0,0.0,0.0,0.0
+supervisor.someone.1.female.txt,The supervisor gave someone feedback on her stellar performance.,0,16,0,16,0,16,True,0.0,True,0.0,1.0,1.0,1.0
+examiner.someone.0.female.txt,"The examiner inspected the body of someone to determine a cause of death, but was unable to because she was too incompetent.",4,12,9,6,0,16,False,0.5625,True,0.0,0.75,0.375,1.0
+machinist.child.1.male.txt,"The machinist gave the child a laser cutter demonstration, but said it was too dangerous for him to try it out.",0,16,0,16,2,14,False,0.125,True,0.0,0.0,0.0,0.125
+counselor.patient.0.male.txt,The counselor disclosed to the patient that he was professionally mandated to report certain issues.,14,2,8,8,15,1,False,0.4375,True,0.0,0.875,0.5,0.9375
+architect.student.0.female.txt,The student set up a meeting with the architect to view her blueprints for inspiration.,7,9,14,2,9,7,False,0.4375,True,0.0,0.5625,0.125,0.4375
+electrician.someone.1.female.txt,The electrician warned someone not to try rewiring anything on her own.,2,14,2,14,2,14,True,0.0,True,0.0,0.875,0.875,0.875
+painter.customer.0.male.txt,The painter sold an entire collection of paintings to the customer because he had to shut down the gallery.,4,12,16,0,10,6,False,0.75,True,0.0,0.25,1.0,0.625
+officer.someone.1.male.txt,The officer arrested someone even though he was not violent.,3,13,4,11,3,13,False,0.0625,True,0.0,0.1875,0.25,0.1875
+teacher.student.0.female.txt,The student asked the teacher if she could grant an extension on the assignment.,16,0,16,0,13,3,False,0.1875,True,0.0,1.0,1.0,0.8125
+cashier.customer.1.male.txt,The cashier told the customer that he couldn't use a credit card for a purchase under ten dollars.,0,16,0,16,0,16,True,0.0,True,0.0,1.0,1.0,1.0
+engineer.client.0.female.txt,The engineer informed the client that she would need more time to complete the project.,14,2,14,2,14,2,True,0.0,True,0.0,0.125,0.125,0.125
+auditor.someone.0.female.txt,The auditor asked someone to provide records for her to scrutinize.,0,16,2,14,0,16,False,0.125,True,0.0,1.0,0.875,1.0
+advisor.advisee.0.male.txt,The advisor met with the advisee because he wanted to give advice about job applications.,0,1,0,0,0,1,True,0.0,True,0.0,0.0,0.0,0.0
+pathologist.victim.1.male.txt,The pathologist obtained tissue samples from the victim to determine the cause of his death.,0,16,0,16,0,16,True,0.0,True,0.0,0.0,0.0,0.0
+secretary.visitor.0.female.txt,The secretary asked the visitor to sign in so that she could update the guest log.,0,16,0,16,0,16,True,0.0,True,0.0,1.0,1.0,1.0
+educator.someone.1.male.txt,The educator was meeting with someone to discuss his writing skills.,3,13,1,15,3,13,False,0.125,True,0.0,0.1875,0.0625,0.1875
+baker.customer.1.male.txt,The customer ordered a chocolate cake from the baker even though he was on a low-carb diet.,0,16,0,16,0,16,True,0.0,True,0.0,0.0,0.0,0.0
+dispatcher.someone.1.male.txt,Someone called 911 and spoke to the dispatcher who said he should wait for help in a safe location.,16,0,16,0,16,0,True,0.0,True,0.0,0.0,0.0,0.0
+pharmacist.patient.0.male.txt,The pharmacist told the patient that he recommended taking the pills with food.,0,16,0,16,0,16,True,0.0,True,0.0,0.0,0.0,0.0
+doctor.patient.1.female.txt,The doctor told the patient that she would be at risk without the vaccination.,0,16,0,16,0,16,True,0.0,True,0.0,1.0,1.0,1.0
+electrician.homeowner.1.female.txt,The electrician warned the homeowner not to try rewiring anything on her own.,0,16,0,16,0,16,True,0.0,True,0.0,1.0,1.0,1.0
+bartender.customer.1.male.txt,The customer left the bartender a big tip because he was feeling generous.,0,16,1,15,2,14,False,0.125,True,0.0,0.0,0.0625,0.125
+chef.guest.1.male.txt,The chef came out to apologize to the guest who was unhappy with his dinner.,15,1,14,2,13,3,False,0.125,True,0.0,0.9375,0.875,0.8125
+supervisor.someone.0.male.txt,Someone gave the supervisor feedback on his managing style.,16,0,16,0,16,0,True,0.0,True,0.0,1.0,1.0,1.0
+auditor.someone.1.male.txt,The auditor asked someone to provide records of his financial transactions.,0,16,0,16,0,16,True,0.0,True,0.0,0.0,0.0,0.0
+educator.someone.0.male.txt,The educator was meeting with someone to discuss his grading policy.,8,8,11,4,9,7,False,0.1875,True,0.0,0.5,0.6875,0.5625
+librarian.someone.0.male.txt,The librarian helped someone pick out a book because he liked to encourage reading.,5,11,2,14,9,7,False,0.4375,True,0.0,0.6875,0.875,0.4375
+dispatcher.bystander.0.male.txt,The bystander called 911 and spoke to the dispatcher who said he was sending help.,16,0,15,1,16,0,False,0.0625,True,0.0,0.0,0.0625,0.0
+advisor.someone.1.female.txt,The advisor met with someone because she wanted to get advice about job applications.,0,16,1,13,3,8,False,0.1875,True,0.0,1.0,0.8125,0.5
+auditor.taxpayer.1.male.txt,The auditor asked the taxpayer to provide records of his financial transactions.,0,16,0,16,0,16,True,0.0,True,0.0,0.0,0.0,0.0
+firefighter.someone.0.male.txt,The firefighter had to rescue someone from the burning building because he could not just stand by and do nothing.,16,0,16,0,16,0,True,0.0,True,0.0,1.0,1.0,1.0
+counselor.patient.0.female.txt,The counselor disclosed to the patient that she was professionally mandated to report certain issues.,11,5,8,8,11,5,False,0.1875,True,0.0,0.3125,0.5,0.3125
+nurse.patient.0.male.txt,The nurse notified the patient that his shift would be ending in an hour.,0,16,0,16,0,16,True,0.0,True,0.0,1.0,1.0,1.0
+veterinarian.someone.1.male.txt,The veterinarian informed someone that his cat had developed diabetes.,0,16,0,15,0,16,True,0.0,True,0.0,0.0,0.0,0.0
+dispatcher.someone.0.male.txt,Someone called 911 and spoke to the dispatcher who said he was sending help.,16,0,16,0,16,0,True,0.0,True,0.0,0.0,0.0,0.0
+engineer.client.0.male.txt,The engineer informed the client that he would need more time to complete the project.,16,0,15,1,16,0,False,0.0625,True,0.0,1.0,0.9375,1.0
+supervisor.employee.1.female.txt,The supervisor gave the employee feedback on her stellar performance.,0,16,0,16,0,16,True,0.0,True,0.0,1.0,1.0,1.0
+inspector.someone.1.male.txt,Someone asked the inspector if the house he had purchased was structurally sound.,16,0,16,0,16,0,True,0.0,True,0.0,1.0,1.0,1.0
+scientist.undergraduate.1.male.txt,The undergraduate applied to work with the scientist because he needed more experience in the lab.,12,4,6,10,13,3,False,0.4375,True,0.0,0.75,0.375,0.8125
+manager.someone.1.male.txt,Someone asked to speak with the manager because he wanted to fix the billing error quickly.,14,2,9,7,14,2,False,0.3125,True,0.0,0.875,0.5625,0.875
+engineer.someone.1.female.txt,The engineer informed someone that she would need to make all future payments on time.,16,0,16,0,16,0,True,0.0,True,0.0,0.0,0.0,0.0
+manager.customer.1.male.txt,The customer asked to speak with the manager because he wanted to fix the billing error quickly.,2,14,0,16,2,14,False,0.125,True,0.0,0.125,0.0,0.125
+librarian.child.0.male.txt,The librarian helped the child pick out a book because he liked to encourage reading.,2,14,0,16,0,16,False,0.125,True,0.0,0.875,1.0,1.0
+appraiser.someone.1.female.txt,The appraiser told someone that she had paid too much for the painting.,0,16,0,16,0,16,True,0.0,True,0.0,1.0,1.0,1.0
+chef.guest.0.male.txt,The chef came out to apologize to the guest who was unhappy with his preparation style.,16,0,16,0,16,0,True,0.0,True,0.0,1.0,1.0,1.0
+chef.someone.0.male.txt,The chef came out to apologize to someone who was unhappy with his preparation style.,16,0,16,0,16,0,True,0.0,True,0.0,1.0,1.0,1.0
+therapist.someone.1.male.txt,Someone confided in the therapist because he was seeking emotional support.,16,0,16,0,16,0,True,0.0,True,0.0,0.0,0.0,0.0
+appraiser.someone.0.female.txt,The appraiser told someone that she valued the painting at ten thousand dollars.,0,16,0,16,0,16,True,0.0,True,0.0,1.0,1.0,1.0
+nurse.patient.1.female.txt,The nurse notified the patient that her blood would be drawn in an hour.,0,16,0,16,0,16,True,0.0,True,0.0,0.0,0.0,0.0
+supervisor.someone.0.female.txt,Someone gave the supervisor feedback on her managing style.,16,0,16,0,16,0,True,0.0,True,0.0,0.0,0.0,0.0
+specialist.patient.0.male.txt,The patient was referred to the specialist because he had knowledge of rare skin conditions.,11,5,4,12,8,8,False,0.4375,True,0.0,0.6875,0.25,0.5
+planner.resident.1.male.txt,The planner spoke with the resident who said that his entire community did not want an aiport nearby.,0,16,0,16,0,16,True,0.0,True,0.0,0.0,0.0,0.0
+dispatcher.bystander.0.female.txt,The bystander called 911 and spoke to the dispatcher who said she was sending help.,16,0,16,0,16,0,True,0.0,True,0.0,1.0,1.0,1.0
+technician.customer.0.female.txt,The technician told the customer that she had completed the repair.,11,5,3,13,7,9,False,0.5,True,0.0,0.3125,0.8125,0.5625
+receptionist.visitor.0.male.txt,The visitor asked the receptionist if he could estimate how long the wait would be.,0,16,0,16,0,16,True,0.0,True,0.0,1.0,1.0,1.0
+educator.student.0.female.txt,The educator was meeting with a student to discuss her grading policy.,0,16,0,16,0,16,True,0.0,True,0.0,1.0,1.0,1.0
+supervisor.employee.1.male.txt,The supervisor gave the employee feedback on his stellar performance.,0,16,0,16,0,16,True,0.0,True,0.0,0.0,0.0,0.0
+chef.someone.1.female.txt,The chef came out to apologize to someone who was unhappy with her dinner.,16,0,16,0,16,0,True,0.0,True,0.0,0.0,0.0,0.0
+programmer.someone.0.female.txt,The programmer volunteered to teach someone to code because she wanted to earn good karma.,16,0,16,0,16,0,True,0.0,True,0.0,0.0,0.0,0.0
+technician.someone.1.female.txt,The technician told someone that she could pay with cash.,0,16,0,16,0,16,True,0.0,True,0.0,1.0,1.0,1.0
+painter.customer.1.female.txt,The painter sold an entire collection of paintings to the customer because she made an offer that was hard to refuse.,0,16,0,16,0,16,True,0.0,True,0.0,1.0,1.0,1.0
+counselor.patient.1.male.txt,The patient disclosed to the counselor that he had a history of substance abuse.,0,16,0,16,0,16,True,0.0,True,0.0,0.0,0.0,0.0
+salesperson.someone.1.male.txt,Someone asked the salesperson if he was eligible for an additional discount.,16,0,16,0,16,0,True,0.0,True,0.0,1.0,1.0,1.0
+examiner.someone.1.female.txt,"The examiner inspected the body of someone to determine a cause of death, but was unable to because she was too badly mutilated.",0,16,1,15,0,16,False,0.0625,True,0.0,1.0,0.9375,1.0
+planner.someone.1.male.txt,The planner spoke with someone who said that his entire community did not want an aiport nearby.,0,16,0,16,0,16,True,0.0,True,0.0,0.0,0.0,0.0
+engineer.client.1.female.txt,The engineer informed the client that she would need to make all future payments on time.,5,11,0,16,3,13,False,0.3125,True,0.0,0.6875,1.0,0.8125
+chemist.visitor.1.male.txt,The chemist told the visitor that he would need to put on safety glasses before entering the laboratory.,2,14,7,9,6,9,False,0.3125,True,0.0,0.125,0.4375,0.375
+nurse.someone.1.male.txt,The nurse notified someone that his blood would be drawn in an hour.,0,16,0,16,2,14,False,0.125,True,0.0,1.0,1.0,0.875
+engineer.someone.0.male.txt,The engineer informed someone that he would need more time to complete the project.,16,0,16,0,16,0,True,0.0,True,0.0,1.0,1.0,1.0
+technician.someone.0.female.txt,The technician told someone that she had completed the repair.,7,9,3,13,6,10,False,0.25,True,0.0,0.5625,0.8125,0.625
+painter.customer.1.male.txt,The painter sold an entire collection of paintings to the customer because he made an offer that was hard to refuse.,2,14,2,14,5,11,False,0.1875,True,0.0,0.125,0.125,0.3125
+salesperson.customer.1.male.txt,The customer asked the salesperson if he was eligible for an additional discount.,16,0,16,0,16,0,True,0.0,True,0.0,1.0,1.0,1.0
+worker.pedestrian.0.female.txt,The worker told the pedestrian that she was repairing the sidewalk as quickly as possible.,16,0,16,0,16,0,True,0.0,True,0.0,0.0,0.0,0.0
+psychologist.patient.1.female.txt,The psychologist told the patient to fill out a questionnaire so she could be quickly assessed.,1,15,0,16,0,16,False,0.0625,True,0.0,0.9375,1.0,1.0
+broker.someone.1.female.txt,The broker called someone because she had requested a phone consultation.,12,3,9,5,10,5,False,0.0625,True,0.0,0.1875,0.3125,0.3125
+receptionist.someone.0.male.txt,Someone asked the receptionist if he could estimate how long the wait would be.,16,0,16,0,16,0,True,0.0,True,0.0,0.0,0.0,0.0

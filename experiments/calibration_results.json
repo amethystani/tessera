@@ -1,0 +1,66 @@
+[
+  {
+    "regime": "pure_suppression",
+    "param": NaN,
+    "false_rejection_rate": 0.0,
+    "mean_gamma_star": 0.0,
+    "detected_rewriting_rate": null,
+    "true_tv_from_ledger": 0.0
+  },
+  {
+    "regime": "instrument_rewriting",
+    "param": 0.0,
+    "false_rejection_rate": 0.0,
+    "mean_gamma_star": 0.0,
+    "detected_rewriting_rate": 0.0,
+    "true_tv_from_ledger": 0.01877524109548694
+  },
+  {
+    "regime": "instrument_rewriting",
+    "param": 0.05,
+    "false_rejection_rate": 0.0,
+    "mean_gamma_star": 6.0000000000000056e-05,
+    "detected_rewriting_rate": 6.0000000000000056e-05,
+    "true_tv_from_ledger": 0.04027924223469308
+  },
+  {
+    "regime": "instrument_rewriting",
+    "param": 0.1,
+    "false_rejection_rate": 0.0,
+    "mean_gamma_star": 0.005560000000000005,
+    "detected_rewriting_rate": 0.005560000000000005,
+    "true_tv_from_ledger": 0.056997360007814635
+  },
+  {
+    "regime": "instrument_rewriting",
+    "param": 0.15,
+    "false_rejection_rate": 0.01,
+    "mean_gamma_star": 0.027260000000000013,
+    "detected_rewriting_rate": 0.027260000000000013,
+    "true_tv_from_ledger": 0.07277637130302574
+  },
+  {
+    "regime": "instrument_rewriting",
+    "param": 0.2,
+    "false_rejection_rate": 0.09,
+    "mean_gamma_star": 0.06732000000000003,
+    "detected_rewriting_rate": 0.06732000000000003,
+    "true_tv_from_ledger": 0.09107623140941003
+  },
+  {
+    "regime": "instrument_rewriting",
+    "param": 0.3,
+    "false_rejection_rate": 0.86,
+    "mean_gamma_star": 0.14539,
+    "detected_rewriting_rate": 0.14539,
+    "true_tv_from_ledger": 0.12292438674223737
+  },
+  {
+    "regime": "shared_rewriting",
+    "param": NaN,
+    "false_rejection_rate": 0.0,
+    "mean_gamma_star": 0.0,
+    "detected_rewriting_rate": 0.0,
+    "true_tv_from_ledger": 0.49225
+  }
+]

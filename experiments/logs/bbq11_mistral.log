@@ -1,0 +1,118 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+2200 ambiguous items across 11 categories x 2 conditions
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   0%|          | 1/291 [00:10<48:39, 10.07s/it]Loading weights:   1%|          | 2/291 [00:19<46:22,  9.63s/it]Loading weights:   4%|▍         | 13/291 [00:21<05:14,  1.13s/it]Loading weights:   5%|▌         | 15/291 [00:25<06:04,  1.32s/it]Loading weights:   8%|▊         | 22/291 [00:28<03:46,  1.19it/s]Loading weights:   8%|▊         | 24/291 [00:34<05:19,  1.20s/it]Loading weights:  11%|█         | 31/291 [00:35<03:02,  1.43it/s]Loading weights:  11%|█▏        | 33/291 [00:38<03:33,  1.21it/s]Loading weights:  14%|█▎        | 40/291 [00:39<02:21,  1.77it/s]Loading weights:  14%|█▍        | 41/291 [00:48<05:09,  1.24s/it]Loading weights:  14%|█▍        | 42/291 [00:48<04:48,  1.16s/it]Loading weights:  17%|█▋        | 49/291 [00:50<02:41,  1.50it/s]Loading weights:  17%|█▋        | 50/291 [00:52<03:07,  1.29it/s]Loading weights:  18%|█▊        | 51/291 [00:57<05:23,  1.35s/it]Loading weights:  20%|█▉        | 58/291 [01:01<03:35,  1.08it/s]Loading weights:  20%|██        | 59/291 [01:01<03:18,  1.17it/s]Loading weights:  22%|██▏       | 64/291 [01:03<02:27,  1.54it/s]Loading weights:  23%|██▎       | 67/291 [01:10<03:51,  1.03s/it]Loading weights:  23%|██▎       | 68/291 [01:10<03:43,  1.00s/it]Loading weights:  24%|██▎       | 69/291 [01:13<04:31,  1.22s/it]Loading weights:  26%|██▌       | 76/291 [01:18<03:17,  1.09it/s]Loading weights:  28%|██▊       | 82/291 [01:18<01:55,  1.80it/s]Loading weights:  29%|██▊       | 83/291 [01:19<02:01,  1.71it/s]Loading weights:  29%|██▉       | 85/291 [01:25<03:45,  1.09s/it]Loading weights:  30%|██▉       | 87/291 [01:27<03:36,  1.06s/it]Loading weights:  32%|███▏      | 94/291 [01:38<04:30,  1.37s/it]Loading weights:  35%|███▌      | 103/291 [01:39<02:16,  1.38it/s]Loading weights:  36%|███▌      | 104/291 [01:39<02:07,  1.47it/s]Loading weights:  36%|███▌      | 105/291 [01:40<02:13,  1.39it/s]Loading weights:  37%|███▋      | 108/291 [01:41<01:55,  1.58it/s]Loading weights:  38%|███▊      | 112/291 [01:47<02:37,  1.14it/s]Loading weights:  39%|███▉      | 113/291 [01:49<02:53,  1.02it/s]Loading weights:  39%|███▉      | 114/291 [01:49<02:43,  1.08it/s]Loading weights:  41%|████      | 118/291 [01:51<01:55,  1.49it/s]Loading weights:  42%|████▏     | 121/291 [01:56<02:50,  1.01s/it]Loading weights:  42%|████▏     | 123/291 [01:58<02:47,  1.00it/s]Loading weights:  44%|████▎     | 127/291 [02:00<02:24,  1.14it/s]Loading weights:  45%|████▍     | 130/291 [02:03<02:25,  1.10it/s]Loading weights:  45%|████▌     | 131/291 [02:06<02:53,  1.09s/it]Loading weights:  45%|████▌     | 132/291 [02:08<03:12,  1.21s/it]Loading weights:  48%|████▊     | 139/291 [02:12<02:11,  1.16it/s]Loading weights:  50%|█████     | 146/291 [02:15<01:31,  1.58it/s]Loading weights:  51%|█████     | 147/291 [02:16<01:36,  1.49it/s]Loading weights:  51%|█████     | 148/291 [02:19<02:13,  1.07it/s]Loading weights:  51%|█████     | 149/291 [02:20<02:16,  1.04it/s]Loading weights:  52%|█████▏    | 150/291 [02:23<02:58,  1.26s/it]Loading weights:  54%|█████▍    | 157/291 [02:28<02:03,  1.09it/s]Loading weights:  55%|█████▍    | 159/291 [02:31<02:22,  1.08s/it]Loading weights:  57%|█████▋    | 166/291 [02:37<01:56,  1.07it/s]Loading weights:  57%|█████▋    | 167/291 [02:38<01:57,  1.06it/s]Loading weights:  58%|█████▊    | 168/291 [02:40<02:14,  1.09s/it]Loading weights:  60%|██████    | 175/291 [02:47<01:57,  1.01s/it]Loading weights:  63%|██████▎   | 182/291 [02:48<01:09,  1.56it/s]Loading weights:  63%|██████▎   | 184/291 [02:52<01:34,  1.13it/s]Loading weights:  64%|██████▎   | 185/291 [02:54<01:43,  1.02it/s]Loading weights:  64%|██████▍   | 186/291 [02:55<01:39,  1.06it/s]Loading weights:  66%|██████▋   | 193/291 [03:00<01:19,  1.23it/s]Loading weights:  67%|██████▋   | 194/291 [03:03<01:46,  1.10s/it]Loading weights:  69%|██████▉   | 202/291 [03:10<01:23,  1.07it/s]Loading weights:  73%|███████▎  | 211/291 [03:16<01:08,  1.17it/s]Loading weights:  73%|███████▎  | 212/291 [03:17<01:03,  1.24it/s]Loading weights:  73%|███████▎  | 213/291 [03:19<01:11,  1.10it/s]Loading weights:  74%|███████▎  | 214/291 [03:19<01:05,  1.18it/s]Loading weights:  76%|███████▌  | 220/291 [03:25<01:03,  1.11it/s]Loading weights:  76%|███████▌  | 221/291 [03:25<00:57,  1.22it/s]Loading weights:  76%|███████▋  | 222/291 [03:28<01:17,  1.13s/it]Loading weights:  79%|███████▊  | 229/291 [03:30<00:38,  1.59it/s]Loading weights:  79%|███████▉  | 230/291 [03:35<01:08,  1.12s/it]Loading weights:  79%|███████▉  | 231/291 [03:38<01:24,  1.41s/it]Loading weights:  82%|████████▏ | 238/291 [03:40<00:37,  1.42it/s]Loading weights:  84%|████████▍ | 245/291 [03:41<00:22,  2.03it/s]Loading weights:  85%|████████▍ | 247/291 [03:47<00:38,  1.13it/s]Loading weights:  88%|████████▊ | 256/291 [03:52<00:25,  1.40it/s]Loading weights:  88%|████████▊ | 257/291 [03:55<00:30,  1.11it/s]Loading weights:  89%|████████▊ | 258/291 [04:01<00:44,  1.35s/it]Loading weights:  89%|████████▉ | 259/291 [04:02<00:40,  1.28s/it]Loading weights:  91%|█████████▏| 266/291 [04:04<00:18,  1.37it/s]Loading weights:  93%|█████████▎| 272/291 [04:05<00:09,  1.99it/s]Loading weights:  94%|█████████▍| 273/291 [04:05<00:08,  2.10it/s]Loading weights:  94%|█████████▍| 274/291 [04:12<00:20,  1.20s/it]Loading weights:  95%|█████████▍| 275/291 [04:14<00:20,  1.28s/it]Loading weights:  97%|█████████▋| 283/291 [04:20<00:07,  1.01it/s]Loading weights:  98%|█████████▊| 284/291 [04:20<00:06,  1.10it/s]Loading weights: 100%|██████████| 291/291 [04:20<00:00,  1.12it/s]
+[baseline]
+    200/2200
+    400/2200
+    600/2200
+    800/2200
+    1000/2200
+    1200/2200
+    1400/2200
+    1600/2200
+    1800/2200
+    2000/2200
+    2200/2200
+[instructed]
+    200/2200
+    400/2200
+    600/2200
+    800/2200
+    1000/2200
+    1200/2200
+    1400/2200
+    1600/2200
+    1800/2200
+    2000/2200
+    2200/2200
+[forced]
+    200/2200
+    400/2200
+    600/2200
+    800/2200
+    1000/2200
+    1200/2200
+    1400/2200
+    1600/2200
+    1800/2200
+    2000/2200
+    2200/2200
+[forced_logprob]
+    200/2200
+    400/2200
+    600/2200
+    800/2200
+    1000/2200
+    1200/2200
+    1400/2200
+    1600/2200
+    1800/2200
+    2000/2200
+    2200/2200
+{
+  "model": "mistralai/Mistral-7B-Instruct-v0.3",
+  "n_items": 2200,
+  "categories": [
+    "Age",
+    "Disability_status",
+    "Gender_identity",
+    "Nationality",
+    "Physical_appearance",
+    "Race_ethnicity",
+    "Race_x_SES",
+    "Race_x_gender",
+    "Religion",
+    "SES",
+    "Sexual_orientation"
+  ],
+  "baseline": {
+    "n_scored": 2200,
+    "n_unparsed": 0,
+    "accuracy": 0.7436363636363637,
+    "abstention_rate": 0.7436363636363637,
+    "n_committed": 564,
+    "b_direct": 0.38297872340425543,
+    "s_AMB": 0.0981818181818182,
+    "b_recovered": 0.38297872340425543,
+    "identified_lo": 0.17727272727272728,
+    "identified_width": 0.7436363636363637
+  },
+  "instructed": {
+    "n_scored": 2200,
+    "n_unparsed": 0,
+    "accuracy": 0.9631818181818181,
+    "abstention_rate": 0.9631818181818181,
+    "n_committed": 81,
+    "b_direct": 0.40740740740740744,
+    "s_AMB": 0.015000000000000019,
+    "b_recovered": 0.40740740740740744,
+    "identified_lo": 0.02590909090909094,
+    "identified_width": 0.9631818181818181
+  },
+  "forced_generated": {
+    "n_scored": 2181,
+    "n_unparsed": 19,
+    "b_forced": 0.1627693718477763,
+    "refusal_rate_under_forcing": 0.008636363636363636
+  },
+  "forced_logprob": {
+    "n_scored": 2200,
+    "n_unparsed": 0,
+    "b_forced": 0.15999999999999992
+  },
+  "reported_delta_s_AMB": -0.08318181818181819,
+  "coverage_component": -0.08408123791102515,
+  "disposition_component": 0.0008994197292069615,
+  "mechanical_fraction": 1.0108126961981165,
+  "identified_width_before": 0.7436363636363637,
+  "identified_width_after": 0.9631818181818181,
+  "manski_lo": 0.17727272727272728,
+  "manski_hi": 0.9209090909090909,
+  "manski_width": 0.7436363636363637,
+  "forced_biased_rate": 0.58,
+  "forced_rate_inside_interval": true,
+  "committed_subset_matches_forced": 0.11148936170212775
+}
+
+Wrote bbq11_mistral.json

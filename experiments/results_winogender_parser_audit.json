@@ -1,0 +1,48 @@
+{
+  "n_sampled": 3840,
+  "n_checkpoints": 6,
+  "n_items": 80,
+  "draws_per_item_per_condition": 4,
+  "agreement_rate_overall": 0.9994791666666667,
+  "agreement_rate_by_outcome": {
+    "abstained": {
+      "mean": 1.0,
+      "count": 67
+    },
+    "answered": {
+      "mean": 1.0,
+      "count": 3720
+    },
+    "unparsed": {
+      "mean": 0.9622641509433962,
+      "count": 53
+    }
+  },
+  "agreement_rate_by_checkpoint": {
+    "mistral": {
+      "mean": 1.0,
+      "count": 640
+    },
+    "olmo_dpo": {
+      "mean": 1.0,
+      "count": 640
+    },
+    "olmo_inst": {
+      "mean": 1.0,
+      "count": 640
+    },
+    "olmo_sft": {
+      "mean": 1.0,
+      "count": 640
+    },
+    "phi": {
+      "mean": 1.0,
+      "count": 640
+    },
+    "qwen": {
+      "mean": 0.996875,
+      "count": 640
+    }
+  },
+  "n_disagreements": 2
+}

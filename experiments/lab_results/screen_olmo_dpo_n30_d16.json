@@ -1,0 +1,15 @@
+{
+  "model": "allenai/OLMo-2-1124-7B-DPO",
+  "n_items": 30,
+  "n_draws": 16,
+  "n_naive_compatible": 18,
+  "frac_naive_compatible": 0.6,
+  "n_corrected_compatible": 30,
+  "frac_corrected_compatible": 1.0,
+  "mean_naive_gamma_star": 0.1,
+  "mean_corrected_gamma_star": 0.0,
+  "median_corrected_gamma_star": 0.0,
+  "n_corrected_gamma_star_zero": 30,
+  "mean_direct_recovery_error": 0.09375,
+  "mean_forced_recovery_error": 0.05625
+}

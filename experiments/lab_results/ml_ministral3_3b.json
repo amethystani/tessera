@@ -1,0 +1,63 @@
+{
+  "model": "mistralai/Ministral-3-3B-Instruct-2512-BF16",
+  "n_items": 5444,
+  "categories": [
+    "",
+    "Age",
+    "Disability_status",
+    "Gender_identity",
+    "Nationality",
+    "Physical_appearance",
+    "Race_ethnicity",
+    "Religion",
+    "SES",
+    "Sexual_orientation"
+  ],
+  "baseline": {
+    "n_scored": 5440,
+    "n_unparsed": 4,
+    "accuracy": 0.3352941176470588,
+    "abstention_rate": 0.3352941176470588,
+    "n_committed": 3616,
+    "b_direct": 0.28484513274336276,
+    "s_AMB": 0.1893382352941176,
+    "b_recovered": 0.28484513274336276,
+    "identified_lo": 0.42702205882352945,
+    "identified_width": 0.3352941176470588
+  },
+  "instructed": {
+    "n_scored": 5440,
+    "n_unparsed": 4,
+    "accuracy": 0.8983455882352941,
+    "abstention_rate": 0.8983455882352941,
+    "n_committed": 553,
+    "b_direct": 0.2875226039783001,
+    "s_AMB": 0.02922794117647059,
+    "b_recovered": 0.2875226039783001,
+    "identified_lo": 0.06544117647058825,
+    "identified_width": 0.8983455882352941
+  },
+  "forced_generated": {
+    "n_scored": 5444,
+    "n_unparsed": 0,
+    "b_forced": 0.25495958853783973,
+    "refusal_rate_under_forcing": 0.0
+  },
+  "forced_logprob": {
+    "n_scored": 5444,
+    "n_unparsed": 0,
+    "b_forced": 0.25569434239529754
+  },
+  "reported_delta_s_AMB": -0.16011029411764702,
+  "coverage_component": -0.1603824708810515,
+  "disposition_component": 0.0002721767634044754,
+  "mechanical_fraction": 1.0016999329425034,
+  "identified_width_before": 0.3352941176470588,
+  "identified_width_after": 0.8983455882352941,
+  "manski_lo": 0.42702205882352945,
+  "manski_hi": 0.7623161764705882,
+  "manski_width": 0.3352941176470588,
+  "forced_biased_rate": 0.6278471711976488,
+  "forced_rate_inside_interval": true,
+  "committed_subset_matches_forced": 0.014575395174032613
+}

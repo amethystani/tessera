@@ -1,0 +1,8 @@
+screen_mistral_n480_d16_per_item.csv          n=480 d= 16  naive obs= 66 null= 55.1 p=0.000 | corrected obs= 0 null=0.00 p=1.000
+screen_olmo_dpo_n480_d16_per_item.csv         n=480 d= 16  naive obs=196 null=183.4 p=0.000 | corrected obs= 0 null=0.00 p=1.000
+screen_olmo_inst_n480_d16_per_item.csv        n=480 d= 16  naive obs=160 null=148.1 p=0.000 | corrected obs= 0 null=0.00 p=1.000
+screen_olmo_sft_n480_d16_per_item.csv         n=480 d= 16  naive obs=260 null=245.2 p=0.000 | corrected obs= 0 null=0.00 p=1.000
+screen_phi_n480_d16_per_item.csv              n=480 d= 16  naive obs=102 null= 95.6 p=0.000 | corrected obs=25 null=0.00 p=0.000
+screen_qwen_n480_d16_per_item.csv             n=480 d= 16  naive obs=109 null= 94.8 p=0.000 | corrected obs= 4 null=0.00 p=0.000
+
+Wrote model_null_calibration_n480.json

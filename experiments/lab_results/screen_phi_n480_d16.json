@@ -1,0 +1,18 @@
+{
+  "model": "microsoft/Phi-3.5-mini-instruct",
+  "n_items": 480,
+  "n_draws": 16,
+  "n_naive_compatible": 378,
+  "frac_naive_compatible": 0.7875,
+  "n_corrected_compatible": 455,
+  "frac_corrected_compatible": 0.9479166666666666,
+  "mean_naive_gamma_star": 0.12838541666666667,
+  "mean_corrected_gamma_star": 0.00042187206309172537,
+  "median_corrected_gamma_star": 0.0,
+  "n_corrected_gamma_star_zero": 455,
+  "mean_direct_recovery_error": 0.09309895833333333,
+  "mean_forced_recovery_error": 0.10221354166666667,
+  "direction": {
+    "source": "generic"
+  }
+}

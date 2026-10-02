@@ -1,0 +1,15 @@
+{
+  "model": "microsoft/Phi-3.5-mini-instruct",
+  "n_items": 30,
+  "n_draws": 16,
+  "n_naive_compatible": 26,
+  "frac_naive_compatible": 0.8666666666666667,
+  "n_corrected_compatible": 27,
+  "frac_corrected_compatible": 0.9,
+  "mean_naive_gamma_star": 0.11666666666666667,
+  "mean_corrected_gamma_star": 0.01665100019560728,
+  "median_corrected_gamma_star": 0.0,
+  "n_corrected_gamma_star_zero": 27,
+  "mean_direct_recovery_error": 0.09375,
+  "mean_forced_recovery_error": 0.11666666666666667
+}

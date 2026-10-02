@@ -1,0 +1,56 @@
+{
+  "model": "mistralai/Mistral-7B-Instruct-v0.3",
+  "n_items": 600,
+  "categories": [
+    "Gender_identity",
+    "Race_ethnicity",
+    "Religion"
+  ],
+  "baseline": {
+    "n_scored": 600,
+    "n_unparsed": 0,
+    "accuracy": 0.7683333333333333,
+    "abstention_rate": 0.7683333333333333,
+    "n_committed": 139,
+    "b_direct": 0.17985611510791366,
+    "s_AMB": 0.04166666666666667,
+    "b_recovered": 0.17985611510791366,
+    "identified_lo": 0.1366666666666667,
+    "identified_width": 0.7683333333333333
+  },
+  "instructed": {
+    "n_scored": 600,
+    "n_unparsed": 0,
+    "accuracy": 0.95,
+    "abstention_rate": 0.95,
+    "n_committed": 30,
+    "b_direct": 0.3999999999999999,
+    "s_AMB": 0.020000000000000014,
+    "b_recovered": 0.3999999999999999,
+    "identified_lo": 0.03500000000000003,
+    "identified_width": 0.95
+  },
+  "forced_generated": {
+    "n_scored": 590,
+    "n_unparsed": 10,
+    "b_forced": 0.0610169491525423,
+    "refusal_rate_under_forcing": 0.016666666666666666
+  },
+  "forced_logprob": {
+    "n_scored": 600,
+    "n_unparsed": 0,
+    "b_forced": 0.05333333333333323
+  },
+  "reported_delta_s_AMB": -0.021666666666666657,
+  "coverage_component": -0.032673860911270974,
+  "disposition_component": 0.011007194244604323,
+  "mechanical_fraction": 1.5080243497509687,
+  "identified_width_before": 0.7683333333333333,
+  "identified_width_after": 0.95,
+  "manski_lo": 0.1366666666666667,
+  "manski_hi": 0.905,
+  "manski_width": 0.7683333333333333,
+  "forced_biased_rate": 0.5266666666666666,
+  "forced_rate_inside_interval": true,
+  "committed_subset_matches_forced": 0.06326139088729021
+}

@@ -1,0 +1,15 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "n_items": 4,
+  "n_draws": 3,
+  "n_naive_compatible": 3,
+  "frac_naive_compatible": 0.75,
+  "n_corrected_compatible": 4,
+  "frac_corrected_compatible": 1.0,
+  "mean_naive_gamma_star": 0.08333333333333331,
+  "mean_corrected_gamma_star": 0.0,
+  "median_corrected_gamma_star": 0.0,
+  "n_corrected_gamma_star_zero": 4,
+  "mean_direct_recovery_error": 0.25,
+  "mean_forced_recovery_error": 0.08333333333333333
+}

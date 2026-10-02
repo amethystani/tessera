@@ -1,0 +1,20 @@
+{
+  "model": "mistralai/Mistral-7B-Instruct-v0.3",
+  "n_items": 480,
+  "n_draws": 16,
+  "n_naive_compatible": 395,
+  "frac_naive_compatible": 0.8229166666666666,
+  "n_corrected_compatible": 475,
+  "frac_corrected_compatible": 0.9895833333333334,
+  "mean_naive_gamma_star": 0.07239583333333334,
+  "mean_corrected_gamma_star": 8.437441261834507e-05,
+  "median_corrected_gamma_star": 0.0,
+  "n_corrected_gamma_star_zero": 475,
+  "mean_direct_recovery_error": 0.08450520833333333,
+  "mean_forced_recovery_error": 0.04895833333333333,
+  "direction": {
+    "source": "behavioral",
+    "n_abstained": 19,
+    "n_answered": 460
+  }
+}

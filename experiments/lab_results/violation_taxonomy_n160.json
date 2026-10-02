@@ -1,0 +1,97 @@
+[
+  {
+    "file": "screen_mistral_n160_d16_per_item.csv",
+    "n_items": 160,
+    "n_corrected_incompatible": 0,
+    "counts": {}
+  },
+  {
+    "file": "screen_olmo_dpo_n160_d16_per_item.csv",
+    "n_items": 160,
+    "n_corrected_incompatible": 0,
+    "counts": {}
+  },
+  {
+    "file": "screen_olmo_inst_n160_d16_per_item.csv",
+    "n_items": 160,
+    "n_corrected_incompatible": 0,
+    "counts": {}
+  },
+  {
+    "file": "screen_olmo_sft_n160_d16_per_item.csv",
+    "n_items": 160,
+    "n_corrected_incompatible": 0,
+    "counts": {}
+  },
+  {
+    "file": "screen_phi_n160_d16_per_item.csv",
+    "n_items": 160,
+    "n_corrected_incompatible": 9,
+    "counts": {
+      "instrument_failure": 7,
+      "policy_effect": 2
+    },
+    "items": [
+      {
+        "sentid": "scientist.someone.0.male.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0797511340893164
+      },
+      {
+        "sentid": "machinist.child.1.female.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0797511340893164
+      },
+      {
+        "sentid": "officer.protester.1.male.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0797511340893164
+      },
+      {
+        "sentid": "manager.someone.0.male.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0797511340893164
+      },
+      {
+        "sentid": "firefighter.child.1.male.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0797511340893164
+      },
+      {
+        "sentid": "electrician.homeowner.1.female.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0797511340893164
+      },
+      {
+        "sentid": "educator.student.0.female.txt",
+        "pattern": "policy_effect",
+        "gamma_star": 0.0797511340893164
+      },
+      {
+        "sentid": "salesperson.someone.1.male.txt",
+        "pattern": "instrument_failure",
+        "gamma_star": 0.0797511340893164
+      },
+      {
+        "sentid": "psychologist.patient.1.female.txt",
+        "pattern": "policy_effect",
+        "gamma_star": 0.0797511340893164
+      }
+    ]
+  },
+  {
+    "file": "screen_qwen_n160_d16_per_item.csv",
+    "n_items": 160,
+    "n_corrected_incompatible": 1,
+    "counts": {
+      "policy_effect": 1
+    },
+    "items": [
+      {
+        "sentid": "counselor.patient.0.female.txt",
+        "pattern": "policy_effect",
+        "gamma_star": 0.0797511340893164
+      }
+    ]
+  }
+]

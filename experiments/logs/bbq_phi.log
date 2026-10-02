@@ -1,0 +1,79 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] This model config has set a `rope_parameters['original_max_position_embeddings']` field, to be used together with `max_position_embeddings` to determine a scaling factor. Please set the `factor` field of `rope_parameters`with this ratio instead -- we recommend the use of this field over `original_max_position_embeddings`, as it is compatible with most model architectures.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+600 ambiguous items across 3 categories x 2 conditions
+Loading weights:   0%|          | 0/195 [00:00<?, ?it/s]Loading weights:   1%|          | 1/195 [00:10<32:39, 10.10s/it]Loading weights:   5%|▌         | 10/195 [00:13<03:19,  1.08s/it]Loading weights:   6%|▌         | 11/195 [00:15<03:41,  1.20s/it]Loading weights:   7%|▋         | 14/195 [00:17<03:03,  1.01s/it]Loading weights:   9%|▊         | 17/195 [00:20<02:58,  1.00s/it]Loading weights:  12%|█▏        | 23/195 [00:26<02:51,  1.00it/s]Loading weights:  15%|█▍        | 29/195 [00:28<02:06,  1.32it/s]Loading weights:  16%|█▋        | 32/195 [00:29<01:42,  1.59it/s]Loading weights:  17%|█▋        | 33/195 [00:31<02:03,  1.31it/s]Loading weights:  18%|█▊        | 35/195 [00:33<02:14,  1.19it/s]Loading weights:  19%|█▉        | 38/195 [00:34<01:48,  1.45it/s]Loading weights:  21%|██        | 40/195 [00:37<02:02,  1.27it/s]Loading weights:  21%|██        | 41/195 [00:40<03:07,  1.22s/it]Loading weights:  24%|██▍       | 47/195 [00:45<02:22,  1.04it/s]Loading weights:  29%|██▊       | 56/195 [00:51<01:51,  1.25it/s]Loading weights:  30%|███       | 59/195 [00:52<01:38,  1.39it/s]Loading weights:  32%|███▏      | 62/195 [00:53<01:25,  1.55it/s]Loading weights:  33%|███▎      | 65/195 [00:56<01:28,  1.47it/s]Loading weights:  35%|███▍      | 68/195 [00:57<01:16,  1.66it/s]Loading weights:  36%|███▋      | 71/195 [01:02<01:57,  1.05it/s]Loading weights:  39%|███▉      | 77/195 [01:05<01:22,  1.43it/s]Loading weights:  41%|████      | 80/195 [01:08<01:30,  1.27it/s]Loading weights:  43%|████▎     | 83/195 [01:15<02:10,  1.17s/it]Loading weights:  49%|████▊     | 95/195 [01:24<01:33,  1.07it/s]Loading weights:  54%|█████▍    | 106/195 [01:25<00:49,  1.79it/s]Loading weights:  55%|█████▍    | 107/195 [01:31<01:17,  1.13it/s]Loading weights:  58%|█████▊    | 113/195 [01:35<01:04,  1.27it/s]Loading weights:  61%|██████    | 119/195 [01:40<01:02,  1.21it/s]Loading weights:  64%|██████▍   | 125/195 [01:45<00:54,  1.28it/s]Loading weights:  66%|██████▌   | 128/195 [01:46<00:47,  1.42it/s]Loading weights:  67%|██████▋   | 131/195 [01:48<00:46,  1.38it/s]Loading weights:  68%|██████▊   | 133/195 [01:49<00:42,  1.46it/s]Loading weights:  70%|██████▉   | 136/195 [01:50<00:34,  1.70it/s]Loading weights:  70%|███████   | 137/195 [01:56<01:06,  1.15s/it]Loading weights:  73%|███████▎  | 143/195 [01:57<00:37,  1.39it/s]Loading weights:  76%|███████▌  | 148/195 [01:58<00:23,  2.02it/s]Loading weights:  76%|███████▋  | 149/195 [02:03<00:43,  1.06it/s]Loading weights:  79%|███████▉  | 155/195 [02:06<00:30,  1.33it/s]Loading weights:  83%|████████▎ | 161/195 [02:09<00:22,  1.48it/s]Loading weights:  85%|████████▌ | 166/195 [02:11<00:15,  1.86it/s]Loading weights:  86%|████████▌ | 167/195 [02:14<00:21,  1.27it/s]Loading weights:  86%|████████▌ | 168/195 [02:14<00:19,  1.40it/s]Loading weights:  88%|████████▊ | 172/195 [02:15<00:12,  1.91it/s]Loading weights:  89%|████████▊ | 173/195 [02:19<00:20,  1.05it/s]Loading weights:  90%|█████████ | 176/195 [02:20<00:14,  1.34it/s]Loading weights:  91%|█████████▏| 178/195 [02:23<00:14,  1.16it/s]Loading weights:  95%|█████████▍| 185/195 [02:31<00:10,  1.06s/it]Loading weights: 100%|██████████| 195/195 [02:31<00:00,  1.29it/s]
+[baseline]
+    200/600
+    400/600
+    600/600
+[instructed]
+    200/600
+    400/600
+    600/600
+[forced]
+    200/600
+    400/600
+    600/600
+[forced_logprob]
+    200/600
+    400/600
+    600/600
+{
+  "model": "microsoft/Phi-3.5-mini-instruct",
+  "n_items": 600,
+  "categories": [
+    "Gender_identity",
+    "Race_ethnicity",
+    "Religion"
+  ],
+  "baseline": {
+    "n_scored": 599,
+    "n_unparsed": 1,
+    "accuracy": 0.9131886477462438,
+    "abstention_rate": 0.9131886477462438,
+    "n_committed": 52,
+    "b_direct": 0.11538461538461542,
+    "s_AMB": 0.010016694490818032,
+    "b_recovered": 0.11538461538461542,
+    "identified_lo": 0.04841402337228714,
+    "identified_width": 0.9131886477462438
+  },
+  "instructed": {
+    "n_scored": 600,
+    "n_unparsed": 0,
+    "accuracy": 0.9766666666666667,
+    "abstention_rate": 0.9766666666666667,
+    "n_committed": 14,
+    "b_direct": 0.5714285714285714,
+    "s_AMB": 0.013333333333333324,
+    "b_recovered": 0.5714285714285714,
+    "identified_lo": 0.01833333333333332,
+    "identified_width": 0.9766666666666667
+  },
+  "forced_generated": {
+    "n_scored": 572,
+    "n_unparsed": 28,
+    "b_forced": 0.08391608391608396,
+    "refusal_rate_under_forcing": 0.04666666666666667
+  },
+  "forced_logprob": {
+    "n_scored": 600,
+    "n_unparsed": 0,
+    "b_forced": 0.07000000000000006
+  },
+  "reported_delta_s_AMB": 0.003316638842515292,
+  "coverage_component": -0.00732438679851034,
+  "disposition_component": 0.010641025641025632,
+  "mechanical_fraction": -2.208376355188444,
+  "identified_width_before": 0.9131886477462438,
+  "identified_width_after": 0.9766666666666667,
+  "manski_lo": 0.04841402337228714,
+  "manski_hi": 0.9616026711185309,
+  "manski_width": 0.9131886477462438,
+  "forced_biased_rate": 0.535,
+  "forced_rate_inside_interval": true,
+  "committed_subset_matches_forced": 0.02269230769230768
+}
+
+Wrote bbq_phi.json
