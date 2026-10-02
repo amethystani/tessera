@@ -41,6 +41,7 @@ MODELS = {
 
 
 def cell_stats(g: pd.DataFrame) -> dict:
+    """Abstention, s_AMB, forced stereotype-aligned rate theta and the baseline-only Manski interval for one cell of items."""
     scored = g[g.pred_baseline.notna()]
     p = float((scored.pred_baseline == scored.unknown_idx).mean())
     committed = scored[scored.pred_baseline != scored.unknown_idx]

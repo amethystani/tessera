@@ -38,6 +38,7 @@ N_CONDITIONS = 3
 
 
 def load_pools(disclosure_path: str, occshare_path: str) -> tuple[np.ndarray, np.ndarray]:
+    """Load the empirical disclosure-rate and answer-share pools saved by extract_empirical_pools.py."""
     disclosure = np.load(disclosure_path)
     occshare = np.load(occshare_path)
     return disclosure, occshare

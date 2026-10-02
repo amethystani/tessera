@@ -128,6 +128,7 @@ def group_parts(group: str) -> set[str]:
 
 
 def unknown_index(rec) -> int | None:
+    """Index (0-2) of the UNKNOWN answer option, or None if no option is marked unknown."""
     for i in range(3):
         label = str(rec["answer_info"][f"ans{i}"][1]).strip().lower()
         text = str(rec[f"ans{i}"]).strip().lower()
@@ -169,6 +170,7 @@ def biased_index(rec, unk: int) -> int | None:
 
 
 def load_items(paths, limit, seed=42, per_category: int = 0) -> pd.DataFrame:
+    """Read the ambiguous items from BBQ jsonl files, skipping any whose unknown or stereotyped option can't be identified."""
     rows = []
     for path in paths:
         for line in Path(path).read_text().splitlines():
@@ -254,6 +256,7 @@ def parse_response(resp: str, options: list[str], unknown: int | None) -> int | 
 
 
 def score(df: pd.DataFrame, col: str) -> dict:
+    """Accuracy (= abstention rate), direct committed-answer bias, s_AMB and the recovered bias for one prediction column."""
     answered = df[df[col].notna()]
     n = len(answered)
     if n == 0:
