@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/amethystani/tessera/actions/workflows/ci.yml/badge.svg)](https://github.com/amethystani/tessera/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![Python](https://img.shields.io/badge/python-3.12-blue)
 
 Code, data and results for the paper **Abstention Masquerading as Debiasing: Partial
 Identification and Calibrated Certificates for LLM Fairness Evaluation**.
