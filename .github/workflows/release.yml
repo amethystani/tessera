@@ -1,0 +1,36 @@
+name: Release
+
+# When a release is published: check the numbers, build the paper from that
+# tag, and attach the PDF to the release.
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  paper-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt -c constraints.txt
+      - name: Paper numbers match the stored results
+        run: python scripts/verify_paper_claims.py
+      - uses: wtfjoke/setup-tectonic@v4
+      - name: Build
+        run: |
+          mkdir -p ../build
+          tectonic -X compile main.tex --outdir ../build
+        working-directory: paper
+      - name: Attach the PDF
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.event.release.tag_name }}
+        run: |
+          cp build/main.pdf "paper-${TAG}.pdf"
+          gh release upload "$TAG" "paper-${TAG}.pdf" --clobber
