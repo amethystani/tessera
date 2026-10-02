@@ -1,7 +1,7 @@
 # enough to run the checks and rebuild every table and figure
 pandas>=2.0
 numpy>=1.24
-scipy>=1.10
+scipy>=1.18.1
 
 # only needed to re-run model generations (GPU recommended)
 # torch>=2.0
