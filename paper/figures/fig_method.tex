@@ -1,0 +1,106 @@
+\begin{figure*}[t]
+\centering
+\begin{adjustbox}{max width=\textwidth}
+\begin{tikzpicture}[
+  x=1cm, y=1cm,
+  box/.style={draw=black!45, rounded corners=2pt, fill=white, font=\scriptsize,
+              align=center, inner sep=2.5pt},
+  arr/.style={-{Stealth[length=1.5mm]}, line width=0.6pt, black!65},
+  lab/.style={font=\scriptsize\bfseries, anchor=west},
+]
+% ---------------- top row: BBQ ----------------
+\node[lab] at (-0.6,1.95) {BBQ};
+\node[box, minimum width=1.9cm, minimum height=1.5cm] (q) at (0.35,0)
+  {\textbf{Item}\\[1pt]ambiguous context,\\question, options};
+\node[box, fill=gray!12, minimum width=1.2cm, minimum height=1.5cm] (llm) at (3.0,0) {LLM};
+\node[box, fill=red!8, draw=red!50!black, minimum width=3.3cm] (ps) at (6.1,0.9)
+  {stereotype answer\quad$p_s$};
+\node[box, fill=blue!8, draw=blue!50!black, minimum width=3.3cm] (pc) at (6.1,0)
+  {counter-stereotype\quad$p_c$};
+\node[box, fill=gray!15, minimum width=3.3cm] (pu) at (6.1,-0.9)
+  {unknown / abstain\quad$p_u$};
+\node[box, minimum width=3.0cm, minimum height=1.9cm] (met) at (10.0,0)
+  {coverage $c=p_s+p_c$\\[3pt]
+   bias $b=\dfrac{p_s-p_c}{p_s+p_c}$\\[3pt]
+   \fbox{$s_{\mathrm{AMB}}=c\times b$}};
+\draw[arr] (q) -- (llm);
+\draw[arr] (llm.east) -- ++(0.3,0) |- (ps.west);
+\draw[arr] (llm.east) -- (pc.west);
+\draw[arr] (llm.east) -- ++(0.3,0) |- (pu.west);
+\draw[arr] (ps.east) -- ++(0.25,0) |- ([yshift=0.45cm]met.west);
+\draw[arr] (pc.east) -- (met.west);
+\draw[arr] (pu.east) -- ++(0.25,0) |- ([yshift=-0.45cm]met.west);
+% identified interval, drawn schematically
+\begin{scope}[shift={(12.95,-0.8)}]
+  \fill[blue!14] (0,0.8) -- (2.2,1.75) -- (2.2,-0.15) -- cycle;
+  \draw[blue!60!black, line width=0.8pt] (0,0.8) -- (2.2,0.62);
+  \draw[black!55, dashed, line width=0.4pt] (0,0.8) -- (2.2,0.8);
+  \draw[-{Stealth[length=1.2mm]}, black!70] (0,-0.15) -- (2.4,-0.15);
+  \draw[-{Stealth[length=1.2mm]}, black!70] (0,-0.15) -- (0,1.9);
+  \node[font=\tiny, anchor=north] at (0,-0.2) {0};
+  \node[font=\tiny, anchor=north] at (2.2,-0.2) {1};
+  \node[font=\tiny, anchor=north] at (1.1,-0.42) {abstention $p$};
+  \node[font=\tiny, rotate=90, anchor=south] at (-0.12,0.85) {preference};
+  \node[font=\scriptsize, align=center] at (1.1,2.35) {identified interval\\widens with $p$};
+\end{scope}
+\draw[arr] (met.east) -- (12.75,0);
+
+% ---------------- bottom row: WinoGender ----------------
+\node[lab] at (-0.6,-2.65) {WinoGender};
+\node[box, minimum width=1.9cm, minimum height=1.5cm] (w) at (0.35,-4.6)
+  {\textbf{Item}\\[1pt]sentence with a\\pronoun, two\\candidate referents};
+\node[box, fill=orange!10, draw=orange!60!black, minimum width=3.2cm] (d) at (3.9,-3.7)
+  {\textsc{direct} (may abstain)};
+\node[box, fill=blue!8, draw=blue!50!black, minimum width=3.2cm] (f) at (3.9,-4.6)
+  {\textsc{forced} (must choose)};
+\node[box, fill=green!8, draw=green!40!black, minimum width=3.2cm] (r) at (3.9,-5.5)
+  {\textsc{refusal-ablated}\\[-1pt]\tiny forced, refusal direction removed};
+\node[font=\tiny, anchor=north] at (3.9,-6.05) {16 draws per condition};
+\node[box, fill=gray!12, minimum width=1.0cm, minimum height=2.3cm] (par) at (6.55,-4.6)
+  {shared\\parser};
+\draw[arr] (w.east) -- ++(0.25,0) |- (d.west);
+\draw[arr] (w.east) -- (f.west);
+\draw[arr] (w.east) -- ++(0.25,0) |- (r.west);
+\draw[arr] (d.east) -- ++(0.2,0) |- ([yshift=0.5cm]par.west);
+\draw[arr] (f.east) -- (par.west);
+\draw[arr] (r.east) -- ++(0.2,0) |- ([yshift=-0.5cm]par.west);
+% condition x answer panel
+\begin{scope}[shift={(9.05,-5.6)}]
+  \foreach \i/\c in {0/green,1/blue,2/orange}{
+    \foreach \j/\s in {0/60,1/22,2/10}{
+      \fill[\c!\s] (\j*0.62,\i*0.62) rectangle +(0.6,0.6);}}
+  \node[font=\tiny, anchor=east] at (-0.05,0.31) {refusal-abl.};
+  \node[font=\tiny, anchor=east] at (-0.05,0.93) {forced};
+  \node[font=\tiny, anchor=east] at (-0.05,1.55) {direct};
+  \node[font=\tiny, rotate=40, anchor=south west] at (0.1,1.88) {occupation};
+  \node[font=\tiny, rotate=40, anchor=south west] at (0.72,1.88) {participant};
+  \node[font=\tiny, rotate=40, anchor=south west] at (1.34,1.88) {residual};
+  \node[font=\scriptsize, align=center] at (0.93,-0.4) {condition $\times$ answer\\counts};
+\end{scope}
+\draw[arr] (par.east) -- (8.2,-4.6);
+\node[box, minimum width=2.7cm, minimum height=1.7cm] (lp) at (12.85,-4.6)
+  {exact-binomial\\lower bounds $\mathrm{lo}_z(k)$\\[3pt]
+   LP test:\\$\sum_k \max_z \mathrm{lo}_z(k)\le 1$};
+\draw[arr] (11.0,-4.6) -- (lp.west);
+\node[box, fill=green!8, draw=green!40!black, minimum width=2.5cm] (ok) at (15.95,-3.85)
+  {\textbf{compatible}\\[-1pt]\tiny shared answer law\\[-2pt]\tiny not rejected};
+\node[box, fill=red!8, draw=red!50!black, minimum width=2.5cm] (bad) at (15.95,-5.35)
+  {\textbf{incompatible}\\[-1pt]\tiny inspect the dissenting\\[-2pt]\tiny condition};
+\draw[arr] (lp.east) -- ++(0.25,0) |- (ok.west);
+\draw[arr] (lp.east) -- ++(0.25,0) |- (bad.west);
+\end{tikzpicture}
+\end{adjustbox}
+\caption{\textbf{Overview of the two analyses.} \emph{Top (BBQ).} Repeated
+completions on an ambiguous item give stereotype, counter-stereotype, and
+abstain probabilities. The score factors as $s_{\mathrm{AMB}}=c\times b$
+(coverage $c=p_s+p_c$, committed-answer bias $b=(p_s-p_c)/(p_s+p_c)$), and the
+identified interval widens with the abstention rate $p$
+(\S\ref{sec:decomposition}). \emph{Bottom (WinoGender).} The item is elicited
+under \textsc{direct}, \textsc{forced}, and \textsc{refusal-ablated} conditions,
+16 draws each. A shared parser builds a condition$\times$answer panel,
+exact-binomial lower bounds feed a linear-program compatibility test
+($\sum_k \max_z \mathrm{lo}_z(k)\le 1$), and the panel is compatible with one
+answer law or certified incompatible, prompting inspection of the dissenting
+condition (\S\ref{sec:certificate}--\S\ref{sec:models}).}
+\label{fig:method}
+\end{figure*}
