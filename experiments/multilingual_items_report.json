@@ -1,0 +1,134 @@
+{
+  "per_category": 200,
+  "seed": 42,
+  "mbbq_categories": [
+    "Age",
+    "Disability_status",
+    "Gender_identity",
+    "Physical_appearance",
+    "SES",
+    "Sexual_orientation"
+  ],
+  "mbbq_matching": {
+    "Age": {
+      "en": {
+        "ambiguous": 1660,
+        "matched": 1660
+      },
+      "es": {
+        "ambiguous": 1660,
+        "matched": 1660
+      },
+      "nl": {
+        "ambiguous": 1660,
+        "matched": 1660
+      },
+      "tr": {
+        "ambiguous": 1660,
+        "matched": 1660
+      }
+    },
+    "Disability_status": {
+      "en": {
+        "ambiguous": 648,
+        "matched": 648
+      },
+      "es": {
+        "ambiguous": 648,
+        "matched": 648
+      },
+      "nl": {
+        "ambiguous": 648,
+        "matched": 648
+      },
+      "tr": {
+        "ambiguous": 648,
+        "matched": 648
+      }
+    },
+    "Gender_identity": {
+      "en": {
+        "ambiguous": 272,
+        "matched": 264
+      },
+      "es": {
+        "ambiguous": 272,
+        "matched": 258
+      },
+      "nl": {
+        "ambiguous": 272,
+        "matched": 264
+      },
+      "tr": {
+        "ambiguous": 272,
+        "matched": 264
+      }
+    },
+    "Physical_appearance": {
+      "en": {
+        "ambiguous": 588,
+        "matched": 588
+      },
+      "es": {
+        "ambiguous": 588,
+        "matched": 588
+      },
+      "nl": {
+        "ambiguous": 588,
+        "matched": 588
+      },
+      "tr": {
+        "ambiguous": 588,
+        "matched": 588
+      }
+    },
+    "SES": {
+      "en": {
+        "ambiguous": 1800,
+        "matched": 1800
+      },
+      "es": {
+        "ambiguous": 1800,
+        "matched": 1800
+      },
+      "nl": {
+        "ambiguous": 1800,
+        "matched": 1800
+      },
+      "tr": {
+        "ambiguous": 1800,
+        "matched": 1800
+      }
+    },
+    "Sexual_orientation": {
+      "en": {
+        "ambiguous": 76,
+        "matched": 76
+      },
+      "es": {
+        "ambiguous": 76,
+        "matched": 76
+      },
+      "nl": {
+        "ambiguous": 76,
+        "matched": 76
+      },
+      "tr": {
+        "ambiguous": 76,
+        "matched": 76
+      }
+    }
+  },
+  "kobbq": {
+    "ambiguous": 1140,
+    "kept": 1140,
+    "dropped": 0
+  },
+  "items": {
+    "kobbq/ko": 1140,
+    "mbbq/en": 1076,
+    "mbbq/es": 1076,
+    "mbbq/nl": 1076,
+    "mbbq/tr": 1076
+  }
+}

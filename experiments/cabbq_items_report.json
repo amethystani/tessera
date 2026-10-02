@@ -1,0 +1,46 @@
+{
+  "per_category": 200,
+  "categories": {
+    "Age": {
+      "ambiguous": 1292,
+      "matched": 1292
+    },
+    "DisabilityStatus": {
+      "ambiguous": 928,
+      "matched": 928
+    },
+    "Gender": {
+      "ambiguous": 1504,
+      "matched": 1504
+    },
+    "LGBTQIA": {
+      "ambiguous": 576,
+      "matched": 576
+    },
+    "Nationality": {
+      "ambiguous": 168,
+      "matched": 168
+    },
+    "PhysicalAppearance": {
+      "ambiguous": 1184,
+      "matched": 1184
+    },
+    "RaceEthnicity": {
+      "ambiguous": 1228,
+      "matched": 588
+    },
+    "Religion": {
+      "ambiguous": 216,
+      "matched": 216
+    },
+    "SES": {
+      "ambiguous": 1380,
+      "matched": 1380
+    },
+    "SpanishRegion": {
+      "ambiguous": 324,
+      "matched": 324
+    }
+  },
+  "total_items": 1968
+}
