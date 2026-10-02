@@ -1,0 +1,12 @@
+# enough to run the checks and rebuild every table and figure
+pandas>=2.0
+numpy>=1.24
+scipy>=1.10
+
+# only needed to re-run model generations (GPU recommended)
+# torch>=2.0
+# transformers>=4.40
+# accelerate>=0.28
+
+# only needed to rebuild the Catalan item set from the CaBBQ parquet files
+# pyarrow

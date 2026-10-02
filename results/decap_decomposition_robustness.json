@@ -1,0 +1,32 @@
+{
+  "symmetric_decomposition": {
+    "median_mechanical_fraction_original": 0.8036012225991279,
+    "median_mechanical_fraction_symmetric": 0.6527587861337159,
+    "mean_mechanical_fraction_original": 0.7552669549649977,
+    "mean_mechanical_fraction_symmetric": 0.6971135567304563,
+    "absolute_difference_in_median": 0.15084243646541207,
+    "n_pairs_coverage_sign_differs": 0,
+    "n_at_least_90pct_mechanical_original": 14,
+    "n_at_least_90pct_mechanical_symmetric": 10,
+    "n_at_least_75pct_mechanical_original": 17,
+    "n_at_least_75pct_mechanical_symmetric": 14,
+    "n_at_least_50pct_mechanical_original": 24,
+    "n_at_least_50pct_mechanical_symmetric": 21,
+    "disposition_worsened_flag_convention_independent": true
+  },
+  "rounding_sensitivity": {
+    "rounding_half_width": 0.005,
+    "n_draws": 20000,
+    "median_mechanical_fraction_point_estimate": 0.8036012225991279,
+    "median_mechanical_fraction_mc_95ci": [
+      0.8029082112027447,
+      0.8043005515082944
+    ],
+    "pairs_with_nonzero_disposition_worsened_flip_rate": {
+      "Def-2/FLAN-T5 (3B)": 0.20385
+    },
+    "pairs_with_nonzero_identified_set_widened_flip_rate": {},
+    "max_flip_rate_disposition_worsened": 0.20385,
+    "max_flip_rate_identified_set_widened": 0.0
+  }
+}

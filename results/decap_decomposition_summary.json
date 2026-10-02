@@ -1,0 +1,13 @@
+{
+  "source": "DeCAP (NAACL 2025, arXiv:2503.19426) Table 11a, BBQ ambiguous",
+  "n_pairs": 32,
+  "n_reporting_improvement": 32,
+  "median_mechanical_fraction": 0.8036012225991279,
+  "mean_mechanical_fraction": 0.7552669549649977,
+  "n_at_least_90pct_mechanical": 14,
+  "n_at_least_75pct_mechanical": 17,
+  "n_disposition_worsened": 7,
+  "n_identified_set_widened": 31,
+  "mean_width_before": 0.2125625,
+  "mean_width_after": 0.6063218749999999
+}

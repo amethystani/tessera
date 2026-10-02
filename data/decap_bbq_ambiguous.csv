@@ -1,0 +1,48 @@
+# Source: Bae, Choi & Lee (2025), "DeCAP: Context-Adaptive Prompt Generation
+# for Debiasing Zero-shot Question Answering in Large Language Models",
+# NAACL 2025, arXiv:2503.19426. Table 11(a), BBQ AMBIGUOUS split.
+# Transcribed 2026-09-17 from https://arxiv.org/html/2503.19426v1
+# accuracy and bias_score are in percentage points, exactly as printed.
+# On BBQ ambiguous items the gold answer IS the UNKNOWN option, so
+# accuracy == P(model abstains) == the non-response rate p.
+method,model,accuracy,bias_score
+Base,FLAN-T5 (3B),46.26,27.52
+Base,FLAN-T5 (11B),48.35,25.69
+Base,Llama2 (7B),7.67,3.93
+Base,Llama2-chat (7B),6.37,5.41
+Base,Llama2 (13B),13.46,3.06
+Base,Llama2-chat (13B),4.89,8.78
+Base,Llama3 (8B),11.35,12.31
+Base,Llama3-instruct (8B),31.70,28.89
+Self-Debiasing,FLAN-T5 (3B),62.67,13.74
+Self-Debiasing,FLAN-T5 (11B),61.15,3.33
+Self-Debiasing,Llama2 (7B),41.19,2.87
+Self-Debiasing,Llama2-chat (7B),52.22,2.41
+Self-Debiasing,Llama2 (13B),42.44,2.12
+Self-Debiasing,Llama2-chat (13B),57.91,1.54
+Self-Debiasing,Llama3 (8B),51.02,4.08
+Self-Debiasing,Llama3-instruct (8B),55.31,7.24
+Def-1,FLAN-T5 (3B),61.67,19.56
+Def-1,FLAN-T5 (11B),80.85,8.81
+Def-1,Llama2 (7B),5.98,0.19
+Def-1,Llama2-chat (7B),36.93,1.67
+Def-1,Llama2 (13B),34.30,1.17
+Def-1,Llama2-chat (13B),30.26,5.45
+Def-1,Llama3 (8B),56.91,3.20
+Def-1,Llama3-instruct (8B),81.81,9.07
+Def-2,FLAN-T5 (3B),89.00,5.63
+Def-2,FLAN-T5 (11B),90.37,5.74
+Def-2,Llama2 (7B),20.57,0.41
+Def-2,Llama2-chat (7B),53.22,1.89
+Def-2,Llama2 (13B),50.57,0.94
+Def-2,Llama2-chat (13B),80.57,3.24
+Def-2,Llama3 (8B),83.80,1.19
+Def-2,Llama3-instruct (8B),84.59,7.78
+DeCAP,FLAN-T5 (3B),91.37,3.56
+DeCAP,FLAN-T5 (11B),91.52,2.67
+DeCAP,Llama2 (7B),26.22,0.32
+DeCAP,Llama2-chat (7B),47.96,0.19
+DeCAP,Llama2 (13B),65.35,0.32
+DeCAP,Llama2-chat (13B),71.17,1.48
+DeCAP,Llama3 (8B),88.85,1.24
+DeCAP,Llama3-instruct (8B),92.48,3.59
