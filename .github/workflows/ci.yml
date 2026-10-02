@@ -39,7 +39,7 @@ jobs:
           mkdir -p ../build
           tectonic -X compile main.tex --outdir ../build
         working-directory: paper
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: paper-pdf
           path: build/main.pdf
