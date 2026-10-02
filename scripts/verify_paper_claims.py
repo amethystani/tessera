@@ -69,7 +69,7 @@ claim("Def-2/FLAN-T5 b_cond after", "51.18", float(flan.b_cond_after),
       lambda v: f"{v:.2f}")
 
 # --- Prong 1b: first-party BBQ ----------------------------------------------
-print("\n[First-party BBQ -> research/.../results_bbq_firstparty_summary.json]")
+print("\n[First-party BBQ -> experiments/results_bbq_firstparty_summary.json]")
 fp = json.loads((RESEARCH / "results_bbq11_firstparty_summary.json").read_text())
 claim("first-party n models", "six checkpoints", fp["n_models"],
       lambda v: "six checkpoints" if v == 6 else f"{v} checkpoints")
@@ -303,7 +303,7 @@ assert sym["n_pairs_coverage_sign_differs"] == 0, "coverage sign differs under s
 # --- Prong 12: power by incompatibility magnitude -----------------------------
 # Power is estimated per simulated population's own gamma*, over genuinely
 # incompatible populations (gamma*>0), grouped by magnitude.
-print("\n[Power by magnitude -> research/.../results_power_by_magnitude.json]")
+print("\n[Power by magnitude -> experiments/results_power_by_magnitude.json]")
 PW = json.loads((RESEARCH / "results_power_by_magnitude.json").read_text())
 pbin = {(b["gamma_low"], b["gamma_high"]): {x["n_draws"]: x for x in b["by_draw"]}
         for b in PW["incompatible_bins"]}
@@ -334,7 +334,7 @@ claim("compatible-group corrected FPR stated bound (actual max %.4f%%)" % compat
       "0.01", 0.01, lambda v: f"{v:.2f}")
 
 # --- Prong 13: parser audit ----------------------------------------------------
-print("\n[Parser audit -> research/.../results_parser_audit.json]")
+print("\n[Parser audit -> experiments/results_parser_audit.json]")
 PA = json.loads((RESEARCH / "results_parser_audit.json").read_text())
 claim("parser audit sample size", "161", PA["n_sampled"])
 claim("parser audit agreement rate", "1.0", PA["agreement_rate_overall"])
@@ -429,7 +429,7 @@ else:
     failures.append(f"OLMo-2/Mistral Catalan |b| max {maxb:.3f} exceeds stated bound 0.05")
 
 # --- Prong 16: WinoGender parser audit ----------------------------------------
-print("\n[WinoGender parser audit -> research/.../results_winogender_parser_audit.json]")
+print("\n[WinoGender parser audit -> experiments/results_winogender_parser_audit.json]")
 WPA = json.loads((RESEARCH / "results_winogender_parser_audit.json").read_text())
 claim("winogender parser audit sample size", "3,840", WPA["n_sampled"], lambda v: f"{v:,}")
 claim("winogender parser audit agreement rate", "99.95", WPA["agreement_rate_overall"] * 100,
