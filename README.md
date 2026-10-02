@@ -59,6 +59,12 @@ cd ../paper && latexmk -pdf main.tex      # or: tectonic main.tex
 `verify_paper_claims.py` recomputes each claim from its source file and compares it with the text of
 `paper/main.tex`, so a table or sentence that drifts from the data fails the check.
 
+## Checking your setup without a GPU
+
+`make test` runs the certificate and parser tests, and re-derives each of the 12 stored BBQ summaries
+from its per-item CSV with the same code a new run would use. If those pass, the scoring side of the
+pipeline works on your machine. Only the model calls themselves need a GPU.
+
 ## Re-running the models
 
 The per-item outputs in `experiments/lab_results/` came from a single GPU machine. To regenerate them you
