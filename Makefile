@@ -1,4 +1,7 @@
-.PHONY: verify assets plots paper summaries all
+.PHONY: test verify assets plots paper summaries all
+
+test:
+	python -m pytest -q
 
 verify:
 	python scripts/verify_paper_claims.py
@@ -15,4 +18,4 @@ summaries:
 paper:
 	cd paper && tectonic -X compile main.tex
 
-all: verify assets plots paper
+all: test verify assets plots paper
