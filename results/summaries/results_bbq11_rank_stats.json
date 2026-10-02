@@ -1,0 +1,12 @@
+{
+  "n_models": 6,
+  "spearman_abstention_vs_score": -0.8285714285714287,
+  "p_abstention_vs_score": 0.04156268221574335,
+  "spearman_score_vs_disposition": -0.3714285714285715,
+  "p_score_vs_disposition": 0.4684781341107872,
+  "score_vs_disposition_boot_ci": [
+    -1.0,
+    0.8000000000000002
+  ],
+  "note": "score-vs-disposition CI spans nearly the full range at n=6; not an established relationship in either direction."
+}

@@ -1,0 +1,8 @@
+# keep language stats about the code, not the data
+data/** linguist-vendored
+experiments/lab_results/** linguist-generated
+experiments/logs/** linguist-generated
+results/summaries/** linguist-generated
+paper/tables/** linguist-generated
+paper/figures/** linguist-generated
+*.pdf binary

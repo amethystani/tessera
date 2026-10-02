@@ -1,5 +1,9 @@
 # Tessera
 
+[![CI](https://github.com/amethystani/tessera/actions/workflows/ci.yml/badge.svg)](https://github.com/amethystani/tessera/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+![Python](https://img.shields.io/badge/python-3.12-blue)
+
 Code, data and results for the paper **Abstention Masquerading as Debiasing: Partial
 Identification and Calibrated Certificates for LLM Fairness Evaluation**.
 
@@ -29,9 +33,11 @@ experiments/  model runs, analyses, and their outputs
   logs/          stdout from the runs
   run/           shell scripts that launched the sweeps
 data/         BBQ, WinoGender, and the transcribed published numbers (see data/README.md)
-results/      output of the published-table decomposition
-scripts/      verify_paper_claims.py
+results/      headline results table, plots, and a copy of every summary file (start here)
+scripts/      verify_paper_claims.py, make_result_plots.py, collect_results.py
 ```
+
+The headline numbers and plots are in [`results/`](results/README.md).
 
 ## Reproducing the paper's numbers
 
@@ -95,6 +101,14 @@ Olmo-3-7B-Instruct and Ministral-3-3B-Instruct-2512.
 | `experiments/violation_taxonomy.py` | which condition is the odd one out in each violation |
 | `experiments/mechanism_inference.py`, `mechanism_abstention.py` | "someone" items and the recovery gap |
 | `experiments/parser_audit.py`, `winogender_parser_audit.py` | checks on the response parsers |
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md). Issues are open, and several extensions are already listed there.
+
+## License
+
+Code is MIT. The data under `data/` keeps the licenses of its sources (see `data/README.md`).
 
 ## Notes
 

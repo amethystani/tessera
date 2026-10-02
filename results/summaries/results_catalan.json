@@ -1,0 +1,268 @@
+{
+  "checkpoints": [
+    "Qwen2.5-7B",
+    "OLMo-2-SFT",
+    "OLMo-2-DPO",
+    "OLMo-2-Instruct",
+    "Mistral-7B",
+    "Phi-3.5-mini",
+    "Qwen3-4B-2507",
+    "Gemma-4-E2B",
+    "Phi-4-mini",
+    "Granite-4.0-micro",
+    "OLMo-3-7B",
+    "Ministral-3-3B"
+  ],
+  "languages": {
+    "ca": {
+      "name": "Catalan",
+      "n_checkpoints": 12,
+      "n_cells": 120,
+      "n_categories": 10,
+      "variance_shares": {
+        "abstention": {
+          "checkpoint": 0.8298919356430904,
+          "category": 0.08251250261363843,
+          "residual": 0.08759556174327121
+        },
+        "theta": {
+          "checkpoint": 0.43747747692999384,
+          "category": 0.2996131828289107,
+          "residual": 0.26290934024109547
+        },
+        "s_AMB": {
+          "checkpoint": 0.22297670346579435,
+          "category": 0.35540357181141774,
+          "residual": 0.42161972472278786
+        }
+      },
+      "ckpt_rho_abstention_score": -0.013986013986013986,
+      "ckpt_p_abstention_score": 0.9655902689187796,
+      "cell_rho_score_theta": 0.47214186829894866,
+      "cell_p_score_theta": 5.2087091390564716e-08,
+      "manski_inside_cells": 112,
+      "manski_total_cells": 120,
+      "manski_inside_checkpoints": 12,
+      "abstention_range": [
+        0.1173780487804878,
+        0.8460365853658537
+      ],
+      "theta_range": [
+        0.532520325203252,
+        0.6422764227642277
+      ],
+      "abstainer_lean_checkpoints_tested": 12,
+      "abstainer_lean_above_half": 7,
+      "abstainer_theta_range": [
+        0.5041322314049587,
+        0.659942363112392
+      ],
+      "per_checkpoint": [
+        {
+          "model": "Qwen2.5-7B",
+          "abstention": 0.8460365853658537,
+          "s_AMB": 0.06351626016260162,
+          "theta": 0.6351626016260162,
+          "manski_lo": 0.10873983739837396,
+          "manski_hi": 0.9547764227642277,
+          "inside": true,
+          "n_items": 1968,
+          "abst_n_abstained": 1665,
+          "abst_theta_abstainers": 0.6204204204204204,
+          "abst_ci": [
+            0.5981831831831832,
+            0.6432432432432432
+          ],
+          "abst_above_half": true
+        },
+        {
+          "model": "OLMo-2-SFT",
+          "abstention": 0.1173780487804878,
+          "s_AMB": -0.016768292682926823,
+          "theta": 0.5350609756097561,
+          "manski_lo": 0.4329268292682927,
+          "manski_hi": 0.5503048780487805,
+          "inside": true,
+          "n_items": 1968,
+          "abst_n_abstained": 231,
+          "abst_theta_abstainers": 0.5281385281385281,
+          "abst_ci": [
+            0.46320346320346323,
+            0.5930735930735931
+          ],
+          "abst_above_half": false
+        },
+        {
+          "model": "OLMo-2-DPO",
+          "abstention": 0.2149390243902439,
+          "s_AMB": 0.033028455284552886,
+          "theta": 0.5442073170731707,
+          "manski_lo": 0.4090447154471545,
+          "manski_hi": 0.6239837398373984,
+          "inside": true,
+          "n_items": 1968,
+          "abst_n_abstained": 423,
+          "abst_theta_abstainers": 0.5390070921985816,
+          "abst_ci": [
+            0.491725768321513,
+            0.5886524822695035
+          ],
+          "abst_above_half": false
+        },
+        {
+          "model": "OLMo-2-Instruct",
+          "abstention": 0.17530487804878048,
+          "s_AMB": 0.039126016260162606,
+          "theta": 0.532520325203252,
+          "manski_lo": 0.4319105691056911,
+          "manski_hi": 0.6072154471544715,
+          "inside": true,
+          "n_items": 1968,
+          "abst_n_abstained": 345,
+          "abst_theta_abstainers": 0.5362318840579711,
+          "abst_ci": [
+            0.48108695652173916,
+            0.591304347826087
+          ],
+          "abst_above_half": false
+        },
+        {
+          "model": "Mistral-7B",
+          "abstention": 0.5412844036697247,
+          "s_AMB": 0.023445463812436288,
+          "theta": 0.5487804878048781,
+          "manski_lo": 0.24108053007135577,
+          "manski_hi": 0.7823649337410805,
+          "inside": true,
+          "n_items": 1968,
+          "abst_n_abstained": 1062,
+          "abst_theta_abstainers": 0.5131826741996234,
+          "abst_ci": [
+            0.4849340866290019,
+            0.544256120527307
+          ],
+          "abst_above_half": false
+        },
+        {
+          "model": "Phi-3.5-mini",
+          "abstention": 0.5533536585365854,
+          "s_AMB": 0.09502032520325203,
+          "theta": 0.5330284552845529,
+          "manski_lo": 0.2708333333333333,
+          "manski_hi": 0.8241869918699187,
+          "inside": true,
+          "n_items": 1968,
+          "abst_n_abstained": 1089,
+          "abst_theta_abstainers": 0.5041322314049587,
+          "abst_ci": [
+            0.47474747474747475,
+            0.5344352617079889
+          ],
+          "abst_above_half": false
+        },
+        {
+          "model": "Qwen3-4B-2507",
+          "abstention": 0.5596518177163339,
+          "s_AMB": 0.11059907834101378,
+          "theta": 0.6361788617886179,
+          "manski_lo": 0.27547363031233996,
+          "manski_hi": 0.8351254480286738,
+          "inside": true,
+          "n_items": 1968,
+          "abst_n_abstained": 1093,
+          "abst_theta_abstainers": 0.6203110704483074,
+          "abst_ci": [
+            0.5919487648673376,
+            0.6495882891125343
+          ],
+          "abst_above_half": true
+        },
+        {
+          "model": "Gemma-4-E2B",
+          "abstention": 0.7190040650406504,
+          "s_AMB": 0.024898373983739844,
+          "theta": 0.5848577235772358,
+          "manski_lo": 0.15294715447154472,
+          "manski_hi": 0.8719512195121951,
+          "inside": true,
+          "n_items": 1968,
+          "abst_n_abstained": 1415,
+          "abst_theta_abstainers": 0.5915194346289753,
+          "abst_ci": [
+            0.566077738515901,
+            0.6169611307420495
+          ],
+          "abst_above_half": true
+        },
+        {
+          "model": "Phi-4-mini",
+          "abstention": 0.6890243902439024,
+          "s_AMB": 0.08536585365853658,
+          "theta": 0.6117886178861789,
+          "manski_lo": 0.19817073170731708,
+          "manski_hi": 0.8871951219512195,
+          "inside": true,
+          "n_items": 1968,
+          "abst_n_abstained": 1356,
+          "abst_theta_abstainers": 0.5988200589970502,
+          "abst_ci": [
+            0.5722713864306784,
+            0.6238938053097345
+          ],
+          "abst_above_half": true
+        },
+        {
+          "model": "Granite-4.0-micro",
+          "abstention": 0.35264227642276424,
+          "s_AMB": 0.14532520325203255,
+          "theta": 0.6422764227642277,
+          "manski_lo": 0.39634146341463417,
+          "manski_hi": 0.7489837398373984,
+          "inside": true,
+          "n_items": 1968,
+          "abst_n_abstained": 694,
+          "abst_theta_abstainers": 0.659942363112392,
+          "abst_ci": [
+            0.6253602305475504,
+            0.6945244956772334
+          ],
+          "abst_above_half": true
+        },
+        {
+          "model": "OLMo-3-7B",
+          "abstention": 0.7611788617886179,
+          "s_AMB": 0.017276422764227636,
+          "theta": 0.5431910569105691,
+          "manski_lo": 0.12804878048780485,
+          "manski_hi": 0.8892276422764228,
+          "inside": true,
+          "n_items": 1968,
+          "abst_n_abstained": 1498,
+          "abst_theta_abstainers": 0.5353805073431241,
+          "abst_ci": [
+            0.5093457943925234,
+            0.5607476635514018
+          ],
+          "abst_above_half": true
+        },
+        {
+          "model": "Ministral-3-3B",
+          "abstention": 0.2078265468006346,
+          "s_AMB": 0.133262823902697,
+          "theta": 0.5828252032520326,
+          "manski_lo": 0.46271813855103117,
+          "manski_hi": 0.6705446853516658,
+          "inside": true,
+          "n_items": 1968,
+          "abst_n_abstained": 393,
+          "abst_theta_abstainers": 0.5954198473282443,
+          "abst_ci": [
+            0.5470737913486005,
+            0.6437659033078881
+          ],
+          "abst_above_half": true
+        }
+      ]
+    }
+  }
+}

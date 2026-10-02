@@ -1,0 +1,63 @@
+{
+  "n_cells": 66,
+  "cell_agreement_abstention": 0.9581932468102976,
+  "cell_agreement_theta": 0.575746198636,
+  "cell_agreement_s_AMB": 0.8498272112890506,
+  "variance_orig": {
+    "abstention": {
+      "checkpoint": 0.8313928479005378,
+      "category": 0.13154296819286782,
+      "residual": 0.03706418390659438
+    },
+    "theta": {
+      "checkpoint": 0.05565960899148456,
+      "category": 0.6786439037891304,
+      "residual": 0.265696487219385
+    },
+    "s_AMB": {
+      "checkpoint": 0.25827665353365037,
+      "category": 0.5909180131328057,
+      "residual": 0.15080533333354396
+    }
+  },
+  "ckpt_rho_abstention_score_orig": -0.8285714285714287,
+  "cell_rho_score_theta_orig": 0.4400948240758215,
+  "manski_inside_orig": 65,
+  "variance_para": {
+    "abstention": {
+      "checkpoint": 0.9680422518196805,
+      "category": 0.021383512872665558,
+      "residual": 0.010574235307654
+    },
+    "theta": {
+      "checkpoint": 0.11708806155511008,
+      "category": 0.7708533486141788,
+      "residual": 0.11205858983071126
+    },
+    "s_AMB": {
+      "checkpoint": 0.4449232572856324,
+      "category": 0.40292796759728855,
+      "residual": 0.15214877511707892
+    }
+  },
+  "ckpt_rho_abstention_score_para": -1.0,
+  "cell_rho_score_theta_para": 0.7364495125038886,
+  "manski_inside_para": 64,
+  "checkpoint_abstention_orig": {
+    "Mistral-7B": 0.7440909090909091,
+    "OLMo-2-DPO": 0.4968574451921439,
+    "OLMo-2-Instruct": 0.41620065432765296,
+    "OLMo-2-SFT": 0.46362937275911237,
+    "Phi-3.5-mini": 0.893140703517588,
+    "Qwen2.5-7B": 0.9481818181818181
+  },
+  "checkpoint_abstention_para": {
+    "Mistral-7B": 0.5859090909090909,
+    "OLMo-2-DPO": 0.23272727272727273,
+    "OLMo-2-Instruct": 0.16,
+    "OLMo-2-SFT": 0.1918181818181818,
+    "Phi-3.5-mini": 0.8899999999999999,
+    "Qwen2.5-7B": 0.9568181818181819
+  },
+  "checkpoint_abstention_rank_rho": 1.0
+}
