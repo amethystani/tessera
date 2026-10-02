@@ -82,7 +82,7 @@ def run_replicate_pure_suppression(ledger: np.ndarray, n_instruments: int = 3) -
     exists, so the audit should not reject except at the chosen false-rejection
     rate."""
     obs = []
-    for z in range(n_instruments):
+    for _ in range(n_instruments):
         # Arbitrary, instrument-specific, category-dependent disclosure --
         # allowed under the pure-suppression null, still one common law.
         dz = {0: RNG.uniform(0.2, 0.9), 1: RNG.uniform(0.2, 0.9)}
@@ -115,7 +115,7 @@ def run_replicate_instrument_rewriting(ledger: np.ndarray, bias_spread: float,
     obs = []
     true_tvs = []
     p_ledger = np.array([(ledger == 0).mean(), (ledger == 1).mean()])
-    for z, bias in enumerate(biases):
+    for bias in biases:
         idx = RNG.integers(0, len(ledger), size=N_TRIALS_PER_INSTRUMENT)
         truth = ledger[idx]
         # bias > 0 => this instrument over-reports A; bias < 0 => over-reports B.
@@ -172,7 +172,7 @@ def main() -> None:
         outs = [run_replicate_instrument_rewriting(ledger, spread) for _ in range(N_REPLICATES)]
         rej = [o[0] for o in outs]; gam = [o[1] for o in outs]; tv = [o[2] for o in outs]
         results.append(RegimeResult(
-            regime=f"instrument_rewriting", param=spread,
+            regime="instrument_rewriting", param=spread,
             false_rejection_rate=float(np.mean(rej)), mean_gamma_star=float(np.mean(gam)),
             detected_rewriting_rate=float(np.mean(gam)), true_tv_from_ledger=float(np.mean(tv))))
 

@@ -105,7 +105,7 @@ def catalan_bias():
     from make_paper_assets import _catalan_mechanism_rows
     rows = _catalan_mechanism_rows()
     fig, ax = plt.subplots(figsize=(5.4, 3.8))
-    for i, (name, be, bc) in enumerate(rows):
+    for i, (_, be, bc) in enumerate(rows):
         ax.plot([bc, be], [i, i], color="#bbbbbb", lw=2, zorder=1)
     ax.scatter([r[1] for r in rows], range(len(rows)), s=30, facecolor="white",
                edgecolor="black", zorder=2, label="English")

@@ -423,7 +423,7 @@ else:
     failures.append(f"tab_catalan_mechanism English b range mismatch: recomputed {lo:.2f}--{hi:.2f}")
 checks += 1
 maxb = max(abs(b_ca[n]) for n in ("OLMo-2-SFT", "OLMo-2-DPO", "OLMo-2-Instruct", "Mistral-7B"))
-if round(maxb, 2) <= 0.05 and f"|b|\\le0.05" in CATTEX:
+if round(maxb, 2) <= 0.05 and "|b|\\le0.05" in CATTEX:
     print(f"  ok  OLMo-2/Mistral Catalan |b| max {maxb:.3f} <= stated bound 0.05")
 else:
     failures.append(f"OLMo-2/Mistral Catalan |b| max {maxb:.3f} exceeds stated bound 0.05")

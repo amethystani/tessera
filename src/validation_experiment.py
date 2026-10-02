@@ -165,7 +165,6 @@ def ablate_direction(model, direction):
     Project the refusal direction out of every residual-stream write.
     Returns a handle list; call .remove() on each to restore the model.
     """
-    import torch
     # direction is float32 on CPU (mean_hidden casts it). Match the model's
     # device and dtype, otherwise h @ d mixes half and float under fp16/bf16.
     model_dtype = next(model.parameters()).dtype

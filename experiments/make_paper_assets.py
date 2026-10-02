@@ -10,7 +10,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import math
 from pathlib import Path
 
 import pandas as pd
@@ -686,7 +685,7 @@ def fig_variance() -> str:
     # A real pgfplots legend (auto-spaced) instead of hand-placed nodes, which
     # collide whenever the axis width changes.
     legend = []
-    for (part, fill, _), name in zip(parts, ("checkpoint", "social category", "residual")):
+    for (_, fill, _), name in zip(parts, ("checkpoint", "social category", "residual")):
         legend.append(f"\\addlegendimage{{area legend, draw=none, fill={fill}}}")
         legend.append(f"\\addlegendentry{{{name}}}")
     ticks = ",".join(str(y) for _, _, y in reversed(rows))
@@ -833,7 +832,7 @@ def fig_teaser() -> str:
         rows.append((tag, y, aligned, abst, 100 - aligned - abst, b, score))
     drop = 100 * (1 - r.score_after / r.score_before)
     draw = []
-    for tag, y, al, ab, co, b, score in rows:
+    for tag, y, al, ab, _co, b, score in rows:
         h = 0.26
         draw.append(f"\\fill[red!65!black] (axis cs:0,{y-h}) rectangle (axis cs:{al:.2f},{y+h});")
         draw.append(f"\\fill[gray!25] (axis cs:{al:.2f},{y-h}) rectangle (axis cs:{al+ab:.2f},{y+h});")

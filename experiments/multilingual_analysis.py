@@ -131,7 +131,7 @@ def main() -> None:
     print(f"checkpoints: {', '.join(out['checkpoints'])}\n")
     print(f"{'lang':8s} {'ck':>3s} {'abst->ckpt':>10s} {'theta->cat':>10s} {'rho(abst,s)':>11s} "
           f"{'rho(s,th)':>9s} {'Manski':>9s} {'abst lean>.5':>12s}")
-    for lang, r in out["languages"].items():
+    for r in out["languages"].values():
         vs = r["variance_shares"]
         print(f"{r['name']:8s} {r['n_checkpoints']:3d} {vs['abstention']['checkpoint']*100:9.0f}% "
               f"{vs['theta']['category']*100:9.0f}% {r['ckpt_rho_abstention_score']:+11.2f} "
