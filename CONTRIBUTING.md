@@ -6,7 +6,8 @@ a number that doesn't reproduce, or a check you think the stored outputs can ans
 ## Getting set up
 
 ```bash
-pip install -r requirements.txt matplotlib
+pip install -r requirements.txt matplotlib pytest
+make test        # certificate and parser tests
 make verify      # every number in the paper against the stored results
 ```
 
@@ -14,7 +15,7 @@ Re-running models needs a GPU and the extra packages listed in `requirements.txt
 
 ## Before opening a pull request
 
-- `make verify` should pass.
+- `make test` and `make verify` should pass.
 - If you changed an analysis script or its output, rerun `make assets plots summaries` and commit what
   they produce. CI checks that the generated tables and figures match.
 - Numbers in `paper/` come from generated files. Change the script, not the table.
