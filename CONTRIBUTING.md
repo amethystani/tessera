@@ -6,7 +6,7 @@ a number that doesn't reproduce, or a check you think the stored outputs can ans
 ## Getting set up
 
 ```bash
-pip install -r requirements.txt matplotlib pytest
+pip install -r requirements.txt matplotlib pytest -c constraints.txt
 make test        # certificate and parser tests
 make verify      # every number in the paper against the stored results
 ```
