@@ -20,6 +20,7 @@ from scipy.stats import beta
 
 
 def validate(p):
+    """Return the panel as a float array, raising ValueError unless it is a nonempty non-negative matrix with rows summing to at most one."""
     p = np.asarray(p, dtype=float)
     if p.ndim != 2 or min(p.shape) < 1:
         raise ValueError("Expected a nonempty intervention-by-category matrix")

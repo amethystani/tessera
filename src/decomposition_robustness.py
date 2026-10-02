@@ -36,6 +36,7 @@ N_DRAWS = 20_000
 
 
 def symmetric_decompose(acc0, s0, acc1, s1) -> dict:
+    """Split s1 - s0 into coverage and disposition using the average of the two endpoints. Accuracy is in percent."""
     p0, p1 = acc0 / 100.0, acc1 / 100.0
     c0, c1 = 1.0 - p0, 1.0 - p1
     b0 = s0 / c0 if c0 > 0 else float("nan")
@@ -49,6 +50,7 @@ def symmetric_decompose(acc0, s0, acc1, s1) -> dict:
 
 
 def pairs():
+    """Yield every method/model pair with its baseline accuracy and bias score, as printed in the published table."""
     df = pd.read_csv(DATA, comment="#")
     base = df[df.method == BASELINE].set_index("model")
     for _, r in df[df.method != BASELINE].iterrows():
