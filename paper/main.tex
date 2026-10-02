@@ -36,7 +36,12 @@
 \usetikzlibrary{decorations.pathreplacing,arrows.meta,positioning,calc}
 \pgfplotsset{compat=1.18}
 
-\title{Abstention Masquerading as Debiasing:\\Partial Identification and Calibrated Certificates\\for LLM Fairness Evaluation}
+% Footnote on the first page with the code link. Set to \showrepofalse for a blind submission.
+\newif\ifshowrepo
+\showrepotrue
+
+\title{Abstention Masquerading as Debiasing:\\Partial Identification and Calibrated Certificates\\for LLM Fairness Evaluation
+  \ifshowrepo\thanks{Code, data and per-item results: \url{https://github.com/amethystani/tessera}}\fi}
 
 \author{Anonymous Author(s)}
 
