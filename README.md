@@ -44,7 +44,7 @@ The headline numbers and plots are in [`results/`](results/README.md).
 Everything below runs on a laptop from the committed outputs. No model is called.
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements.txt -c constraints.txt
 
 # every number quoted in the paper against the stored results
 python scripts/verify_paper_claims.py
@@ -55,6 +55,9 @@ cd experiments && python make_paper_assets.py
 # build the PDF
 cd ../paper && latexmk -pdf main.tex      # or: tectonic main.tex
 ```
+
+`constraints.txt` has the exact versions CI uses (Python 3.12). Without it you get the newest releases, which
+the weekly workflow also tests.
 
 `verify_paper_claims.py` recomputes each claim from its source file and compares it with the text of
 `paper/main.tex`, so a table or sentence that drifts from the data fails the check.
