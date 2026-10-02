@@ -1,0 +1,339 @@
+{
+  "description": "Detection power when condition 2's answer share is shifted by `mix` from the shared value conditions 0,1 use, layered on the exact per-trial resampling of draw_count_calibration.py (one shared answer share plus independent, empirically resampled per-condition disclosure). mix=0 reproduces the existing null exactly, as a consistency check. gamma* is reported for the representative median-disclosure, median-answer-share population at each mix, computed exactly via the LP; individual trials vary around it.",
+  "mix_levels": [
+    0.0,
+    0.02,
+    0.05,
+    0.1,
+    0.2,
+    0.35
+  ],
+  "n_conditions": 3,
+  "items_per_screen_for_family_wise": 480,
+  "rows": [
+    {
+      "mix": 0.0,
+      "gamma_median_population": 0.0,
+      "n_draws": 16,
+      "trials": 8000,
+      "power_naive": 0.20175,
+      "power_corrected_per_item": 0.0,
+      "power_corrected_family_wise": 0.0
+    },
+    {
+      "mix": 0.0,
+      "gamma_median_population": 0.0,
+      "n_draws": 32,
+      "trials": 8000,
+      "power_naive": 0.217875,
+      "power_corrected_per_item": 0.000125,
+      "power_corrected_family_wise": 0.0
+    },
+    {
+      "mix": 0.0,
+      "gamma_median_population": 0.0,
+      "n_draws": 64,
+      "trials": 8000,
+      "power_naive": 0.217,
+      "power_corrected_per_item": 0.0005,
+      "power_corrected_family_wise": 0.0
+    },
+    {
+      "mix": 0.0,
+      "gamma_median_population": 0.0,
+      "n_draws": 128,
+      "trials": 8000,
+      "power_naive": 0.225625,
+      "power_corrected_per_item": 0.00025,
+      "power_corrected_family_wise": 0.0
+    },
+    {
+      "mix": 0.0,
+      "gamma_median_population": 0.0,
+      "n_draws": 256,
+      "trials": 8000,
+      "power_naive": 0.217875,
+      "power_corrected_per_item": 0.0005,
+      "power_corrected_family_wise": 0.0
+    },
+    {
+      "mix": 0.0,
+      "gamma_median_population": 0.0,
+      "n_draws": 1024,
+      "trials": 8000,
+      "power_naive": 0.2195,
+      "power_corrected_per_item": 0.0,
+      "power_corrected_family_wise": 0.0
+    },
+    {
+      "mix": 0.02,
+      "gamma_median_population": 0.020000000000000018,
+      "n_draws": 16,
+      "trials": 8000,
+      "power_naive": 0.3575,
+      "power_corrected_per_item": 0.000125,
+      "power_corrected_family_wise": 0.0
+    },
+    {
+      "mix": 0.02,
+      "gamma_median_population": 0.020000000000000018,
+      "n_draws": 32,
+      "trials": 8000,
+      "power_naive": 0.461875,
+      "power_corrected_per_item": 0.0,
+      "power_corrected_family_wise": 0.0
+    },
+    {
+      "mix": 0.02,
+      "gamma_median_population": 0.020000000000000018,
+      "n_draws": 64,
+      "trials": 8000,
+      "power_naive": 0.591625,
+      "power_corrected_per_item": 0.0,
+      "power_corrected_family_wise": 0.0
+    },
+    {
+      "mix": 0.02,
+      "gamma_median_population": 0.020000000000000018,
+      "n_draws": 128,
+      "trials": 8000,
+      "power_naive": 0.70425,
+      "power_corrected_per_item": 0.0005,
+      "power_corrected_family_wise": 0.0
+    },
+    {
+      "mix": 0.02,
+      "gamma_median_population": 0.020000000000000018,
+      "n_draws": 256,
+      "trials": 8000,
+      "power_naive": 0.744375,
+      "power_corrected_per_item": 0.00425,
+      "power_corrected_family_wise": 0.0
+    },
+    {
+      "mix": 0.02,
+      "gamma_median_population": 0.020000000000000018,
+      "n_draws": 1024,
+      "trials": 8000,
+      "power_naive": 0.764,
+      "power_corrected_per_item": 0.532375,
+      "power_corrected_family_wise": 0.03225
+    },
+    {
+      "mix": 0.05,
+      "gamma_median_population": 0.050000000000000044,
+      "n_draws": 16,
+      "trials": 8000,
+      "power_naive": 0.502625,
+      "power_corrected_per_item": 0.000125,
+      "power_corrected_family_wise": 0.0
+    },
+    {
+      "mix": 0.05,
+      "gamma_median_population": 0.050000000000000044,
+      "n_draws": 32,
+      "trials": 8000,
+      "power_naive": 0.632,
+      "power_corrected_per_item": 0.0,
+      "power_corrected_family_wise": 0.0
+    },
+    {
+      "mix": 0.05,
+      "gamma_median_population": 0.050000000000000044,
+      "n_draws": 64,
+      "trials": 8000,
+      "power_naive": 0.721625,
+      "power_corrected_per_item": 0.001,
+      "power_corrected_family_wise": 0.0
+    },
+    {
+      "mix": 0.05,
+      "gamma_median_population": 0.050000000000000044,
+      "n_draws": 128,
+      "trials": 8000,
+      "power_naive": 0.74425,
+      "power_corrected_per_item": 0.030625,
+      "power_corrected_family_wise": 0.0
+    },
+    {
+      "mix": 0.05,
+      "gamma_median_population": 0.050000000000000044,
+      "n_draws": 256,
+      "trials": 8000,
+      "power_naive": 0.7525,
+      "power_corrected_per_item": 0.332375,
+      "power_corrected_family_wise": 0.0
+    },
+    {
+      "mix": 0.05,
+      "gamma_median_population": 0.050000000000000044,
+      "n_draws": 1024,
+      "trials": 8000,
+      "power_naive": 0.75725,
+      "power_corrected_per_item": 0.625375,
+      "power_corrected_family_wise": 0.5365
+    },
+    {
+      "mix": 0.1,
+      "gamma_median_population": 0.09999999999999998,
+      "n_draws": 16,
+      "trials": 8000,
+      "power_naive": 0.6405,
+      "power_corrected_per_item": 0.000375,
+      "power_corrected_family_wise": 0.0
+    },
+    {
+      "mix": 0.1,
+      "gamma_median_population": 0.09999999999999998,
+      "n_draws": 32,
+      "trials": 8000,
+      "power_naive": 0.734,
+      "power_corrected_per_item": 0.000625,
+      "power_corrected_family_wise": 0.0
+    },
+    {
+      "mix": 0.1,
+      "gamma_median_population": 0.09999999999999998,
+      "n_draws": 64,
+      "trials": 8000,
+      "power_naive": 0.754875,
+      "power_corrected_per_item": 0.026625,
+      "power_corrected_family_wise": 0.0
+    },
+    {
+      "mix": 0.1,
+      "gamma_median_population": 0.09999999999999998,
+      "n_draws": 128,
+      "trials": 8000,
+      "power_naive": 0.747875,
+      "power_corrected_per_item": 0.40675,
+      "power_corrected_family_wise": 0.000125
+    },
+    {
+      "mix": 0.1,
+      "gamma_median_population": 0.09999999999999998,
+      "n_draws": 256,
+      "trials": 8000,
+      "power_naive": 0.753375,
+      "power_corrected_per_item": 0.612875,
+      "power_corrected_family_wise": 0.20825
+    },
+    {
+      "mix": 0.1,
+      "gamma_median_population": 0.09999999999999998,
+      "n_draws": 1024,
+      "trials": 8000,
+      "power_naive": 0.75425,
+      "power_corrected_per_item": 0.736,
+      "power_corrected_family_wise": 0.637375
+    },
+    {
+      "mix": 0.2,
+      "gamma_median_population": 0.19999999999999996,
+      "n_draws": 16,
+      "trials": 8000,
+      "power_naive": 0.733125,
+      "power_corrected_per_item": 0.00075,
+      "power_corrected_family_wise": 0.0
+    },
+    {
+      "mix": 0.2,
+      "gamma_median_population": 0.19999999999999996,
+      "n_draws": 32,
+      "trials": 8000,
+      "power_naive": 0.745625,
+      "power_corrected_per_item": 0.02525,
+      "power_corrected_family_wise": 0.0
+    },
+    {
+      "mix": 0.2,
+      "gamma_median_population": 0.19999999999999996,
+      "n_draws": 64,
+      "trials": 8000,
+      "power_naive": 0.746875,
+      "power_corrected_per_item": 0.44525,
+      "power_corrected_family_wise": 0.00025
+    },
+    {
+      "mix": 0.2,
+      "gamma_median_population": 0.19999999999999996,
+      "n_draws": 128,
+      "trials": 8000,
+      "power_naive": 0.74825,
+      "power_corrected_per_item": 0.67075,
+      "power_corrected_family_wise": 0.25825
+    },
+    {
+      "mix": 0.2,
+      "gamma_median_population": 0.19999999999999996,
+      "n_draws": 256,
+      "trials": 8000,
+      "power_naive": 0.752625,
+      "power_corrected_per_item": 0.731125,
+      "power_corrected_family_wise": 0.600125
+    },
+    {
+      "mix": 0.2,
+      "gamma_median_population": 0.19999999999999996,
+      "n_draws": 1024,
+      "trials": 8000,
+      "power_naive": 0.745125,
+      "power_corrected_per_item": 0.737375,
+      "power_corrected_family_wise": 0.732625
+    },
+    {
+      "mix": 0.35,
+      "gamma_median_population": 0.35,
+      "n_draws": 16,
+      "trials": 8000,
+      "power_naive": 0.747375,
+      "power_corrected_per_item": 0.0215,
+      "power_corrected_family_wise": 0.0
+    },
+    {
+      "mix": 0.35,
+      "gamma_median_population": 0.35,
+      "n_draws": 32,
+      "trials": 8000,
+      "power_naive": 0.75425,
+      "power_corrected_per_item": 0.3755,
+      "power_corrected_family_wise": 0.000125
+    },
+    {
+      "mix": 0.35,
+      "gamma_median_population": 0.35,
+      "n_draws": 64,
+      "trials": 8000,
+      "power_naive": 0.757125,
+      "power_corrected_per_item": 0.687625,
+      "power_corrected_family_wise": 0.150875
+    },
+    {
+      "mix": 0.35,
+      "gamma_median_population": 0.35,
+      "n_draws": 128,
+      "trials": 8000,
+      "power_naive": 0.75075,
+      "power_corrected_per_item": 0.725125,
+      "power_corrected_family_wise": 0.6455
+    },
+    {
+      "mix": 0.35,
+      "gamma_median_population": 0.35,
+      "n_draws": 256,
+      "trials": 8000,
+      "power_naive": 0.75875,
+      "power_corrected_per_item": 0.745875,
+      "power_corrected_family_wise": 0.71975
+    },
+    {
+      "mix": 0.35,
+      "gamma_median_population": 0.35,
+      "n_draws": 1024,
+      "trials": 8000,
+      "power_naive": 0.757125,
+      "power_corrected_per_item": 0.751375,
+      "power_corrected_family_wise": 0.748875
+    }
+  ]
+}

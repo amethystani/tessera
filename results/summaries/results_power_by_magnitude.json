@@ -1,0 +1,308 @@
+{
+  "description": "Detection power grouped by per-population gamma*. mix ~ U[0, 0.40] per trial; population gamma* computed exactly from each trial's own disclosed-mass matrix. Power is over incompatible populations (gamma*>0) only; the gamma*=0 group is reported separately as a false-positive check.",
+  "trials": 60000,
+  "n_conditions": 3,
+  "gamma_edges": [
+    0.0,
+    0.02,
+    0.05,
+    0.1,
+    0.2,
+    1.0
+  ],
+  "mix_max": 0.4,
+  "alpha_per_item": 0.05,
+  "alpha_family_wise": 0.00010416666666666667,
+  "items_per_screen": 480,
+  "incompatible_bins": [
+    {
+      "gamma_low": 0.0,
+      "gamma_high": 0.02,
+      "label": "(0.00, 0.02]",
+      "by_draw": [
+        {
+          "n_draws": 16,
+          "n_populations": 2402,
+          "power_naive": 0.35845129059117403,
+          "power_corrected_per_item": 0.0,
+          "power_corrected_family_wise": 0.0
+        },
+        {
+          "n_draws": 32,
+          "n_populations": 2402,
+          "power_naive": 0.462947543713572,
+          "power_corrected_per_item": 0.0,
+          "power_corrected_family_wise": 0.0
+        },
+        {
+          "n_draws": 64,
+          "n_populations": 2402,
+          "power_naive": 0.5865945045795171,
+          "power_corrected_per_item": 0.00041631973355537054,
+          "power_corrected_family_wise": 0.0
+        },
+        {
+          "n_draws": 128,
+          "n_populations": 2402,
+          "power_naive": 0.7398001665278934,
+          "power_corrected_per_item": 0.00041631973355537054,
+          "power_corrected_family_wise": 0.0
+        },
+        {
+          "n_draws": 256,
+          "n_populations": 2402,
+          "power_naive": 0.8555370524562864,
+          "power_corrected_per_item": 0.0012489592006661116,
+          "power_corrected_family_wise": 0.0
+        },
+        {
+          "n_draws": 1024,
+          "n_populations": 2402,
+          "power_naive": 0.9633638634471274,
+          "power_corrected_per_item": 0.31182348043297253,
+          "power_corrected_family_wise": 0.004579517069109076
+        }
+      ]
+    },
+    {
+      "gamma_low": 0.02,
+      "gamma_high": 0.05,
+      "label": "(0.02, 0.05]",
+      "by_draw": [
+        {
+          "n_draws": 16,
+          "n_populations": 3504,
+          "power_naive": 0.5587899543378996,
+          "power_corrected_per_item": 0.00028538812785388126,
+          "power_corrected_family_wise": 0.0
+        },
+        {
+          "n_draws": 32,
+          "n_populations": 3504,
+          "power_naive": 0.752283105022831,
+          "power_corrected_per_item": 0.0,
+          "power_corrected_family_wise": 0.0
+        },
+        {
+          "n_draws": 64,
+          "n_populations": 3504,
+          "power_naive": 0.9021118721461188,
+          "power_corrected_per_item": 0.00028538812785388126,
+          "power_corrected_family_wise": 0.0
+        },
+        {
+          "n_draws": 128,
+          "n_populations": 3504,
+          "power_naive": 0.9800228310502284,
+          "power_corrected_per_item": 0.009417808219178082,
+          "power_corrected_family_wise": 0.0
+        },
+        {
+          "n_draws": 256,
+          "n_populations": 3504,
+          "power_naive": 0.9988584474885844,
+          "power_corrected_per_item": 0.1800799086757991,
+          "power_corrected_family_wise": 0.0
+        },
+        {
+          "n_draws": 1024,
+          "n_populations": 3504,
+          "power_naive": 0.9997146118721462,
+          "power_corrected_per_item": 0.7796803652968036,
+          "power_corrected_family_wise": 0.5331050228310502
+        }
+      ]
+    },
+    {
+      "gamma_low": 0.05,
+      "gamma_high": 0.1,
+      "label": "(0.05, 0.10]",
+      "by_draw": [
+        {
+          "n_draws": 16,
+          "n_populations": 6639,
+          "power_naive": 0.7957523723452327,
+          "power_corrected_per_item": 0.00015062509414068384,
+          "power_corrected_family_wise": 0.0
+        },
+        {
+          "n_draws": 32,
+          "n_populations": 6639,
+          "power_naive": 0.9382437114023197,
+          "power_corrected_per_item": 0.00015062509414068384,
+          "power_corrected_family_wise": 0.0
+        },
+        {
+          "n_draws": 64,
+          "n_populations": 6639,
+          "power_naive": 0.9917156198222624,
+          "power_corrected_per_item": 0.011296882060551287,
+          "power_corrected_family_wise": 0.0
+        },
+        {
+          "n_draws": 128,
+          "n_populations": 6639,
+          "power_naive": 0.9986443741527339,
+          "power_corrected_per_item": 0.2914595571622232,
+          "power_corrected_family_wise": 0.0
+        },
+        {
+          "n_draws": 256,
+          "n_populations": 6639,
+          "power_naive": 0.9996987498117186,
+          "power_corrected_per_item": 0.7471004669377919,
+          "power_corrected_family_wise": 0.07004066877541798
+        },
+        {
+          "n_draws": 1024,
+          "n_populations": 6639,
+          "power_naive": 1.0,
+          "power_corrected_per_item": 0.94713059195662,
+          "power_corrected_family_wise": 0.8022292513932822
+        }
+      ]
+    },
+    {
+      "gamma_low": 0.1,
+      "gamma_high": 0.2,
+      "label": "(0.10, 0.20]",
+      "by_draw": [
+        {
+          "n_draws": 16,
+          "n_populations": 11916,
+          "power_naive": 0.9387378314870762,
+          "power_corrected_per_item": 0.0009231285666330984,
+          "power_corrected_family_wise": 0.0
+        },
+        {
+          "n_draws": 32,
+          "n_populations": 11916,
+          "power_naive": 0.99269889224572,
+          "power_corrected_per_item": 0.01426653239342061,
+          "power_corrected_family_wise": 0.0
+        },
+        {
+          "n_draws": 64,
+          "n_populations": 11916,
+          "power_naive": 0.9993286337697214,
+          "power_corrected_per_item": 0.32351460221550854,
+          "power_corrected_family_wise": 0.0
+        },
+        {
+          "n_draws": 128,
+          "n_populations": 11916,
+          "power_naive": 0.9998321584424303,
+          "power_corrected_per_item": 0.8141993957703928,
+          "power_corrected_family_wise": 0.10414568647197046
+        },
+        {
+          "n_draws": 256,
+          "n_populations": 11916,
+          "power_naive": 1.0,
+          "power_corrected_per_item": 0.9389056730446459,
+          "power_corrected_family_wise": 0.717438737831487
+        },
+        {
+          "n_draws": 1024,
+          "n_populations": 11916,
+          "power_naive": 1.0,
+          "power_corrected_per_item": 0.9994125545485062,
+          "power_corrected_family_wise": 0.9705438066465257
+        }
+      ]
+    },
+    {
+      "gamma_low": 0.2,
+      "gamma_high": 1.0,
+      "label": "(0.20, 1.00]",
+      "by_draw": [
+        {
+          "n_draws": 16,
+          "n_populations": 20225,
+          "power_naive": 0.9930778739184178,
+          "power_corrected_per_item": 0.02022249690976514,
+          "power_corrected_family_wise": 0.0
+        },
+        {
+          "n_draws": 32,
+          "n_populations": 20225,
+          "power_naive": 0.9996538936959208,
+          "power_corrected_per_item": 0.350061804697157,
+          "power_corrected_family_wise": 0.00024721878862793575
+        },
+        {
+          "n_draws": 64,
+          "n_populations": 20225,
+          "power_naive": 1.0,
+          "power_corrected_per_item": 0.8903831891223734,
+          "power_corrected_family_wise": 0.1357725587144623
+        },
+        {
+          "n_draws": 128,
+          "n_populations": 20225,
+          "power_naive": 1.0,
+          "power_corrected_per_item": 0.9850679851668727,
+          "power_corrected_family_wise": 0.8117181705809642
+        },
+        {
+          "n_draws": 256,
+          "n_populations": 20225,
+          "power_naive": 1.0,
+          "power_corrected_per_item": 0.999406674907293,
+          "power_corrected_family_wise": 0.9656860321384425
+        },
+        {
+          "n_draws": 1024,
+          "n_populations": 20225,
+          "power_naive": 1.0,
+          "power_corrected_per_item": 1.0,
+          "power_corrected_family_wise": 1.0
+        }
+      ]
+    }
+  ],
+  "compatible_group": [
+    {
+      "n_draws": 16,
+      "n_populations": 15314,
+      "fp_naive": 0.025923991119237298,
+      "fp_corrected_per_item": 0.0,
+      "fp_corrected_family_wise": 0.0
+    },
+    {
+      "n_draws": 32,
+      "n_populations": 15314,
+      "fp_naive": 0.02657698837664882,
+      "fp_corrected_per_item": 0.0,
+      "fp_corrected_family_wise": 0.0
+    },
+    {
+      "n_draws": 64,
+      "n_populations": 15314,
+      "fp_naive": 0.026119890296460755,
+      "fp_corrected_per_item": 0.0,
+      "fp_corrected_family_wise": 0.0
+    },
+    {
+      "n_draws": 128,
+      "n_populations": 15314,
+      "fp_naive": 0.026838187279613426,
+      "fp_corrected_per_item": 6.52997257411519e-05,
+      "fp_corrected_family_wise": 0.0
+    },
+    {
+      "n_draws": 256,
+      "n_populations": 15314,
+      "fp_naive": 0.02801358234295416,
+      "fp_corrected_per_item": 0.0,
+      "fp_corrected_family_wise": 0.0
+    },
+    {
+      "n_draws": 1024,
+      "n_populations": 15314,
+      "fp_naive": 0.02801358234295416,
+      "fp_corrected_per_item": 0.0,
+      "fp_corrected_family_wise": 0.0
+    }
+  ]
+}

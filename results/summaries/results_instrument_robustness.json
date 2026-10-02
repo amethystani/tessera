@@ -1,0 +1,70 @@
+{
+  "qwen": {
+    "generic": {
+      "D": 0.09895833333333333,
+      "ci": [
+        0.05598307291666667,
+        0.1437565104166666
+      ],
+      "p_permutation": 0.0,
+      "n_someone": 240,
+      "n_named": 240
+    },
+    "behavioral": {
+      "D": 0.15,
+      "ci": [
+        0.10572916666666668,
+        0.19427083333333334
+      ],
+      "p_permutation": 0.0,
+      "n_someone": 240,
+      "n_named": 240
+    },
+    "behavioral_instrument_failures": 1,
+    "generic_minus_flagged": {
+      "D": 0.11000587009868827,
+      "ci": [
+        0.0667635453630634,
+        0.15345822740674045
+      ],
+      "p_permutation": 0.0,
+      "n_someone": 239,
+      "n_named": 237
+    },
+    "n_flagged_dropped": 4
+  },
+  "mistral": {
+    "generic": {
+      "D": 0.008333333333333338,
+      "ci": [
+        -0.019010416666666675,
+        0.03541666666666666
+      ],
+      "p_permutation": 0.5627,
+      "n_someone": 240,
+      "n_named": 240
+    },
+    "behavioral": {
+      "D": -0.030468750000000003,
+      "ci": [
+        -0.06666666666666667,
+        0.00572916666666666
+      ],
+      "p_permutation": 0.0955,
+      "n_someone": 240,
+      "n_named": 240
+    },
+    "behavioral_instrument_failures": 5,
+    "generic_minus_flagged": {
+      "D": 0.008333333333333338,
+      "ci": [
+        -0.01901041666666667,
+        0.035937500000000004
+      ],
+      "p_permutation": 0.5627,
+      "n_someone": 240,
+      "n_named": 240
+    },
+    "n_flagged_dropped": 0
+  }
+}

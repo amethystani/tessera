@@ -29,9 +29,11 @@ experiments/  model runs, analyses, and their outputs
   logs/          stdout from the runs
   run/           shell scripts that launched the sweeps
 data/         BBQ, WinoGender, and the transcribed published numbers (see data/README.md)
-results/      output of the published-table decomposition
-scripts/      verify_paper_claims.py
+results/      headline results table, plots, and a copy of every summary file (start here)
+scripts/      verify_paper_claims.py, make_result_plots.py, collect_results.py
 ```
+
+The headline numbers and plots are in [`results/`](results/README.md).
 
 ## Reproducing the paper's numbers
 

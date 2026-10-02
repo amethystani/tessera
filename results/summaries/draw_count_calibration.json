@@ -1,0 +1,81 @@
+{
+  "description": "Null: one shared answer law (resampled from real conditional answer-splits), independent per-condition disclosure (resampled from real disclosure rates), so the population panel is compatible by construction and every rejection below is spurious.",
+  "seed": 20260917,
+  "n_conditions": 3,
+  "n_categories": 2,
+  "disclosure_pool_size": 8640,
+  "occshare_pool_size": 8612,
+  "items_per_screen_for_familywise": 480,
+  "rows": [
+    {
+      "n_draws": 4,
+      "trials": 8000,
+      "naive_false_positive_rate": 0.166375,
+      "corrected_per_item_false_positive_rate": 0.0,
+      "corrected_familywise_false_positive_rate": 0.0
+    },
+    {
+      "n_draws": 8,
+      "trials": 8000,
+      "naive_false_positive_rate": 0.201125,
+      "corrected_per_item_false_positive_rate": 0.0,
+      "corrected_familywise_false_positive_rate": 0.0
+    },
+    {
+      "n_draws": 16,
+      "trials": 8000,
+      "naive_false_positive_rate": 0.21275,
+      "corrected_per_item_false_positive_rate": 0.000125,
+      "corrected_familywise_false_positive_rate": 0.0
+    },
+    {
+      "n_draws": 32,
+      "trials": 8000,
+      "naive_false_positive_rate": 0.22275,
+      "corrected_per_item_false_positive_rate": 0.000375,
+      "corrected_familywise_false_positive_rate": 0.0
+    },
+    {
+      "n_draws": 64,
+      "trials": 8000,
+      "naive_false_positive_rate": 0.213,
+      "corrected_per_item_false_positive_rate": 0.0,
+      "corrected_familywise_false_positive_rate": 0.0
+    },
+    {
+      "n_draws": 128,
+      "trials": 8000,
+      "naive_false_positive_rate": 0.229,
+      "corrected_per_item_false_positive_rate": 0.000375,
+      "corrected_familywise_false_positive_rate": 0.0
+    },
+    {
+      "n_draws": 256,
+      "trials": 8000,
+      "naive_false_positive_rate": 0.228,
+      "corrected_per_item_false_positive_rate": 0.00025,
+      "corrected_familywise_false_positive_rate": 0.0
+    },
+    {
+      "n_draws": 512,
+      "trials": 8000,
+      "naive_false_positive_rate": 0.220875,
+      "corrected_per_item_false_positive_rate": 0.00025,
+      "corrected_familywise_false_positive_rate": 0.0
+    },
+    {
+      "n_draws": 1024,
+      "trials": 8000,
+      "naive_false_positive_rate": 0.22175,
+      "corrected_per_item_false_positive_rate": 0.0005,
+      "corrected_familywise_false_positive_rate": 0.0
+    },
+    {
+      "n_draws": 4096,
+      "trials": 8000,
+      "naive_false_positive_rate": 0.22575,
+      "corrected_per_item_false_positive_rate": 0.00025,
+      "corrected_familywise_false_positive_rate": 0.0
+    }
+  ]
+}
