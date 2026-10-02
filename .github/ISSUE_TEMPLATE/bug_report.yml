@@ -1,0 +1,29 @@
+name: Something doesn't reproduce
+description: A script fails, or a number in the paper doesn't match the stored results
+labels: [reproducibility]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: Which script or number, and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: how
+    attributes:
+      label: How to reproduce
+      description: The exact command, run from the repo root if you can.
+      render: shell
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      placeholder: "Python 3.12, pandas 2.2, macOS 14"
+  - type: textarea
+    id: output
+    attributes:
+      label: Output or traceback
+      render: text

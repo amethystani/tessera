@@ -1,0 +1,24 @@
+name: Add a checkpoint or language
+description: Run the BBQ analysis on another model or another BBQ-style dataset
+labels: [extension]
+body:
+  - type: input
+    id: target
+    attributes:
+      label: Model or dataset
+      placeholder: "e.g. Llama-3.1-8B-Instruct, or a German BBQ-style set"
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it would add something
+      description: A new family, a new language, a model that abstains very little or a lot, and so on.
+  - type: dropdown
+    id: gpu
+    attributes:
+      label: Can you run it?
+      options:
+        - I can run it and send the outputs
+        - I can't, but I'd like it done
+        - Not sure yet

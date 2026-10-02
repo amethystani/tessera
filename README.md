@@ -1,5 +1,9 @@
 # Tessera
 
+[![CI](https://github.com/amethystani/tessera/actions/workflows/ci.yml/badge.svg)](https://github.com/amethystani/tessera/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+
 Code, data and results for the paper **Abstention Masquerading as Debiasing: Partial
 Identification and Calibrated Certificates for LLM Fairness Evaluation**.
 
@@ -97,6 +101,14 @@ Olmo-3-7B-Instruct and Ministral-3-3B-Instruct-2512.
 | `experiments/violation_taxonomy.py` | which condition is the odd one out in each violation |
 | `experiments/mechanism_inference.py`, `mechanism_abstention.py` | "someone" items and the recovery gap |
 | `experiments/parser_audit.py`, `winogender_parser_audit.py` | checks on the response parsers |
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md). Issues are open, and several extensions are already listed there.
+
+## License
+
+Code is MIT. The data under `data/` keeps the licenses of its sources (see `data/README.md`).
 
 ## Notes
 

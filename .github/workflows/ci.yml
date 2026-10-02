@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  checks:
+    name: Numbers, tables and plots
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install
+        run: pip install -r requirements.txt matplotlib
+      - name: Python files compile
+        run: python -m compileall -q src experiments scripts
+      - name: Paper numbers match the stored results
+        run: python scripts/verify_paper_claims.py
+      - name: Tables and figures are up to date
+        run: |
+          (cd experiments && python make_paper_assets.py > /dev/null)
+          git diff --exit-code -- paper/tables paper/figures
+      - name: Result plots build
+        run: python scripts/make_result_plots.py
+
+  paper:
+    name: Paper builds
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: wtfjoke/setup-tectonic@v3
+      - name: Compile
+        run: tectonic -X compile main.tex --outdir ../build
+        working-directory: paper
+      - uses: actions/upload-artifact@v4
+        with:
+          name: paper-pdf
+          path: build/main.pdf
