@@ -1,0 +1,25 @@
+name: Weekly check
+
+# Everything is pinned in CI on purpose. This run uses whatever the newest
+# releases are, so a pandas or scipy update that changes a result shows up
+# here before it shows up for someone else.
+
+on:
+  schedule:
+    - cron: "17 5 * * 1"
+  workflow_dispatch:
+
+jobs:
+  latest-dependencies:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Install the newest releases
+        run: pip install -U -r requirements.txt matplotlib pytest
+      - name: Tests
+        run: python -m pytest -q
+      - name: Paper numbers match the stored results
+        run: python scripts/verify_paper_claims.py
