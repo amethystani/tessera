@@ -1,0 +1,3 @@
+# pyflakes errors, syntax errors, and unused loop variables
+lint.select = ["F", "E9", "B007"]
+extend-exclude = ["experiments/lab_results"]

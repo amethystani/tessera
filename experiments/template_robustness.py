@@ -12,7 +12,6 @@ Output: results_template_robustness.json
 from __future__ import annotations
 import json
 from pathlib import Path
-import numpy as np
 import pandas as pd
 from scipy.stats import spearmanr
 from bbq_by_category import MODELS, cell_stats

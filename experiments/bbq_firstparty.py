@@ -205,7 +205,7 @@ def load_items(paths, limit, seed=42, per_category: int = 0) -> pd.DataFrame:
         # Proportional allocation per category, sampled with a fixed seed so
         # every model sees an identical item set.
         parts = []
-        for cat, g in df.groupby("category"):
+        for _cat, g in df.groupby("category"):
             n = max(1, round(limit * len(g) / len(df)))
             parts.append(g.sample(n=min(n, len(g)), random_state=seed))
         df = pd.concat(parts).reset_index(drop=True)

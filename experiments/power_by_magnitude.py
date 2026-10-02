@@ -141,7 +141,7 @@ def main() -> None:
             if d['power_corrected_per_item'] is not None else f"n={d['n_draws']}:--"
             for d in b["by_draw"])
         print(f"gamma* in {b['label']}: {line}")
-    print(f"\ncompatible group (gamma*=0) FPR, per-item: " +
+    print("\ncompatible group (gamma*=0) FPR, per-item: " +
           "  ".join(f"n={c['n_draws']}:{c['fp_corrected_per_item']:.4f}" for c in compat))
     print(f"Wrote {a.out}")
 
