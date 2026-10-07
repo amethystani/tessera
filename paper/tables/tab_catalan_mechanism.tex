@@ -23,7 +23,9 @@ Qwen2.5-7B & +0.863 & +0.413 \\
 \end{tabular}
 \end{adjustbox}
 \caption{Committed-answer bias $b$ recovered as $s_{\text{AMB}}/(1-\text{abstention})$, English
-versus Catalan, same 12 checkpoints. Every checkpoint shows substantial bias in
+versus Catalan, same 12 checkpoints. The English values come from MBBQ's English set (the panel of
+Table~\ref{tab:multilingual}), not the 11-category panel of Table~\ref{tab:firstparty}, so they
+differ from $b$ computed from that table. Every checkpoint shows substantial bias in
 English (0.40--0.86). OLMo-2 (all three variants) and Mistral-7B show
 essentially none in Catalan ($|b|\le0.05$), while Qwen2.5-7B, Phi, and
 Granite retain bias closer to their English values. This is what breaks the

@@ -21,7 +21,7 @@ text of the paper (`paper/main.tex` plus the files in `paper/sections/` and `pap
 | 3.1-3.2 Identity, 32 published results | splits published BBQ improvements into coverage and disposition | `src/decap_decomposition.py` | `results/decap_decomposition*.csv/json` |
 | Appendix A | symmetric split and rounding sensitivity | `src/decomposition_robustness.py` | `results/decap_decomposition_robustness.json` |
 | 3.3 First-party replication | BBQ runs on 6 checkpoints, 11 categories | `experiments/bbq_firstparty.py`, `bbq_by_category.py`, `abstainer_disposition.py`, `template_robustness.py` | `results_bbq11_*.json`, `results_abstainer_disposition.json`, `results_template_robustness.json` |
-| 3.4 Twelve checkpoints, six languages | newer checkpoints and five more languages | `multilingual_prepare.py`, `cabbq_prepare.py`, `multilingual_analysis.py` | `results_multilingual.json`, `results_catalan.json` |
+| 3.4 Twelve checkpoints, six languages | newer checkpoints and five more languages | `multilingual_prepare.py`, `cabbq_prepare.py`, `multilingual_analysis.py`, `panel12_rank_stats.py` | `results_multilingual.json`, `results_catalan.json`, `results_bbq11_12ckpt_rank.json` |
 | 4 Compatibility certificate | the LP and the exact-binomial bounds | `experiments/check_theory.py` | `synthetic_checks.json` |
 | Appendix C | proof of the characterization | (none, it is a proof) | |
 | 5 Calibration | false-positive rate against draw count, power | `draw_count_calibration.py`, `power_simulation.py`, `power_by_magnitude.py`, `calibration_ledger.py` | `draw_count_calibration.json`, `results_power_*.json` |

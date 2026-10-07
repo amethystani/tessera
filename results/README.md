@@ -12,9 +12,10 @@ Every number in the paper comes from a file under this folder or under `experime
 | Pairs where the identified set widened | 31 of 32 (mean width 0.21 to 0.61) | `decap_decomposition_summary.json` |
 | Variance of abstention explained by the checkpoint (6 checkpoints x 11 categories) | 83% | `summaries/results_bbq11_by_category.json` |
 | Variance of the stereotype-aligned rate explained by the category | 68% | `summaries/results_bbq11_by_category.json` |
-| Spearman correlation of abstention with the reported score, 6 checkpoints | -0.83 (p = 0.04) | `summaries/results_bbq11_rank_stats.json` |
+| Spearman correlation of abstention with the reported score, 6 checkpoints | -0.83 (exact permutation p = 0.058, n = 6) | `summaries/results_bbq11_rank_stats.json` |
+| Same correlation, 12 checkpoints on the same 11-category panel | -0.92 (permutation p < 0.001, n = 12); 131 of 132 Manski cells contain the measured rate | `summaries/results_bbq11_12ckpt_rank.json` |
 | Cells where the baseline-only Manski interval contains the measured rate | 65 of 66 | `summaries/results_bbq11_by_category.json` |
-| Same correlation, 12 checkpoints, English / Spanish / Dutch / Turkish / Korean / Catalan | -0.96 / -0.91 / -0.83 / -0.25 / -0.76 / -0.01 | `summaries/results_multilingual.json`, `results_catalan.json` |
+| Same correlation, 12 checkpoints, MBBQ-English / Spanish / Dutch / Turkish / Korean / Catalan (CaBBQ) | -0.96 / -0.91 / -0.83 / -0.25 / -0.76 / -0.01 | `summaries/results_multilingual.json`, `results_catalan.json` |
 | False-positive rate of the plug-in certificate on compatible panels | 17% at 4 draws, 21-23% from 16 to 4,096 draws | `summaries/draw_count_calibration.json` |
 | Same, exact-binomial corrected | at most 0.05% at every draw count | `summaries/draw_count_calibration.json` |
 | WinoGender generations scored | 138,240 (480 items x 16 draws x 3 conditions x 6 checkpoints) | `summaries/results_n480_summary.json` |

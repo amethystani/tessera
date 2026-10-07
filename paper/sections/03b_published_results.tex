@@ -6,8 +6,8 @@ We apply the decomposition to every method--model pair in Table 11(a) of
 on the ambiguous split for four interventions (Self-Debiasing, Def-1, Def-2,
 DeCAP) across eight models, each against its own \textsc{Base} row
 (Figure~\ref{fig:decomposition} and Table~\ref{tab:decomposition},
-Appendix~\ref{app:decomp}). We chose it because it reports both quantities the
-identity needs under one harness.
+Appendix~\ref{app:decomp}), because it reports both quantities the identity
+needs under one harness.
 
 All 32 pairs report a reduction in bias score. Across these 32 pairs from a
 single study, the coverage component accounts for a median 80.4\% of the
@@ -22,15 +22,11 @@ evaluation now pins the disposition only to an interval covering more than half
 the unit range.
 
 The clearest single case is Def-2 on FLAN-T5 (3B) (Figure~\ref{fig:teaser}). The reported ambiguous
-bias score falls from 27.52 to 5.63, an 80\% reduction. The recovered
-committed-answer bias moves from 51.21 to 51.18, unchanged to four
-significant figures and, given two-decimal rounding, indistinguishable from
-zero in sign (Appendix~\ref{app:decomp}). Abstention rises from 46.3\% to
-89.0\%. The
-intervention did not detectably change what the model prefers when it
-answers. It changed how often it answers, and the metric rewards that as if
-it were debiasing. This does not show the interventions are worthless: an
-intervention that induces appropriate abstention on genuinely ambiguous items
-may well be desirable, and BBQ's authors motivate the scaling deliberately. It
-shows that the reported number cannot distinguish that case from the case
-where nothing about the model's preference changed.
+bias score falls from 27.52 to 5.63, an 80\% reduction. Committed-answer
+bias remained nearly unchanged (51.21 to 51.18, indistinguishable from no
+change given two-decimal rounding, Appendix~\ref{app:decomp}), while abstention
+rose from 46.3\% to 89.0\%. The reduction is accounted for by answering less
+often, and the metric rewards that as if it were debiasing. This does not make the interventions worthless, since
+appropriate abstention on genuinely ambiguous items may be desirable. It shows
+that the reported number cannot distinguish that case from one where nothing
+about the model's preference changed.

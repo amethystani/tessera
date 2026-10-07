@@ -2,15 +2,15 @@
 \label{sec:firstparty}
 
 Cross-paper replication should be cheap, since the decomposition needs only two
-published numbers per pair. It was not: of three further papers checked, BBQ's
-own reports the ambiguous
-split only in unlabelled figures. One reports a ``bias score''
-\citep{wu2025reasoning} from which $b$ recovers to $[3.1, 10.2]$, impossible for
-a quantity bounded in $[-1,1]$. The third reports a custom ``diff-bias'' pooled
-across categories. We excluded all three rather than force the identity onto an
-incompatible metric, which is itself the argument for the reporting
-recommendation in \S\ref{sec:conclusion}, and ran the identity ourselves on the
-six checkpoints of \S\ref{sec:models}.
+published numbers per pair, but of three further papers checked none reports
+both usably: BBQ's own reports the ambiguous split only in unlabelled
+figures, one reports a ``bias score'' \citep{wu2025reasoning} from which $b$
+recovers to $[3.1, 10.2]$, impossible for a quantity bounded in $[-1,1]$, and
+one reports a custom ``diff-bias'' pooled across categories. We excluded all
+three rather than force the identity onto an incompatible metric, which is
+itself the argument for the reporting recommendation in
+\S\ref{sec:conclusion}, and ran the identity ourselves on the six checkpoints
+of \S\ref{sec:models}.
 
 Each checkpoint is scored on 2{,}200 ambiguous items (200 per BBQ category)
 under baseline, the same untrained fairness-instruction wording debiasing
@@ -32,9 +32,10 @@ $\ge$89\% mechanical for every checkpoint.
 
 Which quantity drives the score depends on the comparison being made. Across
 the six checkpoints the score tracks abstention (Spearman $\rho=-0.83$,
-$p=0.042$), but six points cannot say whether it tracks $\theta$
+exact permutation $p=0.058$, $n=6$), but six points cannot say whether it tracks $\theta$
 ($\rho=-0.37$, bootstrap 95\% CI $[-1.00,+0.80]$). The 66
-checkpoint$\times$category cells can (Figure~\ref{fig:variance} and
+checkpoint$\times$category cells, analysed as clustered by checkpoint and not as
+66 independent observations, can (Figure~\ref{fig:variance} and
 Appendix~\ref{app:categories}). In the evaluated six-checkpoint, eleven-category grid, checkpoint
 differences account for 83\% of the observed abstention variance (against
 13\% for category), while category differences account for 68\% of the
@@ -56,8 +57,8 @@ that varies most between checkpoints, and that component is abstention.
 (Appendix~\ref{app:prompts}) move abstention \emph{levels} a great deal
 (OLMo-2-SFT 46\%$\to$19\%, Mistral 74\%$\to$59\%) but not the
 \emph{structure}: checkpoint ordering by abstention is identical
-($\rho=+1.00$), abstention remains the checkpoint's property (97\% of
-variance) and $\theta$ the category's (77\%), the score still tracks
+($\rho=+1.00$), abstention still varies mainly by checkpoint (97\% of
+variance) and $\theta$ by category (77\%), the score still tracks
 abstention ($\rho=-1.00$) and $\theta$ across cells ($\rho=+0.74$), and
 Manski containment is 64 of 66 ($\theta$ cell agreement lower, $\rho=+0.58$).
 
@@ -68,8 +69,8 @@ Interpreting it as an underlying preference requires an additional stability
 assumption. In every checkpoint under both
 prompts, abstainers still lean toward the stereotype: 55.7--64.2\% of their
 forced picks are stereotype-aligned, every stratified-bootstrap lower bound
-above 50\% (minimum 52.9\%). Abstention withholds a lean rather than
-indicating its absence. Abstainers lean slightly \emph{less} than answerers in
+above 50\% (minimum 52.9\%). Under the stability assumption, forced-choice responses suggest a
+stereotype-aligned tendency among baseline abstainers. Abstainers lean slightly \emph{less} than answerers in
 all 12 cells (selection odds ratio $\Lambda<1$), but the category-adjusted gap
 is significant (within-category permutation $p<0.05$) in only 4: Qwen2.5 under
 both prompts, Mistral and Phi-3.5-mini under the original. Instrument validity

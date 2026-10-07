@@ -5,20 +5,21 @@ The six checkpoints above are all 2024-era English models. We extend both
 axes: six checkpoints released August 2025--March 2026
 \citep{qwen2025qwen3,gemmateam2026gemma4,abdin2025phi4mini,ibm2025granite4micro,olmoteam2025olmo3,mistralai2026ministral3},
 and five further languages, Spanish, Dutch, Turkish, Korean, and Catalan
-(Appendix~\ref{app:multilingual} names each dataset and the one matcher
-adjustment needed).
+(Appendix~\ref{app:multilingual} names each dataset, and
+Table~\ref{tab:multilingual} gives the per-language results).
 
-\input{tables/tab_multilingual}
-
-Across 12 checkpoints, English is at least as strong as the six-checkpoint
-result it replicates ($\rho=-0.96$ versus $-0.83$), and four of five further
-languages reproduce it, with the category share weaker in Turkish and Korean.
-Catalan is the exception ($\rho=-0.01$). Recovering
-$b=s_{\text{AMB}}/(1-\text{abstention})$ shows why
-(Appendix~\ref{app:multilingual}): OLMo-2 and Mistral-7B show essentially no
-bias in Catalan despite substantial English bias, while Qwen2.5, Phi, and
-Granite retain theirs. When $b$ is not roughly uniform across checkpoints,
-abstention no longer dominates $(1-p)b$, exactly as
-\S\ref{sec:decomposition}'s identity predicts, not a methodological failure.
-A single from-scratch dataset cannot separate a Catalan-language effect from
-a CaBBQ-construction one.
+On the \S\ref{sec:firstparty} panel (eleven categories, 2{,}200 items) all
+twelve checkpoints give $\rho=-0.92$ between abstention and score (Monte Carlo
+permutation $p<0.001$, $n=12$), and 131 of 132 checkpoint--category cells fall
+inside their baseline-derived Manski interval. The language comparison uses
+MBBQ, whose English set (1{,}076 items, six categories) is a different panel
+with $\rho=-0.96$. Four of five further languages reproduce that structure,
+with the category share weaker in Turkish and Korean. Catalan is the
+exception ($\rho=-0.01$). Recovering $b=s_{\text{AMB}}/(1-\text{abstention})$
+shows why (Appendix~\ref{app:multilingual}): OLMo-2 and Mistral-7B show
+essentially no bias in Catalan despite substantial bias in MBBQ-English, while
+Qwen2.5, Phi, and Granite retain theirs. When $b$ is not roughly uniform across
+checkpoints, abstention no longer dominates $(1-p)b$, which is consistent with
+\S\ref{sec:decomposition}'s identity rather than a methodological failure (one
+from-scratch dataset cannot separate a Catalan-language effect from a
+CaBBQ-construction one).

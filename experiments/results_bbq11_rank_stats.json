@@ -2,6 +2,9 @@
   "n_models": 6,
   "spearman_abstention_vs_score": -0.8285714285714287,
   "p_abstention_vs_score": 0.04156268221574335,
+  "p_abstention_vs_score_exact_permutation": 0.058333333333333334,
+  "n_permutations_at_least_as_extreme": 42,
+  "n_permutations": 720,
   "spearman_score_vs_disposition": -0.3714285714285715,
   "p_score_vs_disposition": 0.4684781341107872,
   "score_vs_disposition_boot_ci": [

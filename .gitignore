@@ -13,3 +13,5 @@ paper/*.out
 paper/*.fls
 paper/*.fdb_latexmk
 paper/*.synctex.gz
+.ruff_cache/
+.pytest_cache/

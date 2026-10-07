@@ -5,7 +5,7 @@
 \begin{axis}[
   width=0.80\columnwidth, height=4.2cm, xmin=-1.1, xmax=0.25, ymin=0.4, ymax=6.6,
   xtick={-1,-0.75,-0.5,-0.25,0},
-  ytick={6,5,4,3,2,1}, yticklabels={English,Spanish,Dutch,Turkish,Korean,Catalan},
+  ytick={6,5,4,3,2,1}, yticklabels={English (MBBQ),Spanish,Dutch,Turkish,Korean,Catalan},
   xlabel={$\rho$(abstention, reported score), across checkpoints},
   tick label style={font=\scriptsize}, label style={font=\scriptsize},
   axis lines=left, y axis line style={draw=none}, ytick style={draw=none},
@@ -26,8 +26,8 @@
 \end{axis}
 \end{tikzpicture}
 \caption{The between-checkpoint correlation behind Table~\ref{tab:multilingual},
-by language. Strongly negative in five of six, consistent with abstention
-mechanically driving the reported score. Catalan (red) is the exception:
+by language (English is the MBBQ panel). Strongly negative in five of six, consistent with
+abstention mechanically driving the reported score. Catalan (red) is the exception:
 committed-answer bias collapses for four of twelve checkpoints there
 (Figure~\ref{fig:catalan-mechanism}), breaking the near-uniform bias the
 correlation otherwise relies on.}

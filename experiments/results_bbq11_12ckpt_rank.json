@@ -1,0 +1,10 @@
+{
+  "n_checkpoints": 12,
+  "n_items_per_checkpoint": 2200,
+  "n_categories": 11,
+  "spearman_abstention_vs_score": -0.9230769230769231,
+  "p_monte_carlo_permutation": 8.999955000224999e-05,
+  "n_shuffles": 200000,
+  "manski_cells_inside": 131,
+  "manski_cells_total": 132
+}

@@ -24,6 +24,8 @@ TEX = "\n".join(
     f.read_text() for f in [PAPER / "main.tex", *sorted((PAPER / "sections").glob("*.tex")),
                             *sorted((PAPER / "appendix").glob("*.tex"))])
 
+TEX_FLAT = " ".join(TEX.split())   # same text with line breaks collapsed, for phrases that wrap
+
 failures: list[str] = []
 checks = 0
 
@@ -34,7 +36,7 @@ def claim(description: str, present_in_paper: str, expected_from_data,
     global checks
     checks += 1
     rendered = fmt(expected_from_data)
-    in_tex = present_in_paper in TEX
+    in_tex = present_in_paper in TEX or present_in_paper in TEX_FLAT
     matches = rendered == present_in_paper
     if not in_tex:
         failures.append(
@@ -92,8 +94,14 @@ claim("baseline abstention max", "94.8", fp["baseline_abstention_max"] * 100,
 rs = json.loads((RESEARCH / "results_bbq11_rank_stats.json").read_text())
 claim("abstention-vs-score rho", "-0.83",
       rs["spearman_abstention_vs_score"], lambda v: f"{v:.2f}")
-claim("abstention-vs-score p", "p=0.042",
-      rs["p_abstention_vs_score"], lambda v: f"p={v:.3f}")
+claim("abstention-vs-score exact permutation p", "exact permutation $p=0.058$",
+      rs["p_abstention_vs_score_exact_permutation"], lambda v: f"exact permutation $p={v:.3f}$")
+checks += 1
+if (rs["n_permutations_at_least_as_extreme"], rs["n_permutations"]) == (42, 720) and abs(
+        rs["p_abstention_vs_score_exact_permutation"] - 42 / 720) < 1e-12:
+    print("  ok  exact permutation p is 42/720")
+else:
+    failures.append("exact permutation p is no longer 42/720")
 claim("score-vs-disposition rho", "-0.37",
       rs["spearman_score_vs_disposition"], lambda v: f"{v:.2f}")
 claim("items per checkpoint", "2{,}200", fp["n_items_per_model"],
@@ -206,11 +214,16 @@ BT = {r["file"].split("screen_")[1].split("_n480")[0]: r for r in
       json.loads((LAB / "violation_taxonomy_n480_dir_behavioral.json").read_text())}
 bq = json.loads((LAB / "screen_qwen_n480_dir_behavioral.json").read_text())["direction"]
 bm = json.loads((LAB / "screen_mistral_n480_dir_behavioral.json").read_text())["direction"]
-claim("Qwen behavioural abstained", "58 abstained", bq["n_abstained"], lambda v: f"{v} abstained")
-claim("Mistral behavioural abstained", "(19)", bm["n_abstained"], lambda v: f"({v})")
+claim("Qwen behavioural abstained", "58 abstentions for Qwen2.5 (422 answered)",
+      (bq["n_abstained"], bq["n_answered"]), lambda v: f"{v[0]} abstentions for Qwen2.5 ({v[1]} answered)")
+claim("Mistral behavioural abstained", "19 for Mistral (460 answered)",
+      (bm["n_abstained"], bm["n_answered"]), lambda v: f"{v[0]} for Mistral ({v[1]} answered)")
 claim("Qwen behavioural instrument failures", "3", 3 - BT["qwen"]["counts"].get("instrument_failure", 0) if BT["qwen"]["counts"].get("instrument_failure", 0) == 0 else -1)
-claim("Mistral behavioural instrument failures", "4 instrument failures and 1 outlier",
-      BT["mistral"]["counts"], lambda c: f"{c['instrument_failure']} instrument failures and {c['forced_outlier']} outlier")
+claim("Mistral behavioural instrument failures", "4 patterns consistent with instrument failure and 1 outlier",
+      BT["mistral"]["counts"],
+      lambda c: f"{c['instrument_failure']} patterns consistent with instrument failure and {c['forced_outlier']} outlier")
+claim("Qwen behavioural certified violations", "one policy-effect pattern remaining",
+      BT["qwen"]["counts"], lambda c: "one policy-effect pattern remaining" if c == {"policy_effect": 1} else str(c))
 
 # --- Prong 7: template robustness ---------------------------------------------
 print("\n[Template robustness -> results_template_robustness.json]")
@@ -260,8 +273,8 @@ claim("Mistral p min across checks", "p\\ge0.09", min(m[k]["p_permutation"] for 
 BTX = json.loads((LAB / "violation_taxonomy_n480_dir_behavioral.json").read_text())
 qb = next(r for r in BTX if "screen_qwen_" in r["file"])["counts"]
 checks += 1
-if qb.get("instrument_failure", 0) == 0 and "with no instrument failures on Qwen2.5" in TEX.replace("\n", " ").replace("  ", " "):
-    print("  ok  behavioural direction has 0 instrument failures on Qwen2.5")
+if qb.get("instrument_failure", 0) == 0 and "no instrument-failure pattern among its certified violations on Qwen2.5" in TEX_FLAT:
+    print("  ok  behavioural direction has 0 instrument-failure patterns on Qwen2.5")
 else:
     failures.append(f"Qwen behavioural instrument failures claim: counts={qb}")
 
@@ -437,6 +450,98 @@ claim("winogender parser audit sample size", "3,840", WPA["n_sampled"], lambda v
 claim("winogender parser audit agreement rate", "99.95", WPA["agreement_rate_overall"] * 100,
       lambda v: f"{v:.2f}")
 claim("winogender parser audit disagreements", "2", WPA["n_disagreements"])
+
+# --- Prong 17: review revisions (exact p, panels, regimes, power, abstention counts) ------
+print("\n[Revision claims -> rank stats, 12-checkpoint panel, regimes, power, logs]")
+import re as _re
+from scipy.stats import beta as _bt
+
+# twelve checkpoints on the eleven-category panel
+P12 = json.loads((RESEARCH / "results_bbq11_12ckpt_rank.json").read_text())
+claim("12-checkpoint rho on the 11-category panel", "$\\rho=-0.92$", P12["spearman_abstention_vs_score"],
+      lambda v: f"$\\rho={v:.2f}$")
+claim("12-checkpoint permutation p below .001", "$p<0.001$, $n=12$",
+      P12["p_monte_carlo_permutation"], lambda v: "$p<0.001$, $n=12$" if v < 0.001 else f"{v}")
+claim("12-checkpoint Manski cells", "131 of 132", (P12["manski_cells_inside"], P12["manski_cells_total"]),
+      lambda v: f"{v[0]} of {v[1]}")
+
+# Qwen2.5 recovered bias on the two English panels (Appendix E)
+import pandas as _pd
+from bbq_by_category import cell_stats as _cs
+_b11 = json.loads((LAB / "bbq11_qwen.json").read_text())["baseline"]
+_ml = _pd.read_csv(LAB / "ml_qwen_per_item.csv", keep_default_na=False, na_values=[""])
+_en = _cs(_ml[_ml.lang == "en"])
+claim("Qwen2.5 b on eleven-category panel and MBBQ-English",
+      "is 0.63 on the eleven-category panel and 0.86 on MBBQ-English",
+      (_b11["s_AMB"] / (1 - _b11["abstention_rate"]), _en["s_AMB"] / (1 - _en["abstention"])),
+      lambda v: f"is {v[0]:.2f} on the eleven-category panel and {v[1]:.2f} on MBBQ-English")
+_mlen = _ml[_ml.lang == "en"]
+claim("MBBQ-English item count", "1{,}076", len(_mlen), lambda v: f"{v:,}".replace(",", "{,}"))
+claim("MBBQ-English categories", "six categories, so $12\\times6=72$ cells", _mlen.category.nunique(),
+      lambda v: f"{['zero','one','two','three','four','five','six'][v]} categories, so $12\\times{v}={12*v}$ cells")
+
+# family-wise vs per-item certification thresholds (Section 6)
+_tail_fw, _tail_pi = 0.05 / 480 / 6, 0.05 / 6
+claim("family-wise pair of 16/16 cells", "sum to 1.008", 2 * _bt.ppf(_tail_fw, 16, 1), lambda v: f"sum to {v:.3f}")
+claim("family-wise 15/16 cell", "lower bound 0.414", _bt.ppf(_tail_fw, 15, 2), lambda v: f"lower bound {v:.3f}")
+claim("per-item pair of 16/16 cells", "1.483", 2 * _bt.ppf(_tail_pi, 16, 1), lambda v: f"{v:.3f}")
+claim("per-item 15/16 cell", "0.642", _bt.ppf(_tail_pi, 15, 2), lambda v: f"{v:.3f}")
+
+# false-positive regimes (Section 5, Table 4)
+_rows = CAL["rows"]
+_fw_hits = sum(round(r["corrected_familywise_false_positive_rate"] * r["trials"]) for r in _rows)
+claim("family-wise rejections in all replications", "none of the 8{,}000 replications",
+      (_fw_hits, _rows[0]["trials"]),
+      lambda v: f"none of the {v[1]:,} replications".replace(",", "{,}") if v[0] == 0 else str(v))
+_ub_fw = 1 - 0.025 ** (1.0 / _rows[0]["trials"])
+claim("family-wise 95% upper bound", "95\\% upper bound 0.05\\%", _ub_fw * 100, lambda v: f"95\\% upper bound {v:.2f}\\%")
+
+# power statements (Section 5, Appendix B, Limitations)
+_pm = json.loads((RESEARCH / "results_power_by_magnitude.json").read_text())
+_bins = {(b["gamma_low"], b["gamma_high"]): {x["n_draws"]: x for x in b["by_draw"]} for b in _pm["incompatible_bins"]}
+_nb = _bins[(0.0, 0.02)]
+claim("near-boundary power rounds to 0 through 256 draws", "0",
+      max(round(_nb[n]["power_corrected_per_item"] * 100) for n in (16, 32, 64, 128, 256)))
+claim("near-boundary power at 1,024 draws", "reaches 31\\% at 1{,}024 draws",
+      _nb[1024]["power_corrected_per_item"] * 100, lambda v: f"reaches {v:.0f}\\% at 1{{,}}024 draws")
+_at16 = [round(b[16]["power_corrected_per_item"] * 100) for b in _bins.values()]
+claim("per-item power at 16 draws ranges from 0 to 2", "from 0\\% to 2\\%", (min(_at16), max(_at16)),
+      lambda v: f"from {v[0]}\\% to {v[1]}\\%")
+checks += 1
+if all(b[16]["power_corrected_family_wise"] <= b[16]["power_corrected_per_item"] for b in _bins.values()):
+    print("  ok  family-wise power at 16 draws never exceeds per-item power")
+else:
+    failures.append("family-wise power exceeds per-item power at 16 draws")
+claim("per-item power at 256 draws, gamma* in (0.10,0.20]", "reaches 94\\%",
+      _bins[(0.1, 0.2)][256]["power_corrected_per_item"] * 100, lambda v: f"reaches {v:.0f}\\%")
+claim("family-wise power at 1,024 draws, gamma* in (0.05,0.10]", "it reaches 80\\% at 1{,}024 draws",
+      _bins[(0.05, 0.1)][1024]["power_corrected_family_wise"] * 100,
+      lambda v: f"it reaches {v:.0f}\\% at 1{{,}}024 draws")
+
+# behavioural-direction item counts: Phi and the three OLMo-2 checkpoints (from the run logs)
+LOGS = RESEARCH / "logs"
+def _counts(tag):
+    t = (LOGS / f"screen_{tag}_n480_dir_behavioral.log").read_text(errors="ignore")
+    m = _re.findall(r"from (\d+) abstained / (\d+) answered", t)[-1]
+    return int(m[0]), int(m[1])
+_olmo = [_counts(t) for t in ("olmo_sft", "olmo_dpo", "olmo_inst")]
+_phi = _counts("phi")
+claim("OLMo-2 abstentions in the behavioural-direction build", "0", max(a for a, _ in _olmo))
+claim("OLMo-2 answered range", "(468--475 answered)", [n for _, n in _olmo],
+      lambda v: f"({min(v)}--{max(v)} answered)")
+claim("Phi-3.5-mini answered", "none for Phi-3.5-mini (480 answered)", _phi,
+      lambda v: f"none for Phi-3.5-mini ({v[1]} answered)" if v[0] == 0 else str(v))
+checks += 1
+_n480 = json.loads((RESEARCH / "results_n480_summary.json").read_text())["rows"]
+if all(r["abstention"] > 0 for r in _n480 if r["tag"].startswith("olmo")):
+    print("  ok  OLMo-2 sampled abstention rates (section 6) are nonzero")
+else:
+    failures.append("an OLMo-2 checkpoint has zero sampled abstention, contradicting the Limitations text")
+checks += 1
+if "temperature=0.8" in (RESEARCH / "natural_model_screen.py").read_text():
+    print("  ok  section 6 draws are generated at temperature 0.8")
+else:
+    failures.append("natural_model_screen.py no longer samples at temperature 0.8")
 
 # --- Prong 5: every generated table/figure exists and is fresh ---------------
 print("\n[Generated assets]")

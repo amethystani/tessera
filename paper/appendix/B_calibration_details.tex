@@ -14,6 +14,8 @@ items were run.
 
 \input{tables/tab_calibration_full}
 
+\input{figures/fig_calibration}
+
 \paragraph{Detection power.} Table~\ref{tab:calibration} and
 Figure~\ref{fig:calibration} calibrate specificity against a compatible null.
 To calibrate power we shift one condition's answer share by a per-trial amount
@@ -22,13 +24,14 @@ compute each simulated population's own $\gamma^*$ exactly (the
 Appendix~\ref{app:proof} LP, here its $K{=}2$ closed form), and estimate power
 over the genuinely incompatible populations ($\gamma^*>0$), grouped by
 magnitude. Table~\ref{tab:power-magnitude} reports the corrected per-item test.
-Power rises monotonically in both violation size and budget: near-boundary
-violations ($\gamma^*\le0.02$) are essentially undetectable at every tested
-budget, moderate ones ($\gamma^*\in(0.05,0.10]$) reach 75\% at 256 draws and
+Power rises monotonically in both violation size and budget: for
+$\gamma^*\in(0,0.02]$, estimated per-item power rounds to 0\% through 256 draws
+and reaches 31\% at 1{,}024 draws, moderate violations ($\gamma^*\in(0.05,0.10]$) reach 75\% at 256 draws and
 95\% at 1{,}024, and larger ones ($\gamma^*\in(0.10,0.20]$) 81\% at 128 draws.
-The family-wise test is uniformly more conservative, needing roughly a
-$4\times$ larger budget for comparable power (72\% at 256 draws for
-$\gamma^*\in(0.10,0.20]$). The compatible group ($\gamma^*{=}0$) rejects at most
+The family-wise test is uniformly more conservative: for
+$\gamma^*\in(0.10,0.20]$ it reaches 72\% at 256 draws where the per-item test
+reaches 94\%, and for $\gamma^*\in(0.05,0.10]$ it reaches 80\% at 1{,}024 draws
+where the per-item test reaches 75\% at 256. The compatible group ($\gamma^*{=}0$) rejects at most
 $0.01\%$ of the time, reproducing the specificity of \S\ref{sec:calibration}.
 The naive test rejects incompatible populations readily, but at high budgets it
 does so almost regardless of magnitude (86\% even for $\gamma^*\le0.02$ at 256

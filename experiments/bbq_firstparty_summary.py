@@ -126,11 +126,20 @@ def rank_stats(summary_path: str = "results_bbq11_firstparty_summary.json") -> d
     boots = np.array(boots)
 
     rho_at, p_at = spearmanr(a, s)
+    # with six checkpoints the asymptotic p-value is unreliable, so also enumerate all permutations
+    from itertools import permutations
+    obs = abs(rho_at)
+    hits = sum(abs(spearmanr(a, s[list(perm)])[0]) >= obs - 1e-12
+               for perm in permutations(range(len(s))))
+    n_perm = sum(1 for _ in permutations(range(len(s))))
     rho_st, p_st = spearmanr(s, t)
     out = {
         "n_models": len(rows),
         "spearman_abstention_vs_score": float(rho_at),
         "p_abstention_vs_score": float(p_at),
+        "p_abstention_vs_score_exact_permutation": hits / n_perm,
+        "n_permutations_at_least_as_extreme": int(hits),
+        "n_permutations": n_perm,
         "spearman_score_vs_disposition": float(rho_st),
         "p_score_vs_disposition": float(p_st),
         "score_vs_disposition_boot_ci": [float(np.percentile(boots, 2.5)),

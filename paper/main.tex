@@ -36,12 +36,13 @@
 \usetikzlibrary{decorations.pathreplacing,arrows.meta,positioning,calc}
 \pgfplotsset{compat=1.18}
 
-% Footnote on the first page with the code link. Set to \showrepofalse for a blind submission.
+% Footnote on the first page. Anonymous by default for review; for the camera-ready
+% version set \showrepotrue to show the real repository link instead.
 \newif\ifshowrepo
-\showrepotrue
+\showrepofalse
 
 \title{Abstention Masquerading as Debiasing:\\Partial Identification and Calibrated Certificates\\for LLM Fairness Evaluation
-  \ifshowrepo\thanks{Code, data and per-item results: \url{https://github.com/amethystani/tessera}}\fi}
+  \thanks{\ifshowrepo Code, data and per-item results: \url{https://github.com/amethystani/tessera}\else Code, data and per-item results are in the anonymized supplementary material.\fi}}
 
 \author{Anonymous Author(s)}
 
