@@ -20,6 +20,12 @@ IDENTIFYING = re.compile(
     r"amethystani|animesh|mishra|khetarpaul|krishang|shiv nadar|snu\.edu|prakhar|zghal|cyu\.fr", re.I)
 
 
+def strip_repo_switch(text: str) -> str:
+    """Keep only the anonymous footnote: drop the camera-ready switch and its real URL."""
+    text = re.sub(r"% Footnote on the first page\..*?\\showrepofalse\n\n", "", text, flags=re.S)
+    return re.sub(r"\\thanks\{\\ifshowrepo .*?\\else (.*?)\\fi\}", r"\\thanks{\1}", text, flags=re.S)
+
+
 def scrub(path: Path) -> None:
     text = path.read_text()
     name = path.name
@@ -30,7 +36,7 @@ def scrub(path: Path) -> None:
     elif name == "README.md" and path.parent == ROOT_COPY:
         text = "\n".join(line for line in text.split("\n") if "github.com/" not in line)
     elif name == "main.tex":
-        text = text.replace("https://github.com/amethystani/tessera", "https://anonymous.invalid/repository")
+        text = strip_repo_switch(text)
     path.write_text(text)
 
 
