@@ -1,0 +1,29 @@
+\subsection{The identity}
+
+BBQ defines its ambiguous-context bias score as
+$s_{\text{AMB}} = (1 - \text{acc}) \cdot s_{\text{DIS}}$
+\citep{parrish2022bbq} (top row of Figure~\ref{fig:method}), motivating the scaling as reflecting that a biased
+answer ``is more harmful if it happens more often.'' On ambiguous items the
+gold answer \emph{is} the \textsc{unknown} option, so $\text{acc}$ is
+precisely the abstention rate $p$, and writing $c = 1-p$ for the rate at
+which the model commits to a group answer, and $b$ for the directional bias
+among committed answers,
+\[
+s_{\text{AMB}} = c \cdot b .
+\]
+Any reported change therefore decomposes \emph{exactly}, with no modeling
+assumptions and no access to per-item data:
+\[
+\underbrace{s_1 - s_0}_{\text{reported}} =
+\underbrace{b_0\,(c_1 - c_0)}_{\text{coverage}} +
+\underbrace{c_1\,(b_1 - b_0)}_{\text{disposition}} .
+\]
+The second term captures a change in committed-answer bias, which may
+reflect both changes in responses and changes in the composition of answered
+items. The allocation between terms follows a decomposition convention and is not a
+unique causal attribution (symmetric alternative in Appendix~\ref{app:decomp}). The first term says the intervention moved
+mass into the abstain option, widening the Manski identified set for the
+underlying preference from width $p_0$ to $p_1$. Holding committed-answer bias fixed, increasing abstention moves
+the score toward zero while widening the identified interval. This
+establishes a mechanical link, not an equivalence between every score
+improvement and a loss of identification.

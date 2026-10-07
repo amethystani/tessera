@@ -1,0 +1,45 @@
+\section{Related work}
+
+\paragraph{Selective non-response as a confound.}
+A cluster of recent work converges on the concern that a model's willingness
+to answer is itself a confound in fairness evaluation: desirability-matched
+graded forced choice with IRT-estimated latent traits
+\citep{okada2026desirability}, clinical-style validity scales for
+metacognitive self-report \citep{cacioli2026validity}, an IRT-fitted
+``refusal strictness'' factor across 192 safety benchmarks
+\citep{fonsecarivera2026irt}, implicit association testing
+\citep{bai2025implicit}, list-experiment elicitation of concealed preferences
+\citep{chupilkin2026hidden}, guardrail-agnostic probing via image-conveyed
+demographics \citep{hirota2026guardrail}, activation steering
+\citep{himelstein2026silenced}, and large correspondence-audit designs
+\citep{gao2026hire}. Closest to our concern, \citet{gan2026biaxisbias} find
+17.1\% of model--statement pairs change their forced-choice selection under
+five equivalent wordings alone. UnQover \citep{li2020unqover} established the
+forced-choice-only baseline this literature departs from, and
+\citet{manduru2026vacuous} name the failure mode ``vacuous neutrality.'' This
+body of work establishes the phenomenon. What has been missing is how much of
+the published record it accounts for, and whether the natural remedy is
+sound. We supply both.
+
+\paragraph{Partial identification.} Given a non-response rate $p$ and an
+answered-only alignment $q$, the sharp interval for population alignment is
+$[(1-p)q,\ (1-p)q+p]$, assuming disclosed answers reveal the target outcome
+and leaving undisclosed outcomes unrestricted \citep{manski1989anatomy}.
+Interpreting this target as forced-choice behaviour additionally requires
+that forcing preserve answers on disclosed cases.
+\citet{horowitz1995identification} extend this to contaminated rather than
+merely missing data, the closer analogy for selective disclosure. We use
+these bounds as the identification backbone of \S\ref{sec:decomposition}.
+
+\paragraph{Interpretability as an instrument.} Refusal in open-weight chat
+models is mediated by a single residual-stream direction
+\citep{arditi2024refusal}, which we use to build a refusal-ablated forced
+condition, testing rather than assuming its validity: \S\ref{sec:models}
+shows the certificate detecting where it fails and that conclusions hold when
+it is replaced.
+
+\paragraph{Evaluation data.} We use BBQ \citep{parrish2022bbq} for
+\S\ref{sec:decomposition} and WinoGender
+\citep{rudinger2018gender,rudinger2018winogender} for \S\ref{sec:models},
+noting the template defects catalogued by WinoPron
+\citep{gautam2024winopron}.

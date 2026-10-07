@@ -1,0 +1,78 @@
+\subsection{First-party replication across four families}
+\label{sec:firstparty}
+
+Cross-paper replication should be cheap, since the decomposition needs only two
+published numbers per pair. It was not: of three further papers checked, BBQ's
+own reports the ambiguous
+split only in unlabelled figures. One reports a ``bias score''
+\citep{wu2025reasoning} from which $b$ recovers to $[3.1, 10.2]$, impossible for
+a quantity bounded in $[-1,1]$. The third reports a custom ``diff-bias'' pooled
+across categories. We excluded all three rather than force the identity onto an
+incompatible metric, which is itself the argument for the reporting
+recommendation in \S\ref{sec:conclusion}, and ran the identity ourselves on the
+six checkpoints of \S\ref{sec:models}.
+
+Each checkpoint is scored on 2{,}200 ambiguous items (200 per BBQ category)
+under baseline, the same untrained fairness-instruction wording debiasing
+papers use, and a forced condition (\textsc{unknown} removed) read via
+first-token logits so every item is scored with no refusal-shaped hole in the
+estimate. Generation-based forcing agrees closely (max disagreement 0.007,
+refusal rate 0.6--4.9\%), cross-validating both. Exact prompts are in
+Appendix~\ref{app:prompts}.
+
+\emph{Between checkpoints} (Table~\ref{tab:firstparty},
+Figure~\ref{fig:identification}), baseline $s_{\text{AMB}}$ spans
+5.0$\times$ (0.033--0.164) while the stereotype-aligned rate $\theta$ spans
+only 57.6--62.2\%. Each checkpoint's baseline-derived Manski interval contains
+its own measured $\theta$ (6 of 6, and 65 of 66 checkpoint--category cells, the one
+miss being OLMo-2-Instruct on Age, $\theta=0.615$ against $[0.625, 0.815]$).
+The fairness instruction raises abstention everywhere
+(41.6--94.8\% $\to$ 86.3--99.7\%) and the resulting score change is
+$\ge$89\% mechanical for every checkpoint.
+
+Which quantity drives the score depends on the comparison being made. Across
+the six checkpoints the score tracks abstention (Spearman $\rho=-0.83$,
+$p=0.042$), but six points cannot say whether it tracks $\theta$
+($\rho=-0.37$, bootstrap 95\% CI $[-1.00,+0.80]$). The 66
+checkpoint$\times$category cells can (Figure~\ref{fig:variance} and
+Appendix~\ref{app:categories}). In the evaluated six-checkpoint, eleven-category grid, checkpoint
+differences account for 83\% of the observed abstention variance (against
+13\% for category), while category differences account for 68\% of the
+observed forced-choice alignment variance (against 6\% for checkpoint,
+$\theta$ ranging from 0.46 to 0.77 across cells). These descriptive
+proportions need not generalize beyond the evaluated checkpoints, categories,
+and prompts. The score mixes the
+two: standardised regression over the cells gives $\beta=-0.73$ on abstention
+(checkpoint-cluster 95\% CI $[-0.80,-0.58]$) and $\beta=+0.43$ on $\theta$
+($[+0.37,+0.50]$, $R^2=0.71$), and abstention is unrelated to $\theta$
+($\rho=+0.005$). So the score is not uninformative about disposition: over all 66
+cells it rises with $\theta$ ($\rho=+0.44$), and within
+every one of the six checkpoints it rises with $\theta$ across categories
+($\rho$ from $+0.32$ to $+0.75$). But a checkpoint-to-checkpoint comparison,
+which is what a leaderboard makes, is driven substantially by the component
+that varies most between checkpoints, and that component is abstention.
+
+\paragraph{Robust to rewording, not to level.} Reworded prompts
+(Appendix~\ref{app:prompts}) move abstention \emph{levels} a great deal
+(OLMo-2-SFT 46\%$\to$19\%, Mistral 74\%$\to$59\%) but not the
+\emph{structure}: checkpoint ordering by abstention is identical
+($\rho=+1.00$), abstention remains the checkpoint's property (97\% of
+variance) and $\theta$ the category's (77\%), the score still tracks
+abstention ($\rho=-1.00$) and $\theta$ across cells ($\rho=+0.74$), and
+Manski containment is 64 of 66 ($\theta$ cell agreement lower, $\rho=+0.58$).
+
+\paragraph{What abstainers hide.} Forced choice provides a stereotype
+-alignment measure on every item, including those receiving an abstention
+under the baseline prompt. This measures behaviour under forced choice.
+Interpreting it as an underlying preference requires an additional stability
+assumption. In every checkpoint under both
+prompts, abstainers still lean toward the stereotype: 55.7--64.2\% of their
+forced picks are stereotype-aligned, every stratified-bootstrap lower bound
+above 50\% (minimum 52.9\%). Abstention withholds a lean rather than
+indicating its absence. Abstainers lean slightly \emph{less} than answerers in
+all 12 cells (selection odds ratio $\Lambda<1$), but the category-adjusted gap
+is significant (within-category permutation $p<0.05$) in only 4: Qwen2.5 under
+both prompts, Mistral and Phi-3.5-mini under the original. Instrument validity
+also varies: on committed items the forced pick matches the committed one
+96--99\% of the time for Qwen2.5 but only 60--65\% for OLMo-2 (original
+prompt), so estimates for weaker instruments are conditional on that.

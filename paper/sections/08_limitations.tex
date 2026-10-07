@@ -1,0 +1,45 @@
+\section*{Limitations}
+
+\begin{itemize}[nosep]
+\item The published-table decomposition (\S\ref{sec:decomposition}) covers the
+  32 pairs of one study under one harness, and the first-party replication
+  (\S\ref{sec:firstparty}) establishes the phenomenon independently of it.
+  Applying the identity across the wider literature requires papers to report
+  ambiguous-split accuracy and bias score together, which \S\ref{sec:firstparty}
+  found is not yet standard.
+\item The decomposition takes the reported ambiguous score to be BBQ's official
+  $s_{\text{AMB}}$ and ambiguous accuracy to be the \textsc{unknown} rate, as
+  the benchmark defines them. The authors' per-item outputs are not released,
+  so this could not be checked item by item.
+\item Conditions use one prompt template each (Appendix~\ref{app:prompts}) at
+  one temperature. The BBQ structure holds under a reworded prompt
+  (\S\ref{sec:firstparty}), while absolute abstention levels are
+  prompt-dependent, and the WinoGender results use one template.
+\item At 480 items and 16 draws the corrected certificate certifies unanimous,
+  opposed disagreement, the price of its false-positive rate of at most 0.1\%.
+  The null residue in Table~\ref{tab:certificate} measures what it leaves
+  uncertified, and more draws per item raise its power.
+\item The generic refusal direction is not bias\hy{}specific. The
+  refusal-ablated condition is the dissenting condition in 22 certified
+  violations for Phi-3.5-mini and 3 for Qwen2.5, a pattern consistent with
+  instrument failure. A behaviour\hy{}derived direction removes the
+  instrument failures of Qwen2.5 and strengthens its recovery gap
+  (\S\ref{sec:models}).
+  It needs at least 8 abstentions to build, which holds for Qwen2.5
+  (58 abstained) and Mistral (19) but not for Phi-3.5-mini or the three OLMo-2
+  checkpoints (0 abstained), and on Mistral it gives
+  4 instrument failures and 1 outlier where the generic direction gave none. A general-purpose repair of
+  the instrument is therefore open.
+\item The abstention lean was analysed after the recovery-gap result and is
+  observational. The dose reading is not tested by intervening on abstention,
+  and it rests on five abstaining checkpoints from three families.
+\item The \S\ref{sec:models} refusal-ablation results use WinoGender only,
+  English only, one prompt template, and WinoGender carries template defects
+  documented by \citet{gautam2024winopron}. The decomposition and first-party
+  structure (\S\ref{sec:multilingual}) extend to six languages and twelve
+  checkpoints, but on BBQ alone. The tools are benchmark-agnostic, and
+  extending \S\ref{sec:models}'s instrument work to WinoGender in other
+  languages, and to open-ended generation, is direct future work. Catalan is
+  tested through one independently-built dataset, so a Catalan-language
+  effect is not separable there from a dataset-construction effect.
+\end{itemize}

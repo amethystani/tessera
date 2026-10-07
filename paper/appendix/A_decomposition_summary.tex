@@ -1,0 +1,35 @@
+\section{Decomposition summary}
+\label{app:decomp}
+
+\input{tables/tab_decomposition}
+
+\input{figures/fig_decomposition}
+
+\input{figures/fig_identification}
+
+\paragraph{Symmetric decomposition.} The identity in \S\ref{sec:decomposition}
+allocates the reported change asymmetrically, evaluating the coverage term at
+the before-bias and the disposition term at the after-coverage. The
+equally-exact symmetric split
+$s_1-s_0=\tfrac{1}{2}(b_0+b_1)(c_1-c_0)+\tfrac{1}{2}(c_0+c_1)(b_1-b_0)$
+gives a median coverage share of 65.3\% across the 32 pairs, against 80.4\%
+under the convention used in the main text. The sign of the coverage
+component never differs between conventions across the 32 pairs, and whether
+disposition worsened is a function of $\mathrm{sign}(b_1-b_0)$ alone, so it
+does not depend on the convention. Fourteen pairs reach at least 90\%
+mechanical under the original convention against ten under the symmetric one,
+and 24 against 21 reach at least 50\%. The qualitative conclusion, that
+coverage accounts for most of the reported change in most pairs, holds under
+either convention. The exact split point does not.
+
+\paragraph{Rounding sensitivity.} Published accuracy and bias-score values
+are printed to two decimal places, so each true value lies within a window
+of half-width 0.005 of the printed one. Redrawing all four published inputs
+per pair uniformly within this window and recomputing 20,000 times gives a
+median mechanical fraction of 80.4\%, with a 95\% Monte Carlo interval of
+$[80.3\%, 80.4\%]$: the headline number is not an artifact of rounding.
+Only one pair's qualitative disposition-worsened flag is sensitive to this
+perturbation, flipping in 20.4\% of resamples: Def-2 on FLAN-T5 (3B),
+discussed in \S\ref{sec:decomposition}, where the underlying change is
+already reported as unchanged to four significant figures.
+No pair's identified-set-widened flag changes under any resample.

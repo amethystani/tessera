@@ -1,0 +1,43 @@
+\section{A compatibility certificate}
+\label{sec:certificate}
+
+If answered-only scores are compromised, the natural response is to elicit
+the same items under additional conditions, such as forced choice or an
+intervention that removes the ability to decline, and check whether the
+conditions are mutually consistent (bottom row of Figure~\ref{fig:method}). We
+formalize that check.
+
+Let $p_z(k)$ be the unconditional probability that condition
+$z \in \{1..Z\}$ produces substantive category $k \in \{1..K\}$. The residual
+row mass is abstained or unparsed output. We ask whether one common answer
+law, combined with an arbitrary, adversarial, answer-\emph{dependent}
+disclosure policy chosen separately per condition, could reproduce every
+observed $p_z(\cdot)$ at once. The condition is
+\[
+\texttt{compatible}(p) \iff \sum_k \max_z\, p_z(k) \le 1 .
+\]
+When it fails, we compute the sharp minimum probability that the conditions
+must genuinely disagree,
+\[
+\begin{aligned}
+\gamma^* = 1 - \max_t\ & \textstyle\sum_k t_k \\[-2pt]
+\text{s.t.}\ & \textstyle\sum_k \max(t_k, p_z(k)) \le 1\ \ \forall z,
+\end{aligned}
+\]
+a linear program in $t$. Compatibility is exactly $\gamma^*=0$. We verified
+the LP numerically against an independent exponential-size formulation over
+joint atoms on randomized panels and against closed forms for $Z=2$ and $K=2$,
+and prove both the characterization and the sharpness of $\gamma^*$ in general
+in Appendix~\ref{app:proof}. This
+generalizes the two-condition bound of \S\ref{sec:decomposition} to arbitrarily
+many conditions and provides a per-item test of a common-answer-law model.
+Rejection challenges that model, but non-rejection does not establish the
+validity of any individual instrument.
+
+\paragraph{What this adds.} The certificate builds on two classical tools, a
+Fréchet-type feasibility bound and a minimum-disagreement coupling. The
+contribution is the reduction: instrument agreement in selective-answer
+evaluation is exactly this feasibility problem, turning an assumption every
+forced-choice audit makes implicitly into a per-item statistic, plus the
+finite-sample calibration of \S\ref{sec:calibration}, without which the test
+misleads at every affordable draw count.

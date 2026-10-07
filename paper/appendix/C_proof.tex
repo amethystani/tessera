@@ -1,0 +1,123 @@
+\section{Proof of the compatibility characterization}
+\label{app:proof}
+
+\S\ref{sec:certificate} verifies \texttt{compatible} and $\gamma^*$
+numerically, against an independent exponential-size formulation and against
+closed forms at $Z=2,K=2$. This appendix proves both exactly, for general
+$Z$ and $K$, so the certificate rests on a proof rather than agreement on
+test cases.
+
+\paragraph{Setup.} Condition $z$ discloses a substantive category with the
+sub-probabilities $p_z(1),\dots,p_z(K)$, with $\sum_k p_z(k) \le 1$. The
+missing mass is non-disclosure. The model under test is: a single answer law
+$Y\in\{1,\dots,K\}$, shared across all $Z$ conditions, together with an
+arbitrary, condition-specific, answer-\emph{dependent} disclosure rule, could
+have produced every $p_z(\cdot)$ at once. \texttt{compatible} asks whether
+this model is consistent with the observed panel.
+
+\begin{lemma}[Agreement under fixed marginals]
+\label{lem:agreement}
+Let $Y_1,\dots,Y_Z$ be any random variables on $\{1,\dots,K\}$ with
+$P(Y_z=k)=q_z(k)$. Over every joint coupling of $Y_1,\dots,Y_Z$ consistent
+with these marginals,
+\[
+\max_{\text{couplings}} P(Y_1=\cdots=Y_Z) = \sum_{k=1}^K \min_z q_z(k),
+\]
+and this value is attained.
+\end{lemma}
+\begin{proof}
+\emph{Upper bound.} The events $\{Y_1=\cdots=Y_Z=k\}$ for $k=1,\dots,K$ are
+disjoint, and $\{Y_1=\cdots=Y_Z=k\}\subseteq\{Y_z=k\}$ for every $z$, so
+$P(Y_1=\cdots=Y_Z=k)\le\min_z q_z(k)$. Summing over $k$ gives the bound.
+
+\emph{Attainment.} Write $m(k)=\min_z q_z(k)$ and $M=\sum_k m(k)\in[0,1]$.
+If $M=1$, take $Y_1=\cdots=Y_Z=W$ for $W\sim m/M$ when $M>0$. (When
+$M=0$ the bound is $0$, and any coupling attains it.) If $M<1$, the residual masses
+$r_z(k)=q_z(k)-m(k)\ge0$ each sum to $1-M$. Mix: with probability $M$ draw a
+single $W\sim m(\cdot)/M$ and set every $Y_z=W$. With the complementary
+probability $1-M$, draw $Y_1,\dots,Y_Z$ \emph{independently}, each from
+$r_z(\cdot)/(1-M)$. By construction $P(Y_z=k)=M\cdot m(k)/M + (1-M)\cdot
+r_z(k)/(1-M) = q_z(k)$, so the marginals are exactly right, and
+$P(Y_1=\cdots=Y_Z)\ge P(\text{shared branch})=M$. Combined with the upper
+bound this coupling attains $P(Y_1=\cdots=Y_Z)=M$ exactly.
+\end{proof}
+
+\begin{proposition}[Compatibility]
+\label{prop:compatible}
+A single shared answer law with arbitrary condition-specific, answer
+-dependent disclosure reproduces $p_1,\dots,p_Z$ exactly if and only if
+$\sum_k \max_z p_z(k) \le 1$.
+\end{proposition}
+\begin{proof}
+($\Leftarrow$) Set $\pi(k)=\max_z p_z(k)$ for every $k$, and, if
+$\sum_k\pi(k)<1$, add the deficit to $\pi(1)$ so $\pi$ sums to exactly $1$,
+giving a valid law for $Y$. For each $z$, let the disclosure rate at
+category $k$ be $d_z(k)=p_z(k)/\pi(k)$ when $\pi(k)>0$ (and, since
+$p_z(k)\le\max_{z'}p_{z'}(k)=\pi(k)$, this lies in $[0,1]$). When $\pi(k)=0$,
+every $p_z(k)=0$ and $d_z(k)$ is unconstrained. Disclosing category $k$ under
+condition $z$ with probability $d_z(k)$ given $Y=k$ reproduces
+$P(Y=k,\text{disclosed})=\pi(k)d_z(k)=p_z(k)$ exactly, for every $z,k$.
+
+($\Rightarrow$) If such a $Y\sim\pi$ and disclosure rule exist, then for every
+$z,k$, $p_z(k)=\pi(k)\cdot d_z(k)\le\pi(k)$ since $d_z(k)\le1$. Hence
+$\pi(k)\ge\max_z p_z(k)$ for every $k$, and $1=\sum_k\pi(k)\ge\sum_k\max_z
+p_z(k)$.
+\end{proof}
+
+This is exactly \texttt{compatible} in \S\ref{sec:certificate}, with
+$\gamma^*=0$ the special case of Proposition~\ref{prop:necessary} below.
+
+\begin{proposition}[Sharpness of $\gamma^*$]
+\label{prop:necessary}
+Define, over all $(q_1,\dots,q_Z)$ with $q_z(k)\ge p_z(k)$ and
+$\sum_k q_z(k)=1$ for every $z$, and all couplings of random variables with
+these marginals,
+\[
+\gamma^\dagger \;=\; 1 \,-\, \max_{q_1,\dots,q_Z}\ \max_{\text{couplings}}\
+P(Y_1=\cdots=Y_Z).
+\]
+Then $\gamma^\dagger$ equals the linear program of \S\ref{sec:certificate},
+{\small
+\[
+\gamma^* = 1-\max_t\ \Big\{ \textstyle\sum_k t_k \ :\
+\textstyle\sum_k\max(t_k,p_z(k))\le1\ \forall z \Big\} .
+\]}
+\end{proposition}
+\begin{proof}
+By Lemma~\ref{lem:agreement}, for fixed completions $q_1,\dots,q_Z$ the best
+achievable agreement is $\sum_k\min_z q_z(k)$, so
+$1-\gamma^\dagger=\max_{q_1,\dots,q_Z}\sum_k\min_z q_z(k)$ subject to
+$q_z(k)\ge p_z(k)$, $\sum_k q_z(k)=1$.
+
+\emph{$1-\gamma^\dagger \le$ LP optimum.} Let $q_1^*,\dots,q_Z^*$ attain
+$1-\gamma^\dagger$ and set $t_k=\min_z q_z^*(k)$. Since $q_z^*(k)\ge p_z(k)$
+and $q_z^*(k)\ge t_k$ by definition of the minimum, $q_z^*(k)\ge\max(t_k,
+p_z(k))$ for every $z,k$. Summing over $k$, $\sum_k\max(t_k,p_z(k))\le
+\sum_k q_z^*(k)=1$ for every $z$, so $t$ is LP-feasible, and $\sum_k t_k =
+\sum_k\min_z q_z^*(k) = 1-\gamma^\dagger$.
+
+\emph{LP optimum $\le 1-\gamma^\dagger$.} Let $t^*$ attain the LP optimum and
+set $q_z(k)=\max(t_k^*,p_z(k))$ for every $z,k$. By LP feasibility $\sum_k
+q_z(k)\le1$, and any deficit can be added to $q_z(1)$ (which only increases
+$q_z(1)\ge\max(t_1^*,p_z(1))$, so feasibility of the completion is preserved)
+to make $q_z$ sum to exactly $1$. Each such $q_z$ satisfies $q_z(k)\ge
+p_z(k)$ (a valid completion) and $q_z(k)\ge t_k^*$, so $\min_z q_z(k)\ge
+t_k^*$ and $\sum_k\min_z q_z(k)\ge\sum_k t_k^*$. Since $1-\gamma^\dagger$ is
+the maximum of $\sum_k\min_z q_z(k)$ over all valid completions, $1-
+\gamma^\dagger\ge\sum_k t_k^*=$ LP optimum.
+
+Both inequalities give $1-\gamma^\dagger=$ LP optimum, i.e.\
+$\gamma^\dagger=\gamma^*$.
+\end{proof}
+
+$\gamma^\dagger$ is by construction the sharp minimum probability that the
+$Z$ conditions disagree, over every population consistent with the observed
+disclosed masses and every coupling of that population: no relaxation of the
+common-answer-law model can do better than $\gamma^*$, and
+Lemma~\ref{lem:agreement}'s construction exhibits a population and coupling
+that achieves exactly $\gamma^*$ disagreement. Specializing to $\gamma^*=0$
+recovers Proposition~\ref{prop:compatible} exactly: $\gamma^*=0$ forces
+$\sum_k t_k^*=1$, so the common mass $t^*$ is itself a single distribution
+that completes every condition, which is exactly compatibility. The two
+results are therefore one family, not two separate claims verified only
+numerically.

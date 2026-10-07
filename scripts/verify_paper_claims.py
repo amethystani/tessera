@@ -1,7 +1,7 @@
 """Check that the numbers in the paper reproduce from the committed results.
 
 Each headline claim is recomputed from its source file under results/ or
-experiments/ and compared with what paper/main.tex says. The generated tables
+experiments/ and compared with what the paper text says (paper/main.tex, paper/sections, paper/appendix). The generated tables
 and figures are checked for existence and inclusion.
 
 Run: python3 scripts/verify_paper_claims.py
@@ -20,7 +20,9 @@ ROOT = Path(__file__).resolve().parent.parent
 PAPER = ROOT / "paper"
 RESEARCH = ROOT / "experiments"
 LAB = RESEARCH / "lab_results"
-TEX = (PAPER / "main.tex").read_text()
+TEX = "\n".join(
+    f.read_text() for f in [PAPER / "main.tex", *sorted((PAPER / "sections").glob("*.tex")),
+                            *sorted((PAPER / "appendix").glob("*.tex"))])
 
 failures: list[str] = []
 checks = 0
