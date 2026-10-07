@@ -1,0 +1,32 @@
+\section{Multilingual and newer-checkpoint replication}
+\label{app:multilingual}
+
+Six further checkpoints, Qwen3-4B \citep{qwen2025qwen3}, Gemma~4~E2B
+\citep{gemmateam2026gemma4}, Phi-4-mini \citep{abdin2025phi4mini},
+Granite-4.0-micro \citep{ibm2025granite4micro}, OLMo~3-7B
+\citep{olmoteam2025olmo3}, and Ministral-3-3B
+\citep{mistralai2026ministral3}, ran the \S\ref{sec:firstparty} procedure on
+the same 2{,}200-item English BBQ panel. All twelve checkpoints then ran it
+on Spanish, Dutch, and Turkish (MBBQ \citep{neplenbroek2024mbbq}, parallel
+item IDs across languages, 1{,}076 items each after matching), Korean (KoBBQ
+\citep{jin2023kobbq}, 1{,}140 items), and Catalan (CaBBQ
+\citep{ruizfernandez2025esbbq}, built independently rather than translated,
+1{,}968 items across the 10 categories it defines, which do not coincide
+exactly with BBQ's eleven). Table~\ref{tab:multilingual}
+gives the summary. Table~\ref{tab:catalan-mechanism} gives the recovered
+committed-answer bias behind the Catalan exception discussed in
+\S\ref{sec:multilingual}. MBBQ's translated answer-group labels for Gender
+were mapped to the English terms the matcher expects (12 terms, four
+languages). Every other category and language use the matcher unmodified
+against the benchmark's own labels, since CaBBQ's schema is the original BBQ
+format and KoBBQ ships pre-matched choice lists.
+
+\input{tables/tab_catalan_mechanism}
+
+Figure~\ref{fig:multilingual-rho} plots the per-language correlation behind
+Table~\ref{tab:multilingual}, and Figure~\ref{fig:catalan-mechanism} plots the
+English-versus-Catalan bias behind Table~\ref{tab:catalan-mechanism}.
+
+\input{figures/fig_multilingual_rho}
+
+\input{figures/fig_catalan_mechanism}

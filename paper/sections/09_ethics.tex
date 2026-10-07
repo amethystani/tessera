@@ -1,0 +1,43 @@
+\section*{Ethics Statement}
+
+This paper argues that a class of reported debiasing results overstates what
+was achieved. We want to be careful about what follows from that and what does
+not.
+
+It does not follow that the interventions we decompose are harmful or that
+their authors did anything improper. They report accuracy and bias score
+exactly as the benchmark specifies, and BBQ's scaling of the ambiguous score
+by the commitment rate is a deliberate design choice its authors motivate
+explicitly. Our claim is about what the resulting number can support, not
+about anyone's conduct. Nor does it follow that abstention is bad: declining
+to answer an under-specified question about a person's group membership is
+often the appropriate behavior, and a model that learns to do so has
+learned something worth having. The problem we identify is narrower and
+purely epistemic. The same movement that improves the score destroys the
+evidence needed to check whether the underlying disposition changed, so the
+metric cannot distinguish a model that stopped preferring the stereotype from
+one that merely stopped saying so.
+
+That distinction has practical stakes, not only in principle. Qwen2.5-7B
+posts a near-perfect first-party baseline score ($s_{\text{AMB}}=0.033$,
+Table~\ref{tab:firstparty}) while its own stereotype-aligned rate $\theta$,
+measured on the same items under forced choice, is 62.2\%. A deployment
+decision made on the strength of the published-style score alone would be
+relying on a number compatible, by the width of its own identified interval,
+with a meaningfully stereotype-leaning disposition underneath. Our
+recommendation is therefore additive rather than prohibitive: report the
+abstention rate and the committed-answer bias alongside the headline score,
+and report the identified interval, so readers can see how much the
+evaluation actually pins down.
+
+We work exclusively with existing public benchmarks (BBQ, WinoGender) and
+public model checkpoints. No new human-subjects data was collected. These
+benchmarks encode a US-centric, largely binary treatment of gender and a
+specific inventory of social categories, and WinoGender carries documented
+template defects \citep{gautam2024winopron}. Results here should not be read
+as characterizing bias in any absolute sense, nor as transferring to other
+languages, cultures, or deployment settings. Finally, our experiments
+deliberately elicit stereotype-aligned outputs from models by removing their
+ability to decline. This is done to measure disposition, and we release
+per-item outputs for verification, not as a technique for eliciting harmful
+content in deployment.

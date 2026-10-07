@@ -1,0 +1,22 @@
+\begin{abstract}
+On ambiguous items, abstention can be appropriate. A lower bias score may
+reflect more abstention, not a change in preferences. Using an exact
+identity implied by BBQ's metric, we decompose 32 published method--model
+results: a median 80.4\% of the reported improvement is abstention, not reduced
+bias, committed-answer bias \emph{worsened} in 7 pairs, and the identified
+set widened in 31. First-party, on six checkpoints and eleven BBQ categories,
+abstention is a property of the checkpoint (83\% of variance) and the
+stereotype-aligned rate a property of category (68\%), so the score ranks
+checkpoints largely by abstention ($\rho=-0.83$), surviving reworded
+prompts and extending to twelve checkpoints and six languages, with one
+informative exception explained by the identity itself. Abstainers still
+lean toward the stereotype (56--64\%). The
+natural remedy, forced choice checked for agreement, is unsound in its
+plug-in form: under a resampled null it falsely rejects about 21\% of items
+at 16 draws, unimproved through 4{,}096 draws. An exact-binomial correction
+yields empirical false-positive rates of at most 0.05\%. Applied to
+138{,}240 generations, the certificate separates instrument failures from
+response-policy effects. For Qwen2.5, the recovery gap strengthens under a
+cleaner instrument the certificate clears. Both tools generalize beyond BBQ
+and WinoGender.
+\end{abstract}

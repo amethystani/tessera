@@ -1,0 +1,110 @@
+\section{Six checkpoints across four families}
+\label{sec:models}
+
+\paragraph{Setup.} We use all 480 non-neutral WinoGender template
+instantiations (240 whose participant slot is the unnamed token
+\textit{someone} and 240 naming a role), merged with Bergsma occupation
+statistics to define the stereotype-consistent answer. Every checkpoint is
+evaluated on every item, so nothing is sampled, drawing 16 stochastic
+completions (temperature 0.8, independently seeded) under each of three
+conditions. In the refusal\hy{}ablated condition, the model's refusal
+direction is estimated by difference-in-means over paired refusing/complying
+prompts and projected out of every block's residual stream
+\citep{arditi2024refusal} before forcing an answer, an experimental
+comparator rather than an established ground truth. \textit{Direct} is the
+intact model permitted to abstain, and \textit{forced} is the intact model
+required to choose, giving 23{,}040 generations per checkpoint and
+138{,}240 in total, scored by one shared parser (Appendix~\ref{app:prompts}).
+Checkpoints are Qwen2.5-7B-Instruct \citep{qwen2024technical}, the full
+OLMo-2-7B SFT$\to$DPO$\to$Instruct pipeline \citep{olmo2025furious} (its
+intermediate post-training checkpoints are public), Mistral-7B-Instruct-v0.3
+\citep{jiang2023mistral}, and Phi-3.5-mini-instruct \citep{abdin2024phi3}.
+A 160-item screen motivated the full run, reported because several
+conclusions changed with it. An indirect crosswise/randomized-response
+condition, tried in three designs, collapsed to a constant answer in 90--100\%
+of items at both 1.5B and 7B, excluded as a task-competence failure.
+
+\input{tables/tab_certificate}
+
+\paragraph{Naive incompatibility is mostly noise, but not entirely.} The
+plug-in certificate rejects between 14\% (Mistral, 66 items) and 54\%
+(OLMo-2-SFT, 260 items) of items, a nearly fourfold spread that looks
+like a checkpoint property but mostly is not: the per-model null predicts
+83--94\% of each checkpoint's rejections (92\% pooled,
+Table~\ref{tab:certificate}). The remainder is real, exceeding every one of 200
+null draws for all six checkpoints. A 160-item sample could not separate this
+residue from noise ($p=0.06$--$0.11$), a third of the power. We read it as
+genuine cross-condition disagreement spread across many items, each below the
+per-item certification threshold.
+
+\paragraph{The corrected certificate isolates genuine failures, and is
+conservative.} Under correction four of six checkpoints return no violations.
+Qwen2.5-7B returns 4 and Phi-3.5-mini 25, while the null produces zero
+corrected rejections in every replication. Two features bound what this can
+see. With 480 items and 16 draws, the corrected certificate can certify a
+violation only when two conditions are unanimous (16/16) and opposed: two such
+cells' lower bounds sum to 1.008, whereas a 15/16 cell has lower bound 0.414
+and cannot. All 29 certified items meet this condition, and $\gamma^*=0.008$
+is the smallest value the procedure can return, so the reported $\gamma^*$ is a
+floor set by the draw budget, not the size of the disagreement, which is
+total. At this budget and correction level, the certificate detects only
+extreme disagreements. The aggregate excess over the constructed null in
+Table~\ref{tab:certificate} does not quantify item-level power, which
+\S\ref{sec:calibration} evaluates directly under controlled alternatives.
+
+\paragraph{Which condition is at fault.} A violation count is not yet a
+conclusion: the certificate says three conditions cannot share one answer law
+but not which is responsible, and different culprits support opposite
+readings. We classify each certified violation by the odd condition out. If the refusal-ablated comparator dissents while both intact
+conditions agree, the ablation changed the answer rather than only the
+willingness to give one, an \emph{instrument failure}. If \textit{direct}
+dissents while \textit{forced} and the ablated condition agree, a
+\emph{response-policy effect} changed the committed answer. Each diagnosis is
+read off the disagreement pattern and names the condition at fault, though
+agreement alone does not by itself prove instrument validity.
+
+Of the 29 violations, 25 are instrument failures, 3 policy effects, and 1 a
+forced-condition outlier (Table~\ref{tab:certificate}, every item in
+Appendix~\ref{app:violations}). Phi-3.5-mini accounts for 22 of the
+instrument failures. On two (\nolinkurl{scientist.someone.0.male},
+\nolinkurl{machinist.child.1.female}) the ablated condition selects one category
+16/16 and \emph{both} intact conditions the other. The diagnosis is sharper
+than ``the ablation changed the answer'': Phi-3.5-mini \emph{never abstains} in
+the direct condition (0 of 7{,}680 draws, even with the abstain option
+offered), so it cannot be removing a refusal that never occurs. Qwen2.5-7B has 3 instrument failures, invisible in a 160-item sample (the full
+pool moves five clean checkpoints to four), and 1 policy effect: on
+\nolinkurl{counselor.patient.0.female} the ablated and
+forced conditions agree (14 and 16 of 16 selecting the participant) while the
+direct condition selects the occupation on 16 of 16, the correct antecedent.
+Permitting abstention changed the committed answer, here for the better, and a
+naive certificate's $\sim$20\% noise floor would hide it
+(\S\ref{sec:calibration}).
+
+
+\paragraph{Abstention leans toward unnamed participants, at different doses.}
+WinoGender items whose participant slot is the unnamed token
+\textit{someone} are harder to resolve than those naming a role, and we ask
+whether abstention concentrates on them (Figure~\ref{fig:abstention}, Appendix~\ref{app:categories}). In every
+checkpoint that abstains the lean is positive: $+22.8$ points for Qwen2.5
+(26.7\% of draws on \textit{someone} items against 3.9\% on named), $+4.6$ for
+Mistral, $+3.5$ for OLMo-2-DPO, $+2.9$ for OLMo-2-Instruct and $+1.0$ for
+OLMo-2-SFT, four of five significant after Holm correction (not SFT).
+Phi-3.5-mini never abstains.
+
+Does the lean open a recovery gap on \textit{someone} items? Only for Qwen2.5:
+the stratum difference in recovery error is $D=+0.099$ (95\% bootstrap CI $[+0.054,+0.145]$, permutation
+$p<0.001$). For OLMo-2 and Mistral $|D|\le0.008$ with intervals of about
+$\pm0.03$, and Phi-3.5-mini is $+0.035$ ($[-0.010,+0.080]$), not significant.
+The ordering follows dose: the heaviest abstainer (15.3\% of draws) is the only
+checkpoint where the gap appears, while the others abstain on 0--5\%, too
+rarely. We read this as a difference in \emph{how much} a checkpoint abstains,
+not as Qwen-specific.
+
+\paragraph{Recovery-gap sensitivity to alternative instruments.} Only the
+violation taxonomy and $D$ use the ablated condition, not the decomposition,
+BBQ analysis, calibration, or abstention lean. Dropping the 4 items the
+certificate flags for Qwen2.5 gives $D=+0.110$ ($[+0.067,+0.153]$). A
+behaviour-derived direction (from the checkpoint's own abstained versus
+answered items, with no instrument failures on Qwen2.5) strengthens it to
+$D=+0.150$ ($[+0.106,+0.194]$, $p<0.001$). Mistral stays null under both
+($|D|\le0.030$, $p\ge0.09$): the swap does not manufacture effects.

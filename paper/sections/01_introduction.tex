@@ -1,0 +1,90 @@
+\section{Introduction}
+
+Bias benchmarks for large language models routinely allow a model to decline
+to answer (by selecting an \textsc{unknown} option, saying ``cannot be
+determined,'' or otherwise abstaining) and then report a score computed on
+what remains. This is standard on BBQ's ambiguous-context items
+\citep{parrish2022bbq} and on WinoGender-style coreference probes
+\citep{rudinger2018gender}. It is also a specific threat to validity: if
+abstention is not independent of the disposition being measured, the reported
+score confounds what the model prefers with how willing it is to say so, and
+no amount of additional data closes the gap. \citet{manski1989anatomy} gave
+the general form of this problem for missing outcomes decades before it
+became relevant here.
+
+The concern is easy to state and easy to dismiss as theoretical. Our first
+contribution is to show it is neither. BBQ's ambiguous bias score is defined
+so that it is \emph{multiplied} by the complement of the abstention rate.
+Since on ambiguous items the gold answer is the \textsc{unknown} option,
+that complement is exactly the rate at which the model commits to an answer.
+An intervention that only teaches a model to abstain more therefore drives
+the reported score toward zero while telling us strictly less about the
+model. Applying this decomposition to every method--model pair in the main
+results table of a recent debiasing paper, we find a median 80.4\% of
+reported improvement is this mechanical effect, and that the evaluation's
+identified set widened in 31 of 32 cases: the reported success and the loss
+of identification are the same event (Figure~\ref{fig:teaser}). We then establish the phenomenon
+independently of any published harness, first-party on six checkpoints
+across all eleven BBQ categories (\S\ref{sec:firstparty}). Abstention turns
+out to be a property of the checkpoint and disposition a property of the
+social category, so comparing checkpoints, which is what a leaderboard does,
+ranks them substantially by abstention.
+
+\input{figures/fig_teaser}
+
+If reported scores are compromised this way, the obvious response is to
+re-elicit under a forced-choice policy, or against some instrument that
+removes the model's ability to decline, and then check whether the
+conditions agree. Our second contribution asks whether \emph{that} check is
+itself sound, and finds that the natural implementation is not. We pose
+agreement as a linear-programming compatibility certificate over an
+arbitrary number of elicitation conditions (Figure~\ref{fig:method} maps both
+analyses). Evaluated on plug-in proportions, it rejects a null with no
+cross-condition structure 21.3\% of the time at 16 draws, and calibrated
+against a null resampled from our own panel, more draws do not fix this: the
+rate plateaus at 21--23\% out to 4{,}096 draws. An exact-binomial version has
+a false-positive rate of at most 0.1\% at every draw count tested.
+
+We run both versions on six instruction\hy{}tuned checkpoints from four
+families, on all 480 eligible WinoGender items, using a
+refusal\hy{}direction ablation \citep{arditi2024refusal} as a
+refusal\hy{}ablated comparator. A per-model null explains 83--94\% of each
+checkpoint's naive rejections. The corrected certificate isolates 29
+violations: 25 implicate the comparator itself, including on a checkpoint
+that never once abstains, so there is no refusal to remove, 3 are
+consistent with genuine response\hy{}policy effects, and 1 is a
+forced-condition outlier.
+
+Our contributions are:
+\begin{enumerate}[nosep]
+\item An exact decomposition of BBQ ambiguous scores into coverage and
+  disposition, applied to 32 published method--model pairs and replicated
+  first-party on six checkpoints across eleven categories, showing that
+  abstention lives in the checkpoint and disposition in the category, that
+  abstainers still lean toward the stereotype, and that this survives
+  rewording and extends to twelve checkpoints (2024--2026) and six languages
+  (\S\ref{sec:decomposition}, \S\ref{sec:firstparty}, \S\ref{sec:multilingual}).
+\item A compatibility certificate for $Z$ elicitation conditions posed as a
+  linear program, with a necessary-dependence bound $\gamma^*$
+  (\S\ref{sec:certificate}).
+\item A calibration showing persistent false positives for the plug-in
+  certificate under the tested null and sampling budgets, an exact-binomial
+  correction, and a per-model null for assessing aggregate incompatibility
+  counts (\S\ref{sec:calibration}).
+\item Application to six checkpoints, including a taxonomy that distinguishes
+  instrument failure from response-policy effects, and evidence that
+  abstention leans toward unnamed referents in every checkpoint that abstains
+  (\S\ref{sec:models}).
+\end{enumerate}
+
+All three tools are benchmark-agnostic. The identity holds for any score of
+the form coverage times committed-answer bias, which covers BBQ and every
+benchmark that adopts its ambiguous-context metric, and the certificate and
+its calibration take any panel of elicitation conditions by answer categories,
+whatever produced it. We demonstrate them on BBQ and WinoGender, the standard
+selective-answer bias benchmarks with public items. Our critique targets a
+metric definition and what can be concluded from it, not the interventions'
+authors, who report accuracy and bias score exactly as the benchmark
+specifies.
+
+\input{figures/fig_method}

@@ -12,7 +12,7 @@ raw model runs  ->  per-item CSVs        ->  analysis scripts  ->  results_*.jso
 ```
 
 `scripts/verify_paper_claims.py` reads the JSON and the generated `.tex` and compares them with the
-text of `paper/main.tex`.
+text of the paper (`paper/main.tex` plus the files in `paper/sections/` and `paper/appendix/`).
 
 ## Sections
 

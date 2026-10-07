@@ -1,0 +1,42 @@
+\section{Calibration details}
+\label{app:calibration}
+
+Table~\ref{tab:calibration} gives the full false-positive grid behind
+Figure~\ref{fig:calibration}. We report two $\alpha$ regimes deliberately. The
+\emph{family-wise} regime additionally divides $\alpha$ by the number of items,
+holding a 0.05 rate across a whole screen. It controls family-wise error
+across the screen but becomes more stringent per item as the screen grows,
+reducing sensitivity at a fixed per-item sampling budget. Consequently, fewer
+detected violations need not imply greater compatibility. The
+\emph{per-item} regime holds per-item stringency constant in screen size. We
+report both so that compatibility rates cannot be an artifact of how many
+items were run.
+
+\input{tables/tab_calibration_full}
+
+\paragraph{Detection power.} Table~\ref{tab:calibration} and
+Figure~\ref{fig:calibration} calibrate specificity against a compatible null.
+To calibrate power we shift one condition's answer share by a per-trial amount
+\texttt{mix}$\sim$U$[0,0.4]$ on the same empirically resampled disclosure,
+compute each simulated population's own $\gamma^*$ exactly (the
+Appendix~\ref{app:proof} LP, here its $K{=}2$ closed form), and estimate power
+over the genuinely incompatible populations ($\gamma^*>0$), grouped by
+magnitude. Table~\ref{tab:power-magnitude} reports the corrected per-item test.
+Power rises monotonically in both violation size and budget: near-boundary
+violations ($\gamma^*\le0.02$) are essentially undetectable at every tested
+budget, moderate ones ($\gamma^*\in(0.05,0.10]$) reach 75\% at 256 draws and
+95\% at 1{,}024, and larger ones ($\gamma^*\in(0.10,0.20]$) 81\% at 128 draws.
+The family-wise test is uniformly more conservative, needing roughly a
+$4\times$ larger budget for comparable power (72\% at 256 draws for
+$\gamma^*\in(0.10,0.20]$). The compatible group ($\gamma^*{=}0$) rejects at most
+$0.01\%$ of the time, reproducing the specificity of \S\ref{sec:calibration}.
+The naive test rejects incompatible populations readily, but at high budgets it
+does so almost regardless of magnitude (86\% even for $\gamma^*\le0.02$ at 256
+draws), inseparably from the $\sim$21\% false-positive rate of
+\S\ref{sec:calibration}: its apparent power is not evidence the certificate can
+trust, which is why the corrected test's power should be read against its
+near-zero false-positive floor.
+
+\input{tables/tab_power_magnitude}
+
+\input{tables/tab_violations}

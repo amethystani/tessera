@@ -1,0 +1,36 @@
+\subsection{Applied to 32 published results}
+
+
+We apply the decomposition to every method--model pair in Table 11(a) of
+\citet{bae2025decap}, a 2025 debiasing paper reporting accuracy and bias score
+on the ambiguous split for four interventions (Self-Debiasing, Def-1, Def-2,
+DeCAP) across eight models, each against its own \textsc{Base} row
+(Figure~\ref{fig:decomposition} and Table~\ref{tab:decomposition},
+Appendix~\ref{app:decomp}). We chose it because it reports both quantities the
+identity needs under one harness.
+
+All 32 pairs report a reduction in bias score. Across these 32 pairs from a
+single study, the coverage component accounts for a median 80.4\% of the
+reported score reduction under our convention (65.3\% under a symmetric one,
+Appendix~\ref{app:decomp}: the share is convention-dependent, the direction
+is not). In 7
+pairs the committed-answer bias $b$ moved in the \emph{wrong} direction, so the
+model became more biased among the answers it actually gave, while the
+reported score improved because rising abstention more than compensated. In 31
+of 32 pairs the identified set widened, on average from 0.21 to 0.61, so the
+evaluation now pins the disposition only to an interval covering more than half
+the unit range.
+
+The clearest single case is Def-2 on FLAN-T5 (3B) (Figure~\ref{fig:teaser}). The reported ambiguous
+bias score falls from 27.52 to 5.63, an 80\% reduction. The recovered
+committed-answer bias moves from 51.21 to 51.18, unchanged to four
+significant figures and, given two-decimal rounding, indistinguishable from
+zero in sign (Appendix~\ref{app:decomp}). Abstention rises from 46.3\% to
+89.0\%. The
+intervention did not detectably change what the model prefers when it
+answers. It changed how often it answers, and the metric rewards that as if
+it were debiasing. This does not show the interventions are worthless: an
+intervention that induces appropriate abstention on genuinely ambiguous items
+may well be desirable, and BBQ's authors motivate the scaling deliberately. It
+shows that the reported number cannot distinguish that case from the case
+where nothing about the model's preference changed.

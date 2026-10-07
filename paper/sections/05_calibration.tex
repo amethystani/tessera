@@ -1,0 +1,62 @@
+\section{Calibrating the certificate}
+\label{sec:calibration}
+
+\input{figures/fig_calibration}
+
+\paragraph{Plug-in false positives persist under the tested null and sampling budgets.}
+LLM evaluations run at single- or low-double-digit draw counts. We constructed a
+null in which one shared answer law generates all $Z=3$ conditions and each
+discloses at its own answer-\emph{independent} rate, so the population panel
+is compatible by construction and every rejection is a false positive. Rather
+than a convenient parametric family, we resampled the shared answer law and
+the per-condition disclosure rates from our own six-checkpoint panel
+(\S\ref{sec:models}): disclosure is concentrated near 1 (92.5\% of 8{,}640
+(item, condition) rates exceed 0.95) and answer-law skew near 0 or 1 (82.2\%
+of 8{,}612 observations lie outside $[0.1,0.9]$). Under this null the plug-in
+certificate rejects 21.3\% of the time at 16 draws
+(Figure~\ref{fig:calibration}) and, unlike under a generic null, this does
+\emph{not} improve with more data: it plateaus at 21--23\% out to 4{,}096
+draws, 256$\times$ our budget. The mechanism is structural: with near-total
+disclosure the abstained-mass slack that would let \texttt{compatible}
+tolerate sampling noise disappears, and the check asks whether three
+independent continuous-valued estimates coincide exactly, which finite-sample
+noise defeats however large the sample. At the compatibility boundary,
+sampling fluctuations can cause rejection even at large budgets. For a fixed
+strictly compatible panel with positive slack, rejection probability instead
+tends to zero as estimates converge. Our numerical trials establish persistence
+over the tested budgets, not a universal asymptotic plateau, and an explicit
+correction is what fixes the regime we tested.
+
+\paragraph{The corrected version.} We instead evaluate the certificate on a
+simultaneous one-sided lower confidence bound per cell, using the exact
+binomial (Beta) quantile, Bonferroni-corrected across the panel's
+$Z\times K$ cells:
+\[
+\mathrm{lo}_z(k) = \mathrm{Beta}^{-1}\big(\tfrac{\alpha}{ZK} \,\big|\, n_z(k),\, n_z - n_z(k) + 1\big).
+\] The certificate
+can then only report incompatibility when the data rule out compatibility at
+the stated level. Its empirical false-positive rate has point estimates of at
+most 0.05\% at every draw count tested, with 95\% Monte Carlo confidence
+intervals reaching at most 0.13\% (Appendix~\ref{app:calibration}, which
+also gives the full grid, distinguishes these empirical rates from the
+nominal $\alpha$ the correction targets, and explains the per-item and
+family-wise regimes we report).
+
+\paragraph{A per-model null.} Figure~\ref{fig:calibration} averages over answer
+laws. It does not say whether \emph{this} model's naive incompatibility exceeds
+chance, because the rate depends on the laws its items induce. So for each real
+item we impose the null directly (one common law from the pooled
+conditions, with that item's own per-condition disclosure rates) and resample,
+giving the incompatibility count that model's items would produce with no
+cross-condition structure.
+
+\paragraph{Detection power against known violations.} The rates above are all
+false-positive rates, since the population panel is compatible by
+construction. Computing each simulated population's own $\gamma^*$ and
+estimating power over the incompatible ones ($\gamma^*>0$), grouped by
+magnitude (Appendix~\ref{app:calibration}), power rises with both violation
+size and budget: moderate violations ($\gamma^*\in(0.05,0.10]$) reach 75\% at
+256 draws and 95\% at 1{,}024, larger ones ($\gamma^*\in(0.10,0.20]$) 81\% at
+128, well beyond the unanimous-opposition case \S\ref{sec:models} certifies. By
+construction it certifies only what the budget can prove, silent on
+near-boundary violations ($\gamma^*\le0.02$).
