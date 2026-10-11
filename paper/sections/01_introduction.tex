@@ -1,10 +1,10 @@
 \section{Introduction}
 
-Bias benchmarks for large language models routinely allow a model to decline
+Bias benchmarks for large language models (LLMs) routinely allow a model to decline
 to answer (by selecting an \textsc{unknown} option, saying ``cannot be
 determined,'' or otherwise abstaining) and then report a score computed on
-what remains. This is standard on BBQ's ambiguous-context items
-\citep{parrish2022bbq} and on WinoGender-style coreference probes
+what remains. This is standard on the ambiguous-context items of the Bias Benchmark for QA
+(BBQ; \citealp{parrish2022bbq}) and on WinoGender-style coreference probes
 \citep{rudinger2018gender}. It is also a specific threat to validity: if
 abstention is not independent of the disposition being measured, the reported
 score confounds what the model prefers with how willing it is to say so, and

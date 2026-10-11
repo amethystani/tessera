@@ -10,7 +10,9 @@ one reports a custom ``diff-bias'' pooled across categories. We excluded all
 three rather than force the identity onto an incompatible metric, which is
 itself the argument for the reporting recommendation in
 \S\ref{sec:conclusion}, and ran the identity ourselves on the six checkpoints
-of \S\ref{sec:models}.
+of \S\ref{sec:models}: Qwen2.5-7B, Mistral-7B, Phi-3.5-mini, and OLMo-2 at three
+post-training stages (supervised fine-tuning, SFT; direct preference
+optimization, DPO; and the final Instruct model).
 
 Each checkpoint is scored on 2{,}200 ambiguous items (200 per BBQ category)
 under baseline, the same untrained fairness-instruction wording debiasing
