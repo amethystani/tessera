@@ -10,3 +10,6 @@ scipy>=1.10
 
 # only needed to rebuild the Catalan item set from the CaBBQ parquet files
 # pyarrow
+
+# only needed to build the human-annotation workbooks
+# openpyxl
